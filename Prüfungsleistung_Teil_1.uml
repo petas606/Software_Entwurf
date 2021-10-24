@@ -3,7 +3,7 @@
   <packageImport xmi:type="uml:PackageImport" xmi:id="_azEb0DGoEeyIEsk3z-dEFw">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
-  <packagedElement xmi:type="uml:Component" xmi:id="_13BKUDGoEeyIEsk3z-dEFw" name="Komponente 1">
+  <packagedElement xmi:type="uml:Component" xmi:id="_13BKUDGoEeyIEsk3z-dEFw" name="Einsatzplanung">
     <packagedElement xmi:type="uml:Package" xmi:id="_60vBgDGoEeyIEsk3z-dEFw" name="Fachliches Datenmodell">
       <packagedElement xmi:type="uml:Class" xmi:id="_eYkhgDPaEey2DeH0GXSnRA" name="Autobahnmeisterei">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_GfGVgDPbEey2DeH0GXSnRA" name="Fahrzeugpark" type="_e2xD8DPbEey2DeH0GXSnRA"/>
@@ -60,7 +60,12 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_AxsIIDGpEeyIEsk3z-dEFw" name="Dialogmodell"/>
     <packagedElement xmi:type="uml:Package" xmi:id="_MO4kMDGpEeyIEsk3z-dEFw" name="Use Case Modell"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Component" xmi:id="_aS-KADGpEeyIEsk3z-dEFw" name="Komponente 2"/>
+  <packagedElement xmi:type="uml:Component" xmi:id="_aS-KADGpEeyIEsk3z-dEFw" name="Wetterinformationen">
+    <packagedElement xmi:type="uml:Package" xmi:id="_bhLYkDTVEeyo_rqpkPpilA" name="Fachliches Datenmodell"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_QnTsADTVEeyo_rqpkPpilA" name="Fahrzeugverwaltung">
+    <packagedElement xmi:type="uml:Package" xmi:id="_c6jmUDTVEeyo_rqpkPpilA" name="Fachliches Datenmodell"/>
+  </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3tdQsDPbEey2DeH0GXSnRA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3tee0DPbEey2DeH0GXSnRA" source="http://www.eclipse.org/uml2/2.0.0/UML">
       <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
