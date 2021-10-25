@@ -5,66 +5,190 @@
   </packageImport>
   <packagedElement xmi:type="uml:Component" xmi:id="_13BKUDGoEeyIEsk3z-dEFw" name="Einsatzplanung">
     <packagedElement xmi:type="uml:Package" xmi:id="_60vBgDGoEeyIEsk3z-dEFw" name="Fachliches Datenmodell">
-      <packagedElement xmi:type="uml:Class" xmi:id="_eYkhgDPaEey2DeH0GXSnRA" name="Autobahnmeisterei">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_GfGVgDPbEey2DeH0GXSnRA" name="Fahrzeugpark" type="_e2xD8DPbEey2DeH0GXSnRA"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_sB4P0DPaEey2DeH0GXSnRA" name="Fahrzeug" visibility="package">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_qZVIMDPbEey2DeH0GXSnRA" name="Kennzeichen">
+      <packagedElement xmi:type="uml:Class" xmi:id="_f5wycDXSEeyzZYMRHSWLtg" name="Straßenwärter">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_zDGa0DXSEeyzZYMRHSWLtg" name="Name" type="_h9pq4DXUEeyzZYMRHSWLtg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_1K3YkDXSEeyzZYMRHSWLtg" name="MobilfunkNummer">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_G_gecDPcEey2DeH0GXSnRA" name="Baujahr" type="_HhFhgDPcEey2DeH0GXSnRA"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_fkqPQDPcEey2DeH0GXSnRA" name="Zulässiges_Gesamtgewicht">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_xRUo0DPdEey2DeH0GXSnRA" name="Funkkennung">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
-        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_AXYUUDXTEeyzZYMRHSWLtg" name="BerechtigteFahrzeugKlasse"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_e2xD8DPbEey2DeH0GXSnRA" name="Fahrzeugpark"/>
-      <packagedElement xmi:type="uml:DataType" xmi:id="_HhFhgDPcEey2DeH0GXSnRA" name="Datum">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_OIUUMDPcEey2DeH0GXSnRA" name="Tag">
+      <packagedElement xmi:type="uml:Class" xmi:id="_h3UrUDXSEeyzZYMRHSWLtg" name="Einsatzplan">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_D8px4DXTEeyzZYMRHSWLtg" name="EinsatzZeit" type="_i_DvcDXSEeyzZYMRHSWLtg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_i_DvcDXSEeyzZYMRHSWLtg" name="Einsatzzeit">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_dOLggDXTEeyzZYMRHSWLtg" name="WochenTag" type="_oatDUDXTEeyzZYMRHSWLtg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_0Q-twDXTEeyzZYMRHSWLtg" name="TagesZeit" type="_kFwRwDXSEeyzZYMRHSWLtg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_kFwRwDXSEeyzZYMRHSWLtg" name="Tageszeit">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_Xj2a8DXTEeyzZYMRHSWLtg" name="tagsüber"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_YPZSUDXTEeyzZYMRHSWLtg" name="nachts"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_sJKHgDXSEeyzZYMRHSWLtg" name="Autobahnabschnitt" visibility="public">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_H1qq0DXTEeyzZYMRHSWLtg" name="AutobahnNummer">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_R_rnUDPcEey2DeH0GXSnRA" name="Monat">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Lb81ADXTEeyzZYMRHSWLtg" name="AutobahnKilometerStart">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_POddUDXTEeyzZYMRHSWLtg" name="AutobahnKilometerEnde" visibility="public">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_VTBn0DXTEeyzZYMRHSWLtg" name="Reihenfolge">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_XoPLQDPcEey2DeH0GXSnRA" name="Jahr">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
-        </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_05NK8DPcEey2DeH0GXSnRA" name="Räum-/Streufahrzeuge" visibility="public">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_cMdu8DPdEey2DeH0GXSnRA" name="Räumbreite">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_fBgCYDPdEey2DeH0GXSnRA" name="Salzkapazität">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
-        </ownedAttribute>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_oatDUDXTEeyzZYMRHSWLtg" name="WochenTag">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_pnip4DXTEeyzZYMRHSWLtg" name="Montag"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_qHyQMDXTEeyzZYMRHSWLtg" name="Dienstag"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_rMU2YDXTEeyzZYMRHSWLtg" name="Mittwoch"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_r13ioDXTEeyzZYMRHSWLtg" name="Donnerstag"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_shmAMDXTEeyzZYMRHSWLtg" name="Freitag"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tSiU8DXTEeyzZYMRHSWLtg" name="Samstag"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_t1J50DXTEeyzZYMRHSWLtg" name="Sonntag"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_D62lMDPdEey2DeH0GXSnRA" name="Schneefräsen"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_GaiTsDPdEey2DeH0GXSnRA" name="Schneeschleuder"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_H8VdoDPdEey2DeH0GXSnRA" name="Transport-LKW">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_mDI5IDPdEey2DeH0GXSnRA" name="Nutzlast">
-          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
-        </ownedAttribute>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5lVjUDXTEeyzZYMRHSWLtg" visibility="public" memberEnd="_5lWKYjXTEeyzZYMRHSWLtg _5lWxcDXTEeyzZYMRHSWLtg" navigableOwnedEnd="_5lWKYjXTEeyzZYMRHSWLtg _5lWxcDXTEeyzZYMRHSWLtg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5lWKYDXTEeyzZYMRHSWLtg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5lWKYTXTEeyzZYMRHSWLtg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_5lWKYjXTEeyzZYMRHSWLtg" name="einsatzplan" type="_h3UrUDXSEeyzZYMRHSWLtg" association="_5lVjUDXTEeyzZYMRHSWLtg"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_5lWxcDXTEeyzZYMRHSWLtg" name="straßenwärter" type="_f5wycDXSEeyzZYMRHSWLtg" association="_5lVjUDXTEeyzZYMRHSWLtg"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_WSRzADPeEey2DeH0GXSnRA" name="Straßenwärter:innen" visibility="package">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_eTAvQDPeEey2DeH0GXSnRA" name="Name">
+      <packagedElement xmi:type="uml:Association" xmi:id="_9jQxcDXTEeyzZYMRHSWLtg" memberEnd="_9jRYgjXTEeyzZYMRHSWLtg _9jRYgzXTEeyzZYMRHSWLtg" navigableOwnedEnd="_9jRYgjXTEeyzZYMRHSWLtg _9jRYgzXTEeyzZYMRHSWLtg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9jRYgDXTEeyzZYMRHSWLtg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9jRYgTXTEeyzZYMRHSWLtg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_9jRYgjXTEeyzZYMRHSWLtg" name="autobahnabschnitt" type="_sJKHgDXSEeyzZYMRHSWLtg" association="_9jQxcDXTEeyzZYMRHSWLtg"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_9jRYgzXTEeyzZYMRHSWLtg" name="einsatzplan" type="_h3UrUDXSEeyzZYMRHSWLtg" association="_9jQxcDXTEeyzZYMRHSWLtg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_h9pq4DXUEeyzZYMRHSWLtg" name="Name">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_oLr6cDXUEeyzZYMRHSWLtg" name="Vorname">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_j2Q8cDPeEey2DeH0GXSnRA" name="Mobilfunknummer">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_pnw24DXUEeyzZYMRHSWLtg" name="Nachname">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Enumeration" xmi:id="_8SVCsDPeEey2DeH0GXSnRA" name="Fahrzeugklasse"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_AxsIIDGpEeyIEsk3z-dEFw" name="Dialogmodell"/>
     <packagedElement xmi:type="uml:Package" xmi:id="_MO4kMDGpEeyIEsk3z-dEFw" name="Use Case Modell"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_aS-KADGpEeyIEsk3z-dEFw" name="Wetterinformationen">
-    <packagedElement xmi:type="uml:Package" xmi:id="_bhLYkDTVEeyo_rqpkPpilA" name="Fachliches Datenmodell"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_bhLYkDTVEeyo_rqpkPpilA" name="Fachliches Datenmodell">
+      <packagedElement xmi:type="uml:Class" xmi:id="_tF0EYDXPEeyzZYMRHSWLtg" name="Straßenwetterstation" visibility="public">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_9q6OYDXPEeyzZYMRHSWLtg" name="ID">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_TzgdMDXQEeyzZYMRHSWLtg" name="GPS-Koordinaten" type="_WCNJYDXQEeyzZYMRHSWLtg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_WCNJYDXQEeyzZYMRHSWLtg" name="GPS-Koordinaten">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_bh6TUDXQEeyzZYMRHSWLtg" name="X">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_c-xS4DXQEeyzZYMRHSWLtg" name="Y">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ilQaQDXQEeyzZYMRHSWLtg" name="Meteorologische Daten">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_pldGkDXQEeyzZYMRHSWLtg" name="LuftTemperatur">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_rytoUDXQEeyzZYMRHSWLtg" name="RelativeLuftFeuchte">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_ubmWIDXQEeyzZYMRHSWLtg" name="Niederschlag">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_kT1b8DXQEeyzZYMRHSWLtg" name="Straßenzustand">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_21h1gDXQEeyzZYMRHSWLtg" name="OberflächenTemperatur">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_7ixnwDXQEeyzZYMRHSWLtg" name="FahrBahnZustand" type="_8Olk4DXQEeyzZYMRHSWLtg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_8Olk4DXQEeyzZYMRHSWLtg" name="FahrBahnZustand">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_-G1f8DXQEeyzZYMRHSWLtg" name="trocken"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_-76GwDXQEeyzZYMRHSWLtg" name="feucht"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_AWZHwDXREeyzZYMRHSWLtg" name="eisbildung"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_TseLoDXREeyzZYMRHSWLtg"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_Wt58UDXREeyzZYMRHSWLtg"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_XDB3wDXREeyzZYMRHSWLtg"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_vLCZkDXREeyzZYMRHSWLtg" memberEnd="_vLEOwDXREeyzZYMRHSWLtg _vLFc4DXREeyzZYMRHSWLtg" navigableOwnedEnd="_vLEOwDXREeyzZYMRHSWLtg _vLFc4DXREeyzZYMRHSWLtg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vLDnsDXREeyzZYMRHSWLtg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vLDnsTXREeyzZYMRHSWLtg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_vLEOwDXREeyzZYMRHSWLtg" name="straßenwetterstation" type="_tF0EYDXPEeyzZYMRHSWLtg" association="_vLCZkDXREeyzZYMRHSWLtg"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_vLFc4DXREeyzZYMRHSWLtg" name="meteorologische daten" type="_ilQaQDXQEeyzZYMRHSWLtg" association="_vLCZkDXREeyzZYMRHSWLtg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_57230DXREeyzZYMRHSWLtg" memberEnd="_573e4DXREeyzZYMRHSWLtg _574tADXREeyzZYMRHSWLtg" navigableOwnedEnd="_573e4DXREeyzZYMRHSWLtg _574tADXREeyzZYMRHSWLtg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_57230TXREeyzZYMRHSWLtg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_57230jXREeyzZYMRHSWLtg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_573e4DXREeyzZYMRHSWLtg" name="straßenzustand" type="_kT1b8DXQEeyzZYMRHSWLtg" association="_57230DXREeyzZYMRHSWLtg"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_574tADXREeyzZYMRHSWLtg" name="straßenwetterstation" type="_tF0EYDXPEeyzZYMRHSWLtg" association="_57230DXREeyzZYMRHSWLtg"/>
+      </packagedElement>
+    </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_QnTsADTVEeyo_rqpkPpilA" name="Fahrzeugverwaltung">
-    <packagedElement xmi:type="uml:Package" xmi:id="_c6jmUDTVEeyo_rqpkPpilA" name="Fachliches Datenmodell"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_c6jmUDTVEeyo_rqpkPpilA" name="Fachliches Datenmodell">
+      <packagedElement xmi:type="uml:Class" xmi:id="_OfheQDXUEeyzZYMRHSWLtg" name="Autobahnmeisterei"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_P5vZgDXUEeyzZYMRHSWLtg" name="Fahrzeug" isAbstract="true">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_DnPQoDXVEeyzZYMRHSWLtg" name="Kennzeichen">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_IPcx4DXVEeyzZYMRHSWLtg" name="Baujahr" type="_YxQz0DXUEeyzZYMRHSWLtg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_YgIyIDXVEeyzZYMRHSWLtg" name="ZulässigesGesamtGewicht">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_amdlcDXVEeyzZYMRHSWLtg" name="Funkkennung">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Sqzy8DXUEeyzZYMRHSWLtg" name="Räum-/Streufahrzeuge">
+        <generalization xmi:type="uml:Generalization" xmi:id="_qwcgwDXVEeyzZYMRHSWLtg" general="_P5vZgDXUEeyzZYMRHSWLtg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_8fkqYDXUEeyzZYMRHSWLtg" name="Räumbreite">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_-2wkMDXUEeyzZYMRHSWLtg" name="Salzkapazität">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_UXy5MDXUEeyzZYMRHSWLtg" name="Schneefräsen">
+        <generalization xmi:type="uml:Generalization" xmi:id="_uHmp0DXVEeyzZYMRHSWLtg" general="_P5vZgDXUEeyzZYMRHSWLtg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_V_nLkDXUEeyzZYMRHSWLtg" name="Schneeschleuder">
+        <generalization xmi:type="uml:Generalization" xmi:id="_vSXMwDXVEeyzZYMRHSWLtg" general="_P5vZgDXUEeyzZYMRHSWLtg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_XQCRoDXUEeyzZYMRHSWLtg" name="Transport-LKW">
+        <generalization xmi:type="uml:Generalization" xmi:id="_xf2YADXVEeyzZYMRHSWLtg" general="_P5vZgDXUEeyzZYMRHSWLtg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:DataType" xmi:id="_YxQz0DXUEeyzZYMRHSWLtg" name="Datum">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_wZ21wDXUEeyzZYMRHSWLtg" name="Tag">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_xzuLsDXUEeyzZYMRHSWLtg" name="Monat">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_zAgu8DXUEeyzZYMRHSWLtg" name="Jahr">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ju8M4DXVEeyzZYMRHSWLtg" name="FahrzeugPark"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_0fO6QDXVEeyzZYMRHSWLtg" memberEnd="_0fPhUjXVEeyzZYMRHSWLtg _0fQIYDXVEeyzZYMRHSWLtg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0fPhUDXVEeyzZYMRHSWLtg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0fPhUTXVEeyzZYMRHSWLtg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_0fPhUjXVEeyzZYMRHSWLtg" name="fahrzeugpark" type="_ju8M4DXVEeyzZYMRHSWLtg" association="_0fO6QDXVEeyzZYMRHSWLtg"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_0fQIYDXVEeyzZYMRHSWLtg" name="fahrzeug" type="_P5vZgDXUEeyzZYMRHSWLtg" association="_0fO6QDXVEeyzZYMRHSWLtg"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_3odVADXVEeyzZYMRHSWLtg" memberEnd="_3od8EjXVEeyzZYMRHSWLtg _3od8EzXVEeyzZYMRHSWLtg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3od8EDXVEeyzZYMRHSWLtg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3od8ETXVEeyzZYMRHSWLtg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_3od8EjXVEeyzZYMRHSWLtg" name="fahrzeugpark" type="_ju8M4DXVEeyzZYMRHSWLtg" association="_3odVADXVEeyzZYMRHSWLtg"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_3od8EzXVEeyzZYMRHSWLtg" name="autobahnmeisterei" type="_OfheQDXUEeyzZYMRHSWLtg" association="_3odVADXVEeyzZYMRHSWLtg"/>
+      </packagedElement>
+    </packagedElement>
   </packagedElement>
   <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3tdQsDPbEey2DeH0GXSnRA">
     <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3tee0DPbEey2DeH0GXSnRA" source="http://www.eclipse.org/uml2/2.0.0/UML">
