@@ -69,7 +69,52 @@
         </ownedAttribute>
       </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_AxsIIDGpEeyIEsk3z-dEFw" name="Dialogmodell"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_AxsIIDGpEeyIEsk3z-dEFw" name="Dialogmodell">
+      <packagedElement xmi:type="uml:Actor" xmi:id="_PBG0IDdPEeybi6alUDIscQ" name="Planer"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_VSDNwDdPEeybi6alUDIscQ" name="Straßenwärter als die Fahrzeugführende Person festlegen"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_aUE9MDdPEeybi6alUDIscQ" name="Einsatzplan bearbeiten">
+        <include xmi:type="uml:Include" xmi:id="_2vtQUDdPEeybi6alUDIscQ" addition="_sbgcoDdPEeybi6alUDIscQ"/>
+        <include xmi:type="uml:Include" xmi:id="_3OXiQDdPEeybi6alUDIscQ" addition="_t5_M0DdPEeybi6alUDIscQ"/>
+        <include xmi:type="uml:Include" xmi:id="_3-xrgDdPEeybi6alUDIscQ" addition="_u2Qn0DdPEeybi6alUDIscQ"/>
+        <include xmi:type="uml:Include" xmi:id="_4T8qQDdPEeybi6alUDIscQ" addition="_wpCNADdPEeybi6alUDIscQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_c431MDdPEeybi6alUDIscQ" name="Reihenfolge der Autobahnabschnitte festlegen"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_f2QMUDdPEeybi6alUDIscQ" name="Einsatzplanung generieren"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_ocaJ0DdPEeybi6alUDIscQ" name="&lt;&lt;Service>> Fahrzeuge Anzeigen"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_sbgcoDdPEeybi6alUDIscQ" name="Fahrzeuge zuordnen"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_t5_M0DdPEeybi6alUDIscQ" name="Personen aufteilen"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_u2Qn0DdPEeybi6alUDIscQ" name="Einsatzpläne aufteilen"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_wpCNADdPEeybi6alUDIscQ" name="Autobahnabschnitte den Einsatzplänen zuordnen"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_8RnZsDdPEeybi6alUDIscQ" memberEnd="_8RoAwjdPEeybi6alUDIscQ _8RoAwzdPEeybi6alUDIscQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8RoAwDdPEeybi6alUDIscQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8RoAwTdPEeybi6alUDIscQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_8RoAwjdPEeybi6alUDIscQ" name="straßenwärter als die fahrzeugführende person festlegen" type="_VSDNwDdPEeybi6alUDIscQ" association="_8RnZsDdPEeybi6alUDIscQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_8RoAwzdPEeybi6alUDIscQ" name="planer" type="_PBG0IDdPEeybi6alUDIscQ" association="_8RnZsDdPEeybi6alUDIscQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_9Vf4kDdPEeybi6alUDIscQ" memberEnd="_9VgfojdPEeybi6alUDIscQ _9VgfozdPEeybi6alUDIscQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9VgfoDdPEeybi6alUDIscQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9VgfoTdPEeybi6alUDIscQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_9VgfojdPEeybi6alUDIscQ" name="einsatzplan bearbeiten" type="_aUE9MDdPEeybi6alUDIscQ" association="_9Vf4kDdPEeybi6alUDIscQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_9VgfozdPEeybi6alUDIscQ" type="_PBG0IDdPEeybi6alUDIscQ" association="_9Vf4kDdPEeybi6alUDIscQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_94Lu4DdPEeybi6alUDIscQ" memberEnd="_94MV8TdPEeybi6alUDIscQ _94MV8jdPEeybi6alUDIscQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_94Lu4TdPEeybi6alUDIscQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_94MV8DdPEeybi6alUDIscQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_94MV8TdPEeybi6alUDIscQ" name="reihenfolge der autobahnabschnitte festlegen" type="_c431MDdPEeybi6alUDIscQ" association="_94Lu4DdPEeybi6alUDIscQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_94MV8jdPEeybi6alUDIscQ" type="_PBG0IDdPEeybi6alUDIscQ" association="_94Lu4DdPEeybi6alUDIscQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="__MyxYDdPEeybi6alUDIscQ" memberEnd="__MzYcjdPEeybi6alUDIscQ __MzYczdPEeybi6alUDIscQ">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="__MzYcDdPEeybi6alUDIscQ" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="__MzYcTdPEeybi6alUDIscQ" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="__MzYcjdPEeybi6alUDIscQ" name="einsatzplanung generieren" type="_f2QMUDdPEeybi6alUDIscQ" association="__MyxYDdPEeybi6alUDIscQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="__MzYczdPEeybi6alUDIscQ" type="_94Lu4DdPEeybi6alUDIscQ" association="__MyxYDdPEeybi6alUDIscQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Dependency" xmi:id="_DvbPEDdQEeybi6alUDIscQ" client="_f2QMUDdPEeybi6alUDIscQ" supplier="_ocaJ0DdPEeybi6alUDIscQ"/>
+    </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_MO4kMDGpEeyIEsk3z-dEFw" name="Use Case Modell"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_aS-KADGpEeyIEsk3z-dEFw" name="Wetterinformationen">
