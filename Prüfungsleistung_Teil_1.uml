@@ -10,7 +10,15 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_1K3YkDXSEeyzZYMRHSWLtg" name="MobilfunkNummer">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_AXYUUDXTEeyzZYMRHSWLtg" name="BerechtigteFahrzeugKlasse"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_AXYUUDXTEeyzZYMRHSWLtg" name="BerechtigteFahrzeugKlasse" visibility="public" type="_0ifbwDdYEeyKQufkTDC-Eg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_5lWKYjXTEeyzZYMRHSWLtg" name="einsatzplan" type="_h3UrUDXSEeyzZYMRHSWLtg" association="_5lVjUDXTEeyzZYMRHSWLtg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6JR3YDdTEeybi6alUDIscQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6J7-sDdTEeybi6alUDIscQ" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_IPeZMDdYEeyKQufkTDC-Eg" name="&lt;&lt;abstract >>fahrzeug" type="_P5vZgDXUEeyzZYMRHSWLtg" association="_IPb88DdYEeyKQufkTDC-Eg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_IPfAQDdYEeyKQufkTDC-Eg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_IPfAQTdYEeyKQufkTDC-Eg" value="*"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_h3UrUDXSEeyzZYMRHSWLtg" name="Einsatzplan">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_D8px4DXTEeyzZYMRHSWLtg" name="EinsatzZeit" type="_i_DvcDXSEeyzZYMRHSWLtg"/>
@@ -46,19 +54,26 @@
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tSiU8DXTEeyzZYMRHSWLtg" name="Samstag"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_t1J50DXTEeyzZYMRHSWLtg" name="Sonntag"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_5lVjUDXTEeyzZYMRHSWLtg" visibility="public" memberEnd="_5lWKYjXTEeyzZYMRHSWLtg _5lWxcDXTEeyzZYMRHSWLtg" navigableOwnedEnd="_5lWKYjXTEeyzZYMRHSWLtg _5lWxcDXTEeyzZYMRHSWLtg">
+      <packagedElement xmi:type="uml:Association" xmi:id="_5lVjUDXTEeyzZYMRHSWLtg" name="ist zugeordnet" visibility="public" memberEnd="_5lWKYjXTEeyzZYMRHSWLtg _5lWxcDXTEeyzZYMRHSWLtg" navigableOwnedEnd="_5lWxcDXTEeyzZYMRHSWLtg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5lWKYDXTEeyzZYMRHSWLtg" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5lWKYTXTEeyzZYMRHSWLtg" key="nature" value="UML_Nature"/>
         </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_5lWKYjXTEeyzZYMRHSWLtg" name="einsatzplan" type="_h3UrUDXSEeyzZYMRHSWLtg" association="_5lVjUDXTEeyzZYMRHSWLtg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_5lWxcDXTEeyzZYMRHSWLtg" name="straßenwärter" type="_f5wycDXSEeyzZYMRHSWLtg" association="_5lVjUDXTEeyzZYMRHSWLtg"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_5lWxcDXTEeyzZYMRHSWLtg" name="straßenwärter" type="_f5wycDXSEeyzZYMRHSWLtg" association="_5lVjUDXTEeyzZYMRHSWLtg">
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tbtYkDdTEeybi6alUDIscQ" value="2"/>
+        </ownedEnd>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_9jQxcDXTEeyzZYMRHSWLtg" memberEnd="_9jRYgjXTEeyzZYMRHSWLtg _9jRYgzXTEeyzZYMRHSWLtg" navigableOwnedEnd="_9jRYgjXTEeyzZYMRHSWLtg _9jRYgzXTEeyzZYMRHSWLtg">
+      <packagedElement xmi:type="uml:Association" xmi:id="_9jQxcDXTEeyzZYMRHSWLtg" name="ist zugeordnet" memberEnd="_9jRYgjXTEeyzZYMRHSWLtg _9jRYgzXTEeyzZYMRHSWLtg" navigableOwnedEnd="_9jRYgjXTEeyzZYMRHSWLtg _9jRYgzXTEeyzZYMRHSWLtg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9jRYgDXTEeyzZYMRHSWLtg" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9jRYgTXTEeyzZYMRHSWLtg" key="nature" value="UML_Nature"/>
         </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_9jRYgjXTEeyzZYMRHSWLtg" name="autobahnabschnitt" type="_sJKHgDXSEeyzZYMRHSWLtg" association="_9jQxcDXTEeyzZYMRHSWLtg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_9jRYgzXTEeyzZYMRHSWLtg" name="einsatzplan" type="_h3UrUDXSEeyzZYMRHSWLtg" association="_9jQxcDXTEeyzZYMRHSWLtg"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_9jRYgjXTEeyzZYMRHSWLtg" name="autobahnabschnitt" type="_sJKHgDXSEeyzZYMRHSWLtg" association="_9jQxcDXTEeyzZYMRHSWLtg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_M38V8DdUEeybi6alUDIscQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_M4CckDdUEeybi6alUDIscQ" value="*"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_9jRYgzXTEeyzZYMRHSWLtg" name="einsatzplan" type="_h3UrUDXSEeyzZYMRHSWLtg" association="_9jQxcDXTEeyzZYMRHSWLtg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_NKXisDdUEeybi6alUDIscQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_NKe3cDdUEeybi6alUDIscQ" value="*"/>
+        </ownedEnd>
       </packagedElement>
       <packagedElement xmi:type="uml:DataType" xmi:id="_h9pq4DXUEeyzZYMRHSWLtg" name="Name">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_oLr6cDXUEeyzZYMRHSWLtg" name="Vorname">
@@ -67,6 +82,12 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_pnw24DXUEeyzZYMRHSWLtg" name="Nachname">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Enumeration" xmi:id="_0ifbwDdYEeyKQufkTDC-Eg" name="Fahrzeugklasse">
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_6NzYwDdYEeyKQufkTDC-Eg" name="Räum-/Streufahrzeuge"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_7iIucDdYEeyKQufkTDC-Eg" name="Schneeschleudern"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_8h3tIDdYEeyKQufkTDC-Eg" name="Transport-LKW"/>
+        <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_9gJTQDdYEeyKQufkTDC-Eg" name="Schneefräsen"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_AxsIIDGpEeyIEsk3z-dEFw" name="Dialogmodell">
@@ -79,8 +100,10 @@
         <include xmi:type="uml:Include" xmi:id="_4T8qQDdPEeybi6alUDIscQ" addition="_wpCNADdPEeybi6alUDIscQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:UseCase" xmi:id="_c431MDdPEeybi6alUDIscQ" name="Reihenfolge der Autobahnabschnitte festlegen"/>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_f2QMUDdPEeybi6alUDIscQ" name="Einsatzplanung generieren"/>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_ocaJ0DdPEeybi6alUDIscQ" name="&lt;&lt;Service>> Fahrzeuge Anzeigen"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_f2QMUDdPEeybi6alUDIscQ" name="Einsatzplanung generieren">
+        <include xmi:type="uml:Include" xmi:id="_dlTWADdSEeybi6alUDIscQ" addition="_ocaJ0DdPEeybi6alUDIscQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_ocaJ0DdPEeybi6alUDIscQ" name="&lt;&lt;Service>> Fahrzeuge abrufen"/>
       <packagedElement xmi:type="uml:UseCase" xmi:id="_sbgcoDdPEeybi6alUDIscQ" name="Fahrzeuge zuordnen"/>
       <packagedElement xmi:type="uml:UseCase" xmi:id="_t5_M0DdPEeybi6alUDIscQ" name="Personen aufteilen"/>
       <packagedElement xmi:type="uml:UseCase" xmi:id="_u2Qn0DdPEeybi6alUDIscQ" name="Einsatzpläne aufteilen"/>
@@ -126,14 +149,14 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_TzgdMDXQEeyzZYMRHSWLtg" name="GPS-Koordinaten" type="_WCNJYDXQEeyzZYMRHSWLtg"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_HT0uQjchEeybi6alUDIscQ" name="autobahnmeisterei" type="_OfheQDXUEeyzZYMRHSWLtg" association="_HT0HMDchEeybi6alUDIscQ">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HT3KgDchEeybi6alUDIscQ"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HT5mwDchEeybi6alUDIscQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HT5mwDchEeybi6alUDIscQ" value="*"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:DataType" xmi:id="_WCNJYDXQEeyzZYMRHSWLtg" name="GPS-Koordinaten">
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_bh6TUDXQEeyzZYMRHSWLtg" name="X">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_bh6TUDXQEeyzZYMRHSWLtg" name="Lat">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_c-xS4DXQEeyzZYMRHSWLtg" name="Y">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_c-xS4DXQEeyzZYMRHSWLtg" name="Long">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
         </ownedAttribute>
       </packagedElement>
@@ -162,19 +185,31 @@
       <packagedElement xmi:type="uml:Association" xmi:id="_TseLoDXREeyzZYMRHSWLtg"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_Wt58UDXREeyzZYMRHSWLtg"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_XDB3wDXREeyzZYMRHSWLtg"/>
-      <packagedElement xmi:type="uml:Association" xmi:id="_vLCZkDXREeyzZYMRHSWLtg" memberEnd="_vLEOwDXREeyzZYMRHSWLtg _vLFc4DXREeyzZYMRHSWLtg" navigableOwnedEnd="_vLEOwDXREeyzZYMRHSWLtg _vLFc4DXREeyzZYMRHSWLtg">
+      <packagedElement xmi:type="uml:Association" xmi:id="_vLCZkDXREeyzZYMRHSWLtg" name="erhält" memberEnd="_vLEOwDXREeyzZYMRHSWLtg _vLFc4DXREeyzZYMRHSWLtg" navigableOwnedEnd="_vLEOwDXREeyzZYMRHSWLtg _vLFc4DXREeyzZYMRHSWLtg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vLDnsDXREeyzZYMRHSWLtg" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vLDnsTXREeyzZYMRHSWLtg" key="nature" value="UML_Nature"/>
         </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_vLEOwDXREeyzZYMRHSWLtg" name="straßenwetterstation" type="_tF0EYDXPEeyzZYMRHSWLtg" association="_vLCZkDXREeyzZYMRHSWLtg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_vLFc4DXREeyzZYMRHSWLtg" name="meteorologische daten" type="_ilQaQDXQEeyzZYMRHSWLtg" association="_vLCZkDXREeyzZYMRHSWLtg"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_vLEOwDXREeyzZYMRHSWLtg" name="straßenwetterstation" type="_tF0EYDXPEeyzZYMRHSWLtg" association="_vLCZkDXREeyzZYMRHSWLtg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6Fd48DdUEeybi6alUDIscQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6F7zADdUEeybi6alUDIscQ" value="*"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_vLFc4DXREeyzZYMRHSWLtg" name="meteorologische daten" type="_ilQaQDXQEeyzZYMRHSWLtg" association="_vLCZkDXREeyzZYMRHSWLtg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_6ihoYDdUEeybi6alUDIscQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_6i_icDdUEeybi6alUDIscQ" value="*"/>
+        </ownedEnd>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_57230DXREeyzZYMRHSWLtg" memberEnd="_573e4DXREeyzZYMRHSWLtg _574tADXREeyzZYMRHSWLtg" navigableOwnedEnd="_573e4DXREeyzZYMRHSWLtg _574tADXREeyzZYMRHSWLtg">
+      <packagedElement xmi:type="uml:Association" xmi:id="_57230DXREeyzZYMRHSWLtg" name="erhält" memberEnd="_573e4DXREeyzZYMRHSWLtg _574tADXREeyzZYMRHSWLtg" navigableOwnedEnd="_573e4DXREeyzZYMRHSWLtg _574tADXREeyzZYMRHSWLtg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_57230TXREeyzZYMRHSWLtg" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_57230jXREeyzZYMRHSWLtg" key="nature" value="UML_Nature"/>
         </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_573e4DXREeyzZYMRHSWLtg" name="straßenzustand" type="_kT1b8DXQEeyzZYMRHSWLtg" association="_57230DXREeyzZYMRHSWLtg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_574tADXREeyzZYMRHSWLtg" name="straßenwetterstation" type="_tF0EYDXPEeyzZYMRHSWLtg" association="_57230DXREeyzZYMRHSWLtg"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_573e4DXREeyzZYMRHSWLtg" name="straßenzustand" type="_kT1b8DXQEeyzZYMRHSWLtg" association="_57230DXREeyzZYMRHSWLtg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7Wy98DdUEeybi6alUDIscQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7XSGIDdUEeybi6alUDIscQ" value="*"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_574tADXREeyzZYMRHSWLtg" name="straßenwetterstation" type="_tF0EYDXPEeyzZYMRHSWLtg" association="_57230DXREeyzZYMRHSWLtg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_7w3DwDdUEeybi6alUDIscQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7xWL8DdUEeybi6alUDIscQ" value="*"/>
+        </ownedEnd>
       </packagedElement>
     </packagedElement>
   </packagedElement>
@@ -182,11 +217,11 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_c6jmUDTVEeyo_rqpkPpilA" name="Fachliches Datenmodell">
       <packagedElement xmi:type="uml:Class" xmi:id="_OfheQDXUEeyzZYMRHSWLtg" name="Autobahnmeisterei">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_WX3xsDcgEeybi6alUDIscQ" name="fahrzeug" type="_P5vZgDXUEeyzZYMRHSWLtg" association="_WX1VcDcgEeybi6alUDIscQ">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_WX3xsTcgEeybi6alUDIscQ"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_WX3xsjcgEeybi6alUDIscQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_MOG1IDdcEeyKQufkTDC-Eg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_MOQmIDdcEeyKQufkTDC-Eg" value="*"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_P5vZgDXUEeyzZYMRHSWLtg" name="Fahrzeug" isAbstract="true">
+      <packagedElement xmi:type="uml:Class" xmi:id="_P5vZgDXUEeyzZYMRHSWLtg" name="&lt;&lt;Abstract >>Fahrzeug" isAbstract="true">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_DnPQoDXVEeyzZYMRHSWLtg" name="Kennzeichen">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
@@ -208,25 +243,28 @@
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_mmYVwjciEeybi6alUDIscQ" name="einsatzplan" type="_h3UrUDXSEeyzZYMRHSWLtg" association="_mmXusDciEeybi6alUDIscQ">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mmYVwzciEeybi6alUDIscQ"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mmY80DciEeybi6alUDIscQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mmY80DciEeybi6alUDIscQ" value="*"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_UXy5MDXUEeyzZYMRHSWLtg" name="Schneefräsen">
         <generalization xmi:type="uml:Generalization" xmi:id="_uHmp0DXVEeyzZYMRHSWLtg" general="_P5vZgDXUEeyzZYMRHSWLtg"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_oXOoUjciEeybi6alUDIscQ" type="_h3UrUDXSEeyzZYMRHSWLtg" association="_oXOBQDciEeybi6alUDIscQ">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oXPPYDciEeybi6alUDIscQ"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oXPPYTciEeybi6alUDIscQ" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oXPPYTciEeybi6alUDIscQ" value="*"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_V_nLkDXUEeyzZYMRHSWLtg" name="Schneeschleuder">
         <generalization xmi:type="uml:Generalization" xmi:id="_vSXMwDXVEeyzZYMRHSWLtg" general="_P5vZgDXUEeyzZYMRHSWLtg"/>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_tpa6sjciEeybi6alUDIscQ" name="einsatzplan" type="_h3UrUDXSEeyzZYMRHSWLtg" association="_tpaToDciEeybi6alUDIscQ">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tpa6szciEeybi6alUDIscQ"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tpa6tDciEeybi6alUDIscQ" value="1"/>
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HuPGoDdTEeybi6alUDIscQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HpkpEDdTEeybi6alUDIscQ" value="*"/>
         </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_XQCRoDXUEeyzZYMRHSWLtg" name="Transport-LKW">
         <generalization xmi:type="uml:Generalization" xmi:id="_xf2YADXVEeyzZYMRHSWLtg" general="_P5vZgDXUEeyzZYMRHSWLtg"/>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_y_aU4DdXEeyKQufkTDC-Eg" name="Nutzlast">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:DataType" xmi:id="_YxQz0DXUEeyzZYMRHSWLtg" name="Datum">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_wZ21wDXUEeyzZYMRHSWLtg" name="Tag">
@@ -239,19 +277,22 @@
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_WX1VcDcgEeybi6alUDIscQ" memberEnd="_WX3xsDcgEeybi6alUDIscQ _WX4YwDcgEeybi6alUDIscQ" navigableOwnedEnd="_WX4YwDcgEeybi6alUDIscQ">
+      <packagedElement xmi:type="uml:Association" xmi:id="_WX1VcDcgEeybi6alUDIscQ" name="hat" memberEnd="_WX3xsDcgEeybi6alUDIscQ _WX4YwDcgEeybi6alUDIscQ" navigableOwnedEnd="_WX4YwDcgEeybi6alUDIscQ">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WX2jkDcgEeybi6alUDIscQ" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_WX2jkTcgEeybi6alUDIscQ" key="nature" value="UML_Nature"/>
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_WX4YwDcgEeybi6alUDIscQ" name="autobahnmeisterei" type="_OfheQDXUEeyzZYMRHSWLtg" association="_WX1VcDcgEeybi6alUDIscQ"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_HT0HMDchEeybi6alUDIscQ" memberEnd="_HT0uQjchEeybi6alUDIscQ _HT7b8DchEeybi6alUDIscQ" navigableOwnedEnd="_HT7b8DchEeybi6alUDIscQ">
+      <packagedElement xmi:type="uml:Association" xmi:id="_HT0HMDchEeybi6alUDIscQ" name="bezieht Daten von" memberEnd="_HT0uQjchEeybi6alUDIscQ _HT7b8DchEeybi6alUDIscQ" navigableOwnedEnd="_HT7b8DchEeybi6alUDIscQ">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HT0uQDchEeybi6alUDIscQ" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_HT0uQTchEeybi6alUDIscQ" key="nature" value="UML_Nature"/>
         </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_HT7b8DchEeybi6alUDIscQ" name="straßenwetterstation" type="_tF0EYDXPEeyzZYMRHSWLtg" association="_HT0HMDchEeybi6alUDIscQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_HT7b8DchEeybi6alUDIscQ" name="straßenwetterstation" type="_tF0EYDXPEeyzZYMRHSWLtg" association="_HT0HMDchEeybi6alUDIscQ">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1333IDdUEeybi6alUDIscQ"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_14EEYDdUEeybi6alUDIscQ" value="*"/>
+        </ownedEnd>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_mmXusDciEeybi6alUDIscQ" memberEnd="_mmYVwjciEeybi6alUDIscQ _mmY80TciEeybi6alUDIscQ" navigableOwnedEnd="_mmY80TciEeybi6alUDIscQ">
+      <packagedElement xmi:type="uml:Association" xmi:id="_mmXusDciEeybi6alUDIscQ" name="hat" memberEnd="_mmYVwjciEeybi6alUDIscQ _mmY80TciEeybi6alUDIscQ" navigableOwnedEnd="_mmY80TciEeybi6alUDIscQ">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mmYVwDciEeybi6alUDIscQ" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mmYVwTciEeybi6alUDIscQ" key="nature" value="UML_Nature"/>
         </eAnnotations>
@@ -268,6 +309,15 @@
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tpa6sTciEeybi6alUDIscQ" key="nature" value="UML_Nature"/>
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_tpa6tTciEeybi6alUDIscQ" name="schneeschleuder" type="_V_nLkDXUEeyzZYMRHSWLtg" association="_tpaToDciEeybi6alUDIscQ"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_IPb88DdYEeyKQufkTDC-Eg" name="fährt" memberEnd="_IPeZMDdYEeyKQufkTDC-Eg _IPfAQjdYEeyKQufkTDC-Eg" navigableOwnedEnd="_IPfAQjdYEeyKQufkTDC-Eg">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IPdyIDdYEeyKQufkTDC-Eg" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_IPdyITdYEeyKQufkTDC-Eg" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_IPfAQjdYEeyKQufkTDC-Eg" name="straßenwärter" type="_f5wycDXSEeyzZYMRHSWLtg" association="_IPb88DdYEeyKQufkTDC-Eg">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_b7oTYDdbEeyKQufkTDC-Eg"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_T34U0DdaEeyKQufkTDC-Eg" value="*"/>
+        </ownedEnd>
       </packagedElement>
     </packagedElement>
   </packagedElement>
