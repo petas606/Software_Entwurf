@@ -182,9 +182,6 @@
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_-76GwDXQEeyzZYMRHSWLtg" name="feucht"/>
         <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_AWZHwDXREeyzZYMRHSWLtg" name="eisbildung"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_TseLoDXREeyzZYMRHSWLtg"/>
-      <packagedElement xmi:type="uml:Association" xmi:id="_Wt58UDXREeyzZYMRHSWLtg"/>
-      <packagedElement xmi:type="uml:Association" xmi:id="_XDB3wDXREeyzZYMRHSWLtg"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_vLCZkDXREeyzZYMRHSWLtg" name="erhält" memberEnd="_vLEOwDXREeyzZYMRHSWLtg _vLFc4DXREeyzZYMRHSWLtg" navigableOwnedEnd="_vLEOwDXREeyzZYMRHSWLtg _vLFc4DXREeyzZYMRHSWLtg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_vLDnsDXREeyzZYMRHSWLtg" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_vLDnsTXREeyzZYMRHSWLtg" key="nature" value="UML_Nature"/>
