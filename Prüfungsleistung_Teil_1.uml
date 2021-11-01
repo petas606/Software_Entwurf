@@ -327,68 +327,15 @@
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_ZIPKADphEey4z-B8qvhcUg" name="Use Case Diagramm">
-      <packagedElement xmi:type="uml:Actor" xmi:id="_sKPbUDphEey4z-B8qvhcUg" name="Registrierte Bürger"/>
       <packagedElement xmi:type="uml:Actor" xmi:id="_t_ZmIDphEey4z-B8qvhcUg" name="Planer"/>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_3PIsIDphEey4z-B8qvhcUg" name="Straßenzustandsbericht anfordern">
-        <include xmi:type="uml:Include" xmi:id="_k70I8DplEey4z-B8qvhcUg" addition="_5IG_8DphEey4z-B8qvhcUg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_5IG_8DphEey4z-B8qvhcUg" name="Prognose erhalten">
-        <include xmi:type="uml:Include" xmi:id="_mmY0YDplEey4z-B8qvhcUg" addition="_NPNwwDplEey4z-B8qvhcUg"/>
-        <include xmi:type="uml:Include" xmi:id="_oCWcEDplEey4z-B8qvhcUg" addition="_RDkMIDplEey4z-B8qvhcUg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_a0xu4DpiEey4z-B8qvhcUg" name="Auf Wetterinformationen zugreifen">
-        <extend xmi:type="uml:Extend" xmi:id="_piFJcDplEey4z-B8qvhcUg" extendedCase="_ZHNu8DpkEey4z-B8qvhcUg" extensionLocation="_piFwgDplEey4z-B8qvhcUg"/>
-        <extend xmi:type="uml:Extend" xmi:id="_rG5LIDplEey4z-B8qvhcUg" extendedCase="_bZ144DpkEey4z-B8qvhcUg" extensionLocation="_rG5yMDplEey4z-B8qvhcUg"/>
-        <extend xmi:type="uml:Extend" xmi:id="_sYBb0DplEey4z-B8qvhcUg" extendedCase="_fM560DpkEey4z-B8qvhcUg" extensionLocation="_sYCC4DplEey4z-B8qvhcUg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_cuUqcDpiEey4z-B8qvhcUg" name="Beeinträchtigungsliste anzeigen lassen"/>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_5dXo0DpiEey4z-B8qvhcUg" name="auf die Informationen einer bestimmten Beeinträchtigung zugreifen"/>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_bSNcUDpjEey4z-B8qvhcUg" name="Beeinträchtigung melden"/>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_ZHNu8DpkEey4z-B8qvhcUg" name="GPS-Position automatisch eingeben lassen">
-        <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_piFwgDplEey4z-B8qvhcUg" name="ExtensionPoint1"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_bZ144DpkEey4z-B8qvhcUg" name="Textuelle Ortsbeschreibung hinzufügen">
-        <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_rG5yMDplEey4z-B8qvhcUg" name="ExtensionPoint1"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_fM560DpkEey4z-B8qvhcUg" name="Als Standardbeeinträchtigung festlegen">
-        <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_sYCC4DplEey4z-B8qvhcUg" name="ExtensionPoint1"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_NPNwwDplEey4z-B8qvhcUg" name="&lt;&lt;Service >> Einsatzpläne abrufen"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_a0xu4DpiEey4z-B8qvhcUg" name="Auf Wetterinformationen zugreifen"/>
       <packagedElement xmi:type="uml:UseCase" xmi:id="_RDkMIDplEey4z-B8qvhcUg" name="&lt;&lt; Service >> Wetterinformationen abrufen"/>
-      <packagedElement xmi:type="uml:Association" xmi:id="_b4vl8DplEey4z-B8qvhcUg" memberEnd="_b4wNAjplEey4z-B8qvhcUg _b4wNAzplEey4z-B8qvhcUg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_b4wNADplEey4z-B8qvhcUg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_b4wNATplEey4z-B8qvhcUg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_b4wNAjplEey4z-B8qvhcUg" name="straßenzustandsbericht anfordern" type="_3PIsIDphEey4z-B8qvhcUg" association="_b4vl8DplEey4z-B8qvhcUg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_b4wNAzplEey4z-B8qvhcUg" name="registrierte bürger" type="_sKPbUDphEey4z-B8qvhcUg" association="_b4vl8DplEey4z-B8qvhcUg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_c2eZgDplEey4z-B8qvhcUg" memberEnd="_c2fAkjplEey4z-B8qvhcUg _c2fnoDplEey4z-B8qvhcUg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_c2fAkDplEey4z-B8qvhcUg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_c2fAkTplEey4z-B8qvhcUg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_c2fAkjplEey4z-B8qvhcUg" name="beeinträchtigung melden" type="_bSNcUDpjEey4z-B8qvhcUg" association="_c2eZgDplEey4z-B8qvhcUg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_c2fnoDplEey4z-B8qvhcUg" name="registrierte bürger" type="_sKPbUDphEey4z-B8qvhcUg" association="_c2eZgDplEey4z-B8qvhcUg"/>
-      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_dwET8DplEey4z-B8qvhcUg" memberEnd="_dwE7ADplEey4z-B8qvhcUg _dwE7ATplEey4z-B8qvhcUg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dwET8TplEey4z-B8qvhcUg" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dwET8jplEey4z-B8qvhcUg" key="nature" value="UML_Nature"/>
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_dwE7ADplEey4z-B8qvhcUg" name="auf wetterinformationen zugreifen" type="_a0xu4DpiEey4z-B8qvhcUg" association="_dwET8DplEey4z-B8qvhcUg"/>
         <ownedEnd xmi:type="uml:Property" xmi:id="_dwE7ATplEey4z-B8qvhcUg" name="planer" type="_t_ZmIDphEey4z-B8qvhcUg" association="_dwET8DplEey4z-B8qvhcUg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_eWieEDplEey4z-B8qvhcUg" memberEnd="_eWjFIjplEey4z-B8qvhcUg _eWjFIzplEey4z-B8qvhcUg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_eWjFIDplEey4z-B8qvhcUg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_eWjFITplEey4z-B8qvhcUg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_eWjFIjplEey4z-B8qvhcUg" name="beeinträchtigungsliste anzeigen lassen" type="_cuUqcDpiEey4z-B8qvhcUg" association="_eWieEDplEey4z-B8qvhcUg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_eWjFIzplEey4z-B8qvhcUg" name="planer" type="_t_ZmIDphEey4z-B8qvhcUg" association="_eWieEDplEey4z-B8qvhcUg"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_fAG_gDplEey4z-B8qvhcUg" memberEnd="_fAHmkjplEey4z-B8qvhcUg _fAHmkzplEey4z-B8qvhcUg">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fAHmkDplEey4z-B8qvhcUg" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fAHmkTplEey4z-B8qvhcUg" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_fAHmkjplEey4z-B8qvhcUg" name="auf die informationen einer bestimmten beeinträchtigung zugreifen" type="_5dXo0DpiEey4z-B8qvhcUg" association="_fAG_gDplEey4z-B8qvhcUg"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_fAHmkzplEey4z-B8qvhcUg" name="planer" type="_t_ZmIDphEey4z-B8qvhcUg" association="_fAG_gDplEey4z-B8qvhcUg"/>
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_at4SIDphEey4z-B8qvhcUg" name="Dialogmodell">
@@ -590,6 +537,118 @@
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_usyzkDtREeypb5NCdoRaHw"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_us-ZwDtREeypb5NCdoRaHw" value="*"/>
         </ownedEnd>
+      </packagedElement>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_ucs3MDtTEey6C_PYBV11kA" name="Use Case Diagramm">
+      <packagedElement xmi:type="uml:Actor" xmi:id="_pQ0LsDtUEey6C_PYBV11kA" name="Registrierte Bürger"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_pQ0ywDtUEey6C_PYBV11kA" name="Straßenzustandsbericht anfordern">
+        <include xmi:type="uml:Include" xmi:id="_pQ0ywTtUEey6C_PYBV11kA" addition="_pQ0ywjtUEey6C_PYBV11kA"/>
+        <include xmi:type="uml:Include" xmi:id="__rAg0DtUEey6C_PYBV11kA" addition="_pQ0ywjtUEey6C_PYBV11kA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_pQ0ywjtUEey6C_PYBV11kA" name="Prognose erhalten">
+        <include xmi:type="uml:Include" xmi:id="_pQ0ywztUEey6C_PYBV11kA" addition="_pQ2A5DtUEey6C_PYBV11kA"/>
+        <include xmi:type="uml:Include" xmi:id="_pQ0yxDtUEey6C_PYBV11kA" addition="_RDkMIDplEey4z-B8qvhcUg"/>
+        <include xmi:type="uml:Include" xmi:id="_IfVdMDtVEey6C_PYBV11kA" addition="_pQ2A5DtUEey6C_PYBV11kA"/>
+        <include xmi:type="uml:Include" xmi:id="_KU9soDtWEey6C_PYBV11kA" addition="_HQU28DtWEey6C_PYBV11kA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_pQ1Z0DtUEey6C_PYBV11kA" name="Beeinträchtigungsliste anzeigen lassen"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_pQ1Z0TtUEey6C_PYBV11kA" name="auf die Informationen einer bestimmten Beeinträchtigung zugreifen"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_pQ1Z0jtUEey6C_PYBV11kA" name="Beeinträchtigung melden">
+        <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_C-56gDtVEey6C_PYBV11kA" name="ExtensionPoint1"/>
+        <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_DlHl8DtVEey6C_PYBV11kA" name="ExtensionPoint2"/>
+        <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_EDSvsTtVEey6C_PYBV11kA" name="ExtensionPoint3"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_pQ1Z0ztUEey6C_PYBV11kA" name="GPS-Position automatisch eingeben lassen">
+        <extend xmi:type="uml:Extend" xmi:id="_C-5TcDtVEey6C_PYBV11kA" extendedCase="_pQ1Z0jtUEey6C_PYBV11kA" extensionLocation="_C-56gDtVEey6C_PYBV11kA"/>
+        <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_pQ1Z1DtUEey6C_PYBV11kA" name="ExtensionPoint1"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_pQ2A4DtUEey6C_PYBV11kA" name="Textuelle Ortsbeschreibung hinzufügen">
+        <extend xmi:type="uml:Extend" xmi:id="_DlG-4DtVEey6C_PYBV11kA" extendedCase="_pQ1Z0jtUEey6C_PYBV11kA" extensionLocation="_DlHl8DtVEey6C_PYBV11kA"/>
+        <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_pQ2A4TtUEey6C_PYBV11kA" name="ExtensionPoint1"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_pQ2A4jtUEey6C_PYBV11kA" name="Als Standardbeeinträchtigung festlegen">
+        <extend xmi:type="uml:Extend" xmi:id="_EDSvsDtVEey6C_PYBV11kA" extendedCase="_pQ1Z0jtUEey6C_PYBV11kA" extensionLocation="_EDSvsTtVEey6C_PYBV11kA"/>
+        <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_pQ2A4ztUEey6C_PYBV11kA" name="ExtensionPoint1"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_pQ2A5DtUEey6C_PYBV11kA" name="&lt;&lt;Service >> Einsatzpläne abrufen"/>
+      <packagedElement xmi:type="uml:Actor" xmi:id="_s_DYADtUEey6C_PYBV11kA" name="Planer"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_7p1xcDtUEey6C_PYBV11kA" memberEnd="_7p3moDtUEey6C_PYBV11kA _7p3moTtUEey6C_PYBV11kA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7p2_kDtUEey6C_PYBV11kA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7p2_kTtUEey6C_PYBV11kA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_7p3moDtUEey6C_PYBV11kA" name="beeinträchtigungsliste anzeigen lassen" type="_pQ1Z0DtUEey6C_PYBV11kA" association="_7p1xcDtUEey6C_PYBV11kA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_7p3moTtUEey6C_PYBV11kA" name="planer" type="_s_DYADtUEey6C_PYBV11kA" association="_7p1xcDtUEey6C_PYBV11kA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_8Fz7wDtUEey6C_PYBV11kA" memberEnd="_8F0i0TtUEey6C_PYBV11kA _8F0i0jtUEey6C_PYBV11kA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8Fz7wTtUEey6C_PYBV11kA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8F0i0DtUEey6C_PYBV11kA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_8F0i0TtUEey6C_PYBV11kA" name="auf die informationen einer bestimmten beeinträchtigung zugreifen" type="_pQ1Z0TtUEey6C_PYBV11kA" association="_8Fz7wDtUEey6C_PYBV11kA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_8F0i0jtUEey6C_PYBV11kA" type="_7p1xcDtUEey6C_PYBV11kA" association="_8Fz7wDtUEey6C_PYBV11kA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_8oKa4DtUEey6C_PYBV11kA" memberEnd="_8oLB8DtUEey6C_PYBV11kA _8oLB8TtUEey6C_PYBV11kA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8oKa4TtUEey6C_PYBV11kA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8oKa4jtUEey6C_PYBV11kA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_8oLB8DtUEey6C_PYBV11kA" name="straßenzustandsbericht anfordern" type="_pQ0ywDtUEey6C_PYBV11kA" association="_8oKa4DtUEey6C_PYBV11kA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_8oLB8TtUEey6C_PYBV11kA" name="registrierte bürger" type="_pQ0LsDtUEey6C_PYBV11kA" association="_8oKa4DtUEey6C_PYBV11kA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_9OA58DtUEey6C_PYBV11kA" memberEnd="_9OA58ztUEey6C_PYBV11kA _9OBhADtUEey6C_PYBV11kA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_9OA58TtUEey6C_PYBV11kA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_9OA58jtUEey6C_PYBV11kA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_9OA58ztUEey6C_PYBV11kA" name="beeinträchtigung melden" type="_pQ1Z0jtUEey6C_PYBV11kA" association="_9OA58DtUEey6C_PYBV11kA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_9OBhADtUEey6C_PYBV11kA" type="_pQ0LsDtUEey6C_PYBV11kA" association="_9OA58DtUEey6C_PYBV11kA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_HQU28DtWEey6C_PYBV11kA" name="&lt;&lt; Service >> Wetterinformationen abrufen"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Package" xmi:id="_H2ETMDtUEey6C_PYBV11kA" name="Dialogmodell">
+      <packagedElement xmi:type="uml:Class" xmi:id="_TcVWQDtVEey6C_PYBV11kA" name="Menü">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_qdSJYztVEey6C_PYBV11kA" name="beeinträchtigungsmaske" type="_ZsfswDtVEey6C_PYBV11kA" association="_qdSJYDtVEey6C_PYBV11kA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qdUloDtVEey6C_PYBV11kA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qdWa0DtVEey6C_PYBV11kA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_tYZPojtVEey6C_PYBV11kA" name="beeinträchtigungsübersicht" type="_bjUEcDtVEey6C_PYBV11kA" association="_tYYokDtVEey6C_PYBV11kA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tYZPoztVEey6C_PYBV11kA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tYZPpDtVEey6C_PYBV11kA" value="1"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_w2rUYjtVEey6C_PYBV11kA" name="statusinformation/prognose" type="_fbDyEDtVEey6C_PYBV11kA" association="_w2qtUDtVEey6C_PYBV11kA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w2rUYztVEey6C_PYBV11kA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w2r7cDtVEey6C_PYBV11kA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ZsfswDtVEey6C_PYBV11kA" name="Beeinträchtigungsmaske"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_bjUEcDtVEey6C_PYBV11kA" name="Beeinträchtigungsübersicht">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_uzU8kDtVEey6C_PYBV11kA" name="beeinträchtigungsdetails" type="_diEQIDtVEey6C_PYBV11kA" association="_uzUVgDtVEey6C_PYBV11kA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uzU8kTtVEey6C_PYBV11kA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uzU8kjtVEey6C_PYBV11kA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_diEQIDtVEey6C_PYBV11kA" name="Beeinträchtigungsdetails"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_fbDyEDtVEey6C_PYBV11kA" name="Statusinformation/Prognose"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_qdSJYDtVEey6C_PYBV11kA" name="Beeinträchtigungen melden klicken" memberEnd="_qdSJYztVEey6C_PYBV11kA _qdXo8DtVEey6C_PYBV11kA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qdSJYTtVEey6C_PYBV11kA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qdSJYjtVEey6C_PYBV11kA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_qdXo8DtVEey6C_PYBV11kA" name="menü" type="_TcVWQDtVEey6C_PYBV11kA" association="_qdSJYDtVEey6C_PYBV11kA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_tYYokDtVEey6C_PYBV11kA" name="Beeinträchtigungen klicken" memberEnd="_tYZPojtVEey6C_PYBV11kA _tYZPpTtVEey6C_PYBV11kA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tYZPoDtVEey6C_PYBV11kA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tYZPoTtVEey6C_PYBV11kA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_tYZPpTtVEey6C_PYBV11kA" name="menü" type="_TcVWQDtVEey6C_PYBV11kA" association="_tYYokDtVEey6C_PYBV11kA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_uzUVgDtVEey6C_PYBV11kA" name="Auf eine Beeinträchtigung klicken" memberEnd="_uzU8kDtVEey6C_PYBV11kA _uzU8kztVEey6C_PYBV11kA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uzUVgTtVEey6C_PYBV11kA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uzUVgjtVEey6C_PYBV11kA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_uzU8kztVEey6C_PYBV11kA" name="beeinträchtigungsübersicht" type="_bjUEcDtVEey6C_PYBV11kA" association="_uzUVgDtVEey6C_PYBV11kA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_w2qtUDtVEey6C_PYBV11kA" name="Straßenzustandsbericht klicken" memberEnd="_w2rUYjtVEey6C_PYBV11kA _w2r7cTtVEey6C_PYBV11kA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_w2rUYDtVEey6C_PYBV11kA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_w2rUYTtVEey6C_PYBV11kA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_w2r7cTtVEey6C_PYBV11kA" name="menü" type="_TcVWQDtVEey6C_PYBV11kA" association="_w2qtUDtVEey6C_PYBV11kA"/>
       </packagedElement>
     </packagedElement>
   </packagedElement>
