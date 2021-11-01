@@ -342,7 +342,12 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_ZIPKADphEey4z-B8qvhcUg" name="Use Case Diagramm">
       <packagedElement xmi:type="uml:Actor" xmi:id="_t_ZmIDphEey4z-B8qvhcUg" name="Planer"/>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_a0xu4DpiEey4z-B8qvhcUg" name="Auf Wetterinformationen zugreifen"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_a0xu4DpiEey4z-B8qvhcUg" name="Auf Wetterinformationen zugreifen">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_VLiGMDtZEeyjaqntQmxoiA">
+          <body>Vorbedingung: der Benutzer ist angemeldet und ein Planer&#xD;
+Beschreibung: Der Benutzer klick auf die Taste &quot;Wetterinformationen&quot;. Dann wird eine Liste von meteorologische Daten und Straßenzustandsdaten der Straßenwetterstationen angezeigt</body>
+        </ownedComment>
+      </packagedElement>
       <packagedElement xmi:type="uml:UseCase" xmi:id="_RDkMIDplEey4z-B8qvhcUg" name="&lt;&lt; Service >> Wetterinformationen abrufen"/>
       <packagedElement xmi:type="uml:Association" xmi:id="_dwET8DplEey4z-B8qvhcUg" memberEnd="_dwE7ADplEey4z-B8qvhcUg _dwE7ATplEey4z-B8qvhcUg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dwET8TplEey4z-B8qvhcUg" source="org.eclipse.papyrus">
@@ -555,6 +560,9 @@
     <packagedElement xmi:type="uml:Package" xmi:id="_ucs3MDtTEey6C_PYBV11kA" name="Use Case Diagramm">
       <packagedElement xmi:type="uml:Actor" xmi:id="_pQ0LsDtUEey6C_PYBV11kA" name="Registrierte Bürger"/>
       <packagedElement xmi:type="uml:UseCase" xmi:id="_pQ0ywDtUEey6C_PYBV11kA" name="Straßenzustandsbericht anfordern">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Q8TssDtZEeyjaqntQmxoiA">
+          <body>Beschreibung: Der Benutzer klick auf die Taste &quot;Straßenszustand&quot;. Dann greift das System auf die Einsatzpläne zu und liefert die Informationen, welcher Streckenabschnitt wann zuletzt geräumt  und gestreut wurde. Außerdem greift das System auf die Wetterinformationen und Informationen der Einsatzpläne zu. Basierend auf die Wetterinformationen und Informationen der Einsatzpläne werden eine Prognose an den Benutzer geliefert	</body>
+        </ownedComment>
         <include xmi:type="uml:Include" xmi:id="_pQ0ywTtUEey6C_PYBV11kA" addition="_pQ0ywjtUEey6C_PYBV11kA"/>
         <include xmi:type="uml:Include" xmi:id="__rAg0DtUEey6C_PYBV11kA" addition="_pQ0ywjtUEey6C_PYBV11kA"/>
       </packagedElement>
@@ -564,9 +572,23 @@
         <include xmi:type="uml:Include" xmi:id="_IfVdMDtVEey6C_PYBV11kA" addition="_pQ2A5DtUEey6C_PYBV11kA"/>
         <include xmi:type="uml:Include" xmi:id="_KU9soDtWEey6C_PYBV11kA" addition="_HQU28DtWEey6C_PYBV11kA"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_pQ1Z0DtUEey6C_PYBV11kA" name="Beeinträchtigungsliste anzeigen lassen"/>
-      <packagedElement xmi:type="uml:UseCase" xmi:id="_pQ1Z0TtUEey6C_PYBV11kA" name="auf die Informationen einer bestimmten Beeinträchtigung zugreifen"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_pQ1Z0DtUEey6C_PYBV11kA" name="Beeinträchtigungsliste anzeigen lassen">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_JZNusDtZEeyjaqntQmxoiA">
+          <body>Vorbedingung: der Benutzer ist ein Planer &#xD;
+Beschreibung: der Benutzer klick auf die Taste &quot;Beeinträchtigungsliste&quot;. Dann wird eine Liste von Beeinträchtigungen angezeigt</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_pQ1Z0TtUEey6C_PYBV11kA" name="auf die Informationen einer bestimmten Beeinträchtigung zugreifen">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Hc2vsDtZEeyjaqntQmxoiA">
+          <body>Vorbedingung: der Benutzer ist ein Planer &#xD;
+Beschreibung: Der Planer klick auf die Taste &quot;Beeinträchtigungsliste&quot;. Dann wird eine Liste von Beeinträchtigungen angezeigt. Der Benutzer kann eine Beeinträchtigung auswählen und wird zu eine Form geleitet, die die Informationen der Beeinträchtigungen anzeigt.</body>
+        </ownedComment>
+      </packagedElement>
       <packagedElement xmi:type="uml:UseCase" xmi:id="_pQ1Z0jtUEey6C_PYBV11kA" name="Beeinträchtigung melden">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Kl49MDtZEeyjaqntQmxoiA">
+          <body>Vorbedingung: der Benutzer ist angemeldet &#xD;
+Beschreibung: Der Benutzer klick auf die Taste &quot;Beeinträchtigung melden&quot; und wird an einer Form geleitet, wo der Benutzer die Möglichkeit hat, GPS-Position automatisch eingeben zu lassen oder eine textuelle Ortsbeschreibung hinzuzufügen oder Schneesituation festzulegen</body>
+        </ownedComment>
         <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_C-56gDtVEey6C_PYBV11kA" name="ExtensionPoint1"/>
         <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_DlHl8DtVEey6C_PYBV11kA" name="ExtensionPoint2"/>
         <extensionPoint xmi:type="uml:ExtensionPoint" xmi:id="_EDSvsTtVEey6C_PYBV11kA" name="ExtensionPoint3"/>
@@ -597,7 +619,7 @@
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8F0i0DtUEey6C_PYBV11kA" key="nature" value="UML_Nature"/>
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_8F0i0TtUEey6C_PYBV11kA" name="auf die informationen einer bestimmten beeinträchtigung zugreifen" type="_pQ1Z0TtUEey6C_PYBV11kA" association="_8Fz7wDtUEey6C_PYBV11kA"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_8F0i0jtUEey6C_PYBV11kA" type="_7p1xcDtUEey6C_PYBV11kA" association="_8Fz7wDtUEey6C_PYBV11kA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_8F0i0jtUEey6C_PYBV11kA" type="_s_DYADtUEey6C_PYBV11kA" association="_8Fz7wDtUEey6C_PYBV11kA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_8oKa4DtUEey6C_PYBV11kA" memberEnd="_8oLB8DtUEey6C_PYBV11kA _8oLB8TtUEey6C_PYBV11kA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8oKa4TtUEey6C_PYBV11kA" source="org.eclipse.papyrus">
@@ -614,6 +636,64 @@
         <ownedEnd xmi:type="uml:Property" xmi:id="_9OBhADtUEey6C_PYBV11kA" type="_pQ0LsDtUEey6C_PYBV11kA" association="_9OA58DtUEey6C_PYBV11kA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:UseCase" xmi:id="_HQU28DtWEey6C_PYBV11kA" name="&lt;&lt; Service >> Wetterinformationen abrufen"/>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_tPKo4DtaEeyjaqntQmxoiA" name="Anmelden">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_j73cEDtbEeyjaqntQmxoiA">
+          <body>Beschreibung: Der Benutzer gibt den Benutzername und das Passwort ein und dann klickt auf die Taste &quot;Anmelden&quot;. Das System überprüft, ob der eingegebene Benutzer und das dazugehörende Passwort gültig sind. Wenn ja, dann ist der Benutzer eingeloggt. Wenn nein, wird die Fehlermeldung angezeigt.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_uVMc0DtaEeyjaqntQmxoiA" name="Abmelden">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_itVMYDtbEeyjaqntQmxoiA">
+          <body>Vorbedingung: der Benutzer ist angemeldet&#xD;
+Beschreibung: Der Benutzer klickt auf die Taste &quot;Abmelden&quot;. Dann wird der Benutzer zu dem Anmeldungsform geleitet.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:UseCase" xmi:id="_vAv7QDtaEeyjaqntQmxoiA" name="Registrieren">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_hdDQQDtbEeyjaqntQmxoiA">
+          <body>Beschreibung: Der Benutzer klickt auf die Taste &quot;Registrieren&quot;. Dann wird eine Form zur Registrierung geöffnet, wo der Benutzer die benötigten Daten eingeben muss. Nach der Eingabe klick der Benutzer auf die Taste &quot;Speichern&quot;. Dann wird ein Benutzer in dem System angelegt.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_yLhOIDtaEeyjaqntQmxoiA" memberEnd="_yLh1MTtaEeyjaqntQmxoiA _yLh1MjtaEeyjaqntQmxoiA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_yLhOITtaEeyjaqntQmxoiA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_yLh1MDtaEeyjaqntQmxoiA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_yLh1MTtaEeyjaqntQmxoiA" name="anmelden" type="_tPKo4DtaEeyjaqntQmxoiA" association="_yLhOIDtaEeyjaqntQmxoiA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_yLh1MjtaEeyjaqntQmxoiA" type="_8oKa4DtUEey6C_PYBV11kA" association="_yLhOIDtaEeyjaqntQmxoiA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_5QnokDtaEeyjaqntQmxoiA" memberEnd="_5QoPojtaEeyjaqntQmxoiA _5QoPoztaEeyjaqntQmxoiA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5QoPoDtaEeyjaqntQmxoiA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5QoPoTtaEeyjaqntQmxoiA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_5QoPojtaEeyjaqntQmxoiA" name="registrieren" type="_vAv7QDtaEeyjaqntQmxoiA" association="_5QnokDtaEeyjaqntQmxoiA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_5QoPoztaEeyjaqntQmxoiA" type="_pQ0LsDtUEey6C_PYBV11kA" association="_5QnokDtaEeyjaqntQmxoiA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_83rO0DtaEeyjaqntQmxoiA" memberEnd="_83r14jtaEeyjaqntQmxoiA _83r14ztaEeyjaqntQmxoiA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_83r14DtaEeyjaqntQmxoiA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_83r14TtaEeyjaqntQmxoiA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_83r14jtaEeyjaqntQmxoiA" name="abmelden" type="_uVMc0DtaEeyjaqntQmxoiA" association="_83rO0DtaEeyjaqntQmxoiA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_83r14ztaEeyjaqntQmxoiA" type="_5QnokDtaEeyjaqntQmxoiA" association="_83rO0DtaEeyjaqntQmxoiA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_GjEWEDtbEeyjaqntQmxoiA" memberEnd="_GjFkMTtbEeyjaqntQmxoiA _GjFkMjtbEeyjaqntQmxoiA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GjE9IDtbEeyjaqntQmxoiA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GjFkMDtbEeyjaqntQmxoiA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_GjFkMTtbEeyjaqntQmxoiA" name="abmelden" type="_uVMc0DtaEeyjaqntQmxoiA" association="_GjEWEDtbEeyjaqntQmxoiA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_GjFkMjtbEeyjaqntQmxoiA" type="_s_DYADtUEey6C_PYBV11kA" association="_GjEWEDtbEeyjaqntQmxoiA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_OFuPMDtbEeyjaqntQmxoiA" memberEnd="_OFu2QjtbEeyjaqntQmxoiA _OFvdUDtbEeyjaqntQmxoiA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OFu2QDtbEeyjaqntQmxoiA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OFu2QTtbEeyjaqntQmxoiA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_OFu2QjtbEeyjaqntQmxoiA" name="anmelden" type="_tPKo4DtaEeyjaqntQmxoiA" association="_OFuPMDtbEeyjaqntQmxoiA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_OFvdUDtbEeyjaqntQmxoiA" type="_s_DYADtUEey6C_PYBV11kA" association="_OFuPMDtbEeyjaqntQmxoiA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_R7PvQDtbEeyjaqntQmxoiA" memberEnd="_R7QWUjtbEeyjaqntQmxoiA _R7Q9YDtbEeyjaqntQmxoiA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_R7QWUDtbEeyjaqntQmxoiA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_R7QWUTtbEeyjaqntQmxoiA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_R7QWUjtbEeyjaqntQmxoiA" name="registrieren" type="_vAv7QDtaEeyjaqntQmxoiA" association="_R7PvQDtbEeyjaqntQmxoiA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_R7Q9YDtbEeyjaqntQmxoiA" name="planer" type="_s_DYADtUEey6C_PYBV11kA" association="_R7PvQDtbEeyjaqntQmxoiA"/>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_H2ETMDtUEey6C_PYBV11kA" name="Dialogmodell">
       <packagedElement xmi:type="uml:Class" xmi:id="_TcVWQDtVEey6C_PYBV11kA" name="Menü">
@@ -623,10 +703,6 @@
         <ownedAttribute xmi:type="uml:Property" xmi:id="_qdSJYztVEey6C_PYBV11kA" name="beeinträchtigungsmaske" type="_ZsfswDtVEey6C_PYBV11kA" association="_qdSJYDtVEey6C_PYBV11kA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qdUloDtVEey6C_PYBV11kA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qdWa0DtVEey6C_PYBV11kA" value="1"/>
-        </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_tYZPojtVEey6C_PYBV11kA" name="beeinträchtigungsübersicht" type="_bjUEcDtVEey6C_PYBV11kA" association="_tYYokDtVEey6C_PYBV11kA">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_tYZPoztVEey6C_PYBV11kA"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_tYZPpDtVEey6C_PYBV11kA" value="1"/>
         </ownedAttribute>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_w2rUYjtVEey6C_PYBV11kA" name="statusinformation/prognose" type="_fbDyEDtVEey6C_PYBV11kA" association="_w2qtUDtVEey6C_PYBV11kA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_w2rUYztVEey6C_PYBV11kA"/>
@@ -663,12 +739,6 @@
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_qdXo8DtVEey6C_PYBV11kA" name="menü" type="_TcVWQDtVEey6C_PYBV11kA" association="_qdSJYDtVEey6C_PYBV11kA"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_tYYokDtVEey6C_PYBV11kA" name="Beeinträchtigungen klicken" memberEnd="_tYZPojtVEey6C_PYBV11kA _tYZPpTtVEey6C_PYBV11kA">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tYZPoDtVEey6C_PYBV11kA" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tYZPoTtVEey6C_PYBV11kA" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_tYZPpTtVEey6C_PYBV11kA" name="menü" type="_TcVWQDtVEey6C_PYBV11kA" association="_tYYokDtVEey6C_PYBV11kA"/>
-      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_uzUVgDtVEey6C_PYBV11kA" name="Auf eine Beeinträchtigung klicken" memberEnd="_uzU8kDtVEey6C_PYBV11kA _uzU8kztVEey6C_PYBV11kA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_uzUVgTtVEey6C_PYBV11kA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_uzUVgjtVEey6C_PYBV11kA" key="nature" value="UML_Nature"/>
@@ -680,6 +750,39 @@
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_w2rUYTtVEey6C_PYBV11kA" key="nature" value="UML_Nature"/>
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_w2r7cTtVEey6C_PYBV11kA" name="menü" type="_TcVWQDtVEey6C_PYBV11kA" association="_w2qtUDtVEey6C_PYBV11kA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_25o_kDtZEeyjaqntQmxoiA" name="Anmelden">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_Kbf1ojtaEeyjaqntQmxoiA" name="registrieren" type="_4X_z8DtZEeyjaqntQmxoiA" association="_KbfOkDtaEeyjaqntQmxoiA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_KbgcsDtaEeyjaqntQmxoiA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_KbgcsTtaEeyjaqntQmxoiA" value="1"/>
+        </ownedAttribute>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_4X_z8DtZEeyjaqntQmxoiA" name="Registrieren"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_EhHh4DtaEeyjaqntQmxoiA" name="Anmeldung klicken" memberEnd="_EhKlMDtaEeyjaqntQmxoiA _EhLzUDtaEeyjaqntQmxoiA" navigableOwnedEnd="_EhKlMDtaEeyjaqntQmxoiA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_EhJXEDtaEeyjaqntQmxoiA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_EhJXETtaEeyjaqntQmxoiA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_EhKlMDtaEeyjaqntQmxoiA" name="anmelden" type="_25o_kDtZEeyjaqntQmxoiA" association="_EhHh4DtaEeyjaqntQmxoiA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_EhLMQDtaEeyjaqntQmxoiA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EhLMQTtaEeyjaqntQmxoiA" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_EhLzUDtaEeyjaqntQmxoiA" name="straßenzustandsbericht klicken" type="_TcVWQDtVEey6C_PYBV11kA" association="_EhHh4DtaEeyjaqntQmxoiA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_KbfOkDtaEeyjaqntQmxoiA" name="Registrieren klicken" memberEnd="_Kbf1ojtaEeyjaqntQmxoiA _KbhDwDtaEeyjaqntQmxoiA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Kbf1oDtaEeyjaqntQmxoiA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Kbf1oTtaEeyjaqntQmxoiA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_KbhDwDtaEeyjaqntQmxoiA" name="anmelden" type="_25o_kDtZEeyjaqntQmxoiA" association="_KbfOkDtaEeyjaqntQmxoiA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_YSLRkDtaEeyjaqntQmxoiA" name="Beeinträchtigungen klicken" memberEnd="_YSNGwTtaEeyjaqntQmxoiA _YSNt0TtaEeyjaqntQmxoiA" navigableOwnedEnd="_YSNGwTtaEeyjaqntQmxoiA">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_YSMfsDtaEeyjaqntQmxoiA" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_YSNGwDtaEeyjaqntQmxoiA" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_YSNGwTtaEeyjaqntQmxoiA" name="beeinträchtigungsübersicht" type="_bjUEcDtVEey6C_PYBV11kA" association="_YSLRkDtaEeyjaqntQmxoiA">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_YSNGwjtaEeyjaqntQmxoiA"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YSNt0DtaEeyjaqntQmxoiA" value="1"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_YSNt0TtaEeyjaqntQmxoiA" type="_TcVWQDtVEey6C_PYBV11kA" association="_YSLRkDtaEeyjaqntQmxoiA"/>
       </packagedElement>
     </packagedElement>
   </packagedElement>
