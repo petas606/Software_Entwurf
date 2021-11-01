@@ -227,15 +227,29 @@
         <ownedEnd xmi:type="uml:Property" xmi:id="_qFNRIDsUEeyZ9b2ZM8s6eA" name="planer" type="_PBG0IDdPEeybi6alUDIscQ" association="_qFK04DsUEeyZ9b2ZM8s6eA"/>
       </packagedElement>
     </packagedElement>
-    <packagedElement xmi:type="uml:Package" xmi:id="_MO4kMDGpEeyIEsk3z-dEFw" name="Dialogmodell">
+    <packagedElement xmi:type="uml:Package" xmi:id="_MO4kMDGpEeyIEsk3z-dEFw" name="Dialogmodell" visibility="public">
       <packagedElement xmi:type="uml:Class" xmi:id="_ASxwcDseEeyZ9b2ZM8s6eA" name="Menü">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_Xp4C0DtXEey7U8BfMuf7Vw">
+          <body>Der zentrale Platz, wo man zu anderen Dialogen navigieren kann. Außerdem kann man anmelden oder die Straßenzustandsbericht abrufen.</body>
+        </ownedComment>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_GkeYAjseEeyZ9b2ZM8s6eA" type="_BJmDsDseEeyZ9b2ZM8s6eA" association="_Gkdw8DseEeyZ9b2ZM8s6eA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_BJmDsDseEeyZ9b2ZM8s6eA" name="Einsatzplanübersicht">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_gFp8UDtXEey7U8BfMuf7Vw">
+          <body>Die Übersicht, wo der Planer alle Einsatzplaner sehen können. Beim Auswahl eines Einsatzplans kann der Planer alle Informationen einer ausgewählten Beeinträchtigung ansehen oder bearbeiten. Beim Klicken der Taste &quot;Einsatzplan anlegen&quot; kann der Planer den Einsatzplan anlegen.</body>
+        </ownedComment>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_LoH4EjseEeyZ9b2ZM8s6eA" type="_C0OZgDseEeyZ9b2ZM8s6eA" association="_LoHRADseEeyZ9b2ZM8s6eA"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_C0OZgDseEeyZ9b2ZM8s6eA" name="Einsatzplanmaske"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_DxPbYDseEeyZ9b2ZM8s6eA" name="Einsatzplansbearbeitungsmaske"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_C0OZgDseEeyZ9b2ZM8s6eA" name="Einsatzplanmaske">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_ivcCADtXEey7U8BfMuf7Vw">
+          <body>Die Maske zum Anlegen eines Einsatzplan. Hier muss der Planer benötige Daten eingeben. Nach der Eingabe werden überprüft, ob die EIngabe gültig ist.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_DxPbYDseEeyZ9b2ZM8s6eA" name="Einsatzplansbearbeitungsmaske">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_k-D1sDtXEey7U8BfMuf7Vw">
+          <body>Die Maske zum Bearbeiten eines Standard Einsatzplan. Hier kann der Planer Autobahnabschnitte, die Personen und Fahrzeuge zuordnen, den Plan aufteilen.</body>
+        </ownedComment>
+      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_Gkdw8DseEeyZ9b2ZM8s6eA" name="Einsatzplanübersicht klicken" memberEnd="_GkeYAjseEeyZ9b2ZM8s6eA _Gke_EjseEeyZ9b2ZM8s6eA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GkeYADseEeyZ9b2ZM8s6eA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GkeYATseEeyZ9b2ZM8s6eA" key="nature" value="UML_Nature"/>
@@ -340,25 +354,24 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_at4SIDphEey4z-B8qvhcUg" name="Dialogmodell">
       <packagedElement xmi:type="uml:Class" xmi:id="_NwRFwDsdEeyZ9b2ZM8s6eA" name="Menü">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_C59owDtYEey7U8BfMuf7Vw">
+          <body>Der zentrale Platz, wo man zu anderen Dialogen navigieren kann. Außerdem kann man anmelden oder die Straßenzustandsbericht abrufen.</body>
+        </ownedComment>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_U6QAMjsdEeyZ9b2ZM8s6eA" name="wetterinformationenübersicht" type="_Pq_tEDsdEeyZ9b2ZM8s6eA" association="_U6PZIDsdEeyZ9b2ZM8s6eA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_U6QnQDsdEeyZ9b2ZM8s6eA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_U6QnQTsdEeyZ9b2ZM8s6eA" value="1"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_Pq_tEDsdEeyZ9b2ZM8s6eA" name="Wetterinformationenübersicht"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_RR-R8DsdEeyZ9b2ZM8s6eA" name="Straßenzustandsbericht/Progonose"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Pq_tEDsdEeyZ9b2ZM8s6eA" name="Wetterinformationenübersicht">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_DpoLIDtYEey7U8BfMuf7Vw">
+          <body>Die Übersicht, wo der Planer Wetterinformationen sehen können.</body>
+        </ownedComment>
+      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_U6PZIDsdEeyZ9b2ZM8s6eA" name="Wetterinformationen klicken" memberEnd="_U6QAMjsdEeyZ9b2ZM8s6eA _U6QnQjsdEeyZ9b2ZM8s6eA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_U6QAMDsdEeyZ9b2ZM8s6eA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_U6QAMTsdEeyZ9b2ZM8s6eA" key="nature" value="UML_Nature"/>
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_U6QnQjsdEeyZ9b2ZM8s6eA" name="menü" type="_NwRFwDsdEeyZ9b2ZM8s6eA" association="_U6PZIDsdEeyZ9b2ZM8s6eA"/>
-      </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_VlhKwDsdEeyZ9b2ZM8s6eA" name="Straßenzustandsbericht klicken" memberEnd="_Vlhx0jsdEeyZ9b2ZM8s6eA _VliY4jsdEeyZ9b2ZM8s6eA" navigableOwnedEnd="_Vlhx0jsdEeyZ9b2ZM8s6eA">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Vlhx0DsdEeyZ9b2ZM8s6eA" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Vlhx0TsdEeyZ9b2ZM8s6eA" key="nature" value="UML_Nature"/>
-        </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_Vlhx0jsdEeyZ9b2ZM8s6eA" type="_RR-R8DsdEeyZ9b2ZM8s6eA" association="_VlhKwDsdEeyZ9b2ZM8s6eA"/>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_VliY4jsdEeyZ9b2ZM8s6eA" type="_NwRFwDsdEeyZ9b2ZM8s6eA" association="_VlhKwDsdEeyZ9b2ZM8s6eA"/>
       </packagedElement>
     </packagedElement>
   </packagedElement>
@@ -604,6 +617,9 @@
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_H2ETMDtUEey6C_PYBV11kA" name="Dialogmodell">
       <packagedElement xmi:type="uml:Class" xmi:id="_TcVWQDtVEey6C_PYBV11kA" name="Menü">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_IhrfMDtYEey7U8BfMuf7Vw">
+          <body>Der zentrale Platz, wo man zu anderen Dialogen navigieren kann. Außerdem kann man anmelden oder die Straßenzustandsbericht abrufen.</body>
+        </ownedComment>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_qdSJYztVEey6C_PYBV11kA" name="beeinträchtigungsmaske" type="_ZsfswDtVEey6C_PYBV11kA" association="_qdSJYDtVEey6C_PYBV11kA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qdUloDtVEey6C_PYBV11kA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_qdWa0DtVEey6C_PYBV11kA" value="1"/>
@@ -617,15 +633,30 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_w2r7cDtVEey6C_PYBV11kA" value="1"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_ZsfswDtVEey6C_PYBV11kA" name="Beeinträchtigungsmaske"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_ZsfswDtVEey6C_PYBV11kA" name="Beeinträchtigungsmaske">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_LqGosDtYEey7U8BfMuf7Vw">
+          <body>Die Maske zum Anlegen einer Beeinträchtigung. Hier hat der Benutzer die Möglichkeit, entweder GPS-Position oder textuelle Beschreibung verwenden, um den Standort der Beeinträchtigung festzulegen.</body>
+        </ownedComment>
+      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_bjUEcDtVEey6C_PYBV11kA" name="Beeinträchtigungsübersicht">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_NPQooDtYEey7U8BfMuf7Vw">
+          <body>Die Übersicht, wo der Planer alle Beeinträchtigungen sehen können. Bei der Auswahl einer Beeinträchtigung kann der Planer alle Informationen einer ausgewählten Beeinträchtigung ansehen</body>
+        </ownedComment>
         <ownedAttribute xmi:type="uml:Property" xmi:id="_uzU8kDtVEey6C_PYBV11kA" name="beeinträchtigungsdetails" type="_diEQIDtVEey6C_PYBV11kA" association="_uzUVgDtVEey6C_PYBV11kA">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_uzU8kTtVEey6C_PYBV11kA"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uzU8kjtVEey6C_PYBV11kA" value="1"/>
         </ownedAttribute>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_diEQIDtVEey6C_PYBV11kA" name="Beeinträchtigungsdetails"/>
-      <packagedElement xmi:type="uml:Class" xmi:id="_fbDyEDtVEey6C_PYBV11kA" name="Statusinformation/Prognose"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_diEQIDtVEey6C_PYBV11kA" name="Beeinträchtigungsdetails">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_RuoW8DtYEey7U8BfMuf7Vw">
+          <body>Die Übersicht, wo der Planer alle Informationen der Beeinträchtigung sehen kann.</body>
+        </ownedComment>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_fbDyEDtVEey6C_PYBV11kA" name="Statusinformation/Prognose">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_J4F4gDtYEey7U8BfMuf7Vw">
+          <body>Die Übersicht, wo der Bürger auf die Informationen zugreifen kann, welcher Streckenabschnitt wann zuletzt geräumt und gestreut wurde. Außerdem werden eine Prognose erstellt.</body>
+        </ownedComment>
+      </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_qdSJYDtVEey6C_PYBV11kA" name="Beeinträchtigungen melden klicken" memberEnd="_qdSJYztVEey6C_PYBV11kA _qdXo8DtVEey6C_PYBV11kA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_qdSJYTtVEey6C_PYBV11kA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_qdSJYjtVEey6C_PYBV11kA" key="nature" value="UML_Nature"/>
