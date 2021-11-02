@@ -228,12 +228,6 @@
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_MO4kMDGpEeyIEsk3z-dEFw" name="Dialogmodell" visibility="public">
-      <packagedElement xmi:type="uml:Class" xmi:id="_ASxwcDseEeyZ9b2ZM8s6eA" name="Menü">
-        <ownedComment xmi:type="uml:Comment" xmi:id="_Xp4C0DtXEey7U8BfMuf7Vw">
-          <body>Der zentrale Platz, wo man zu anderen Dialogen navigieren kann. Außerdem kann man anmelden oder die Straßenzustandsbericht abrufen.</body>
-        </ownedComment>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_GkeYAjseEeyZ9b2ZM8s6eA" type="_BJmDsDseEeyZ9b2ZM8s6eA" association="_Gkdw8DseEeyZ9b2ZM8s6eA"/>
-      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_BJmDsDseEeyZ9b2ZM8s6eA" name="Einsatzplanübersicht">
         <ownedComment xmi:type="uml:Comment" xmi:id="_gFp8UDtXEey7U8BfMuf7Vw">
           <body>Die Übersicht, wo der Planer alle Einsatzplaner sehen können. Beim Auswahl eines Einsatzplans kann der Planer alle Informationen einer ausgewählten Beeinträchtigung ansehen oder bearbeiten. Beim Klicken der Taste &quot;Einsatzplan anlegen&quot; kann der Planer den Einsatzplan anlegen.</body>
@@ -254,7 +248,7 @@
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_GkeYADseEeyZ9b2ZM8s6eA" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_GkeYATseEeyZ9b2ZM8s6eA" key="nature" value="UML_Nature"/>
         </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_Gke_EjseEeyZ9b2ZM8s6eA" type="_ASxwcDseEeyZ9b2ZM8s6eA" association="_Gkdw8DseEeyZ9b2ZM8s6eA"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_Gke_EjseEeyZ9b2ZM8s6eA" type="_JoRY8DwKEeyr_LDKzI9Tog" association="_Gkdw8DseEeyZ9b2ZM8s6eA"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_LoHRADseEeyZ9b2ZM8s6eA" name="Einsatzplan anlegen klicken" memberEnd="_LoH4EjseEeyZ9b2ZM8s6eA _LoIfIjseEeyZ9b2ZM8s6eA">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_LoH4EDseEeyZ9b2ZM8s6eA" source="org.eclipse.papyrus">
@@ -268,6 +262,13 @@
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_MHFE8jseEeyZ9b2ZM8s6eA" type="_DxPbYDseEeyZ9b2ZM8s6eA" association="_MHEd4DseEeyZ9b2ZM8s6eA"/>
         <ownedEnd xmi:type="uml:Property" xmi:id="_MHFsADseEeyZ9b2ZM8s6eA" type="_BJmDsDseEeyZ9b2ZM8s6eA" association="_MHEd4DseEeyZ9b2ZM8s6eA"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_JoRY8DwKEeyr_LDKzI9Tog" name="Menü">
+        <ownedComment xmi:type="uml:Comment" xmi:id="_SkRDkDwKEeyr_LDKzI9Tog">
+          <body>Der zentrale Platz, wo man zu anderen Dialogen navigieren kann. Außerdem kann man anmelden oder die Straßenzustandsbericht abrufen.&#xD;
+</body>
+        </ownedComment>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_GkeYAjseEeyZ9b2ZM8s6eA" type="_BJmDsDseEeyZ9b2ZM8s6eA" isUnique="false" association="_Gkdw8DseEeyZ9b2ZM8s6eA"/>
       </packagedElement>
     </packagedElement>
   </packagedElement>
