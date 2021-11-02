@@ -22,9 +22,6 @@
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_h3UrUDXSEeyzZYMRHSWLtg" name="Einsatzplan">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_D8px4DXTEeyzZYMRHSWLtg" name="EinsatzZeit" type="_i_DvcDXSEeyzZYMRHSWLtg"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_-fWi0jtQEeypb5NCdoRaHw" name="planer" type="_G3wfkDtOEeypb5NCdoRaHw" association="_-fV7wDtQEeypb5NCdoRaHw">
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_16GSUDtSEeypb5NCdoRaHw" value="*"/>
-        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:DataType" xmi:id="_i_DvcDXSEeyzZYMRHSWLtg" name="Einsatzzeit">
         <ownedAttribute xmi:type="uml:Property" xmi:id="_dOLggDXTEeyzZYMRHSWLtg" name="WochenTag" type="_oatDUDXTEeyzZYMRHSWLtg"/>
@@ -228,7 +225,7 @@
       </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_MO4kMDGpEeyIEsk3z-dEFw" name="Dialogmodell" visibility="public">
-      <packagedElement xmi:type="uml:Class" xmi:id="_BJmDsDseEeyZ9b2ZM8s6eA" name="Einsatzplanübersicht">
+      <packagedElement xmi:type="uml:Class" xmi:id="_BJmDsDseEeyZ9b2ZM8s6eA" name="Einsatzplanübersicht" visibility="public">
         <ownedComment xmi:type="uml:Comment" xmi:id="_gFp8UDtXEey7U8BfMuf7Vw">
           <body>Die Übersicht, wo der Planer alle Einsatzplaner sehen können. Beim Auswahl eines Einsatzplans kann der Planer alle Informationen einer ausgewählten Beeinträchtigung ansehen oder bearbeiten. Beim Klicken der Taste &quot;Einsatzplan anlegen&quot; kann der Planer den Einsatzplan anlegen.</body>
         </ownedComment>
@@ -340,6 +337,28 @@
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_7xWL8DdUEeybi6alUDIscQ" value="*"/>
         </ownedEnd>
       </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_cp98sDwUEeyk8Y7CLhK37Q" name="zugreift auf" memberEnd="_cqBnEDwUEeyk8Y7CLhK37Q _cqIUwDwUEeyk8Y7CLhK37Q" navigableOwnedEnd="_cqIUwDwUEeyk8Y7CLhK37Q">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_cqAY8DwUEeyk8Y7CLhK37Q" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_cqAY8TwUEeyk8Y7CLhK37Q" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_cqIUwDwUEeyk8Y7CLhK37Q" type="_G3wfkDtOEeypb5NCdoRaHw" association="_cp98sDwUEeyk8Y7CLhK37Q">
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_EVB8sDwVEeyk8Y7CLhK37Q" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FqbpYDwVEeyk8Y7CLhK37Q" value="*"/>
+        </ownedEnd>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Association" xmi:id="_0fAfMDwUEeyk8Y7CLhK37Q" name="zugreift auf" visibility="package" memberEnd="_0fBGQjwUEeyk8Y7CLhK37Q _0fBGRTwUEeyk8Y7CLhK37Q" navigableOwnedEnd="_0fBGQjwUEeyk8Y7CLhK37Q _0fBGRTwUEeyk8Y7CLhK37Q">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_0fBGQDwUEeyk8Y7CLhK37Q" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_0fBGQTwUEeyk8Y7CLhK37Q" key="nature" value="UML_Nature"/>
+        </eAnnotations>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_0fBGQjwUEeyk8Y7CLhK37Q" type="_ilQaQDXQEeyzZYMRHSWLtg" association="_0fAfMDwUEeyk8Y7CLhK37Q">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_0fBGQzwUEeyk8Y7CLhK37Q"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_0fBGRDwUEeyk8Y7CLhK37Q" value="*"/>
+        </ownedEnd>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_0fBGRTwUEeyk8Y7CLhK37Q" type="_G3wfkDtOEeypb5NCdoRaHw" association="_0fAfMDwUEeyk8Y7CLhK37Q">
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_GXOBcDwWEeyk8Y7CLhK37Q" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Hrr6ADwWEeyk8Y7CLhK37Q" value="*"/>
+        </ownedEnd>
+      </packagedElement>
     </packagedElement>
     <packagedElement xmi:type="uml:Package" xmi:id="_ZIPKADphEey4z-B8qvhcUg" name="Use Case Diagramm">
       <packagedElement xmi:type="uml:Actor" xmi:id="_t_ZmIDphEey4z-B8qvhcUg" name="Planer"/>
@@ -409,7 +428,7 @@ Beschreibung: Der Benutzer klick auf die Taste &quot;Wetterinformationen&quot;. 
         <ownedAttribute xmi:type="uml:Property" xmi:id="_-2wkMDXUEeyzZYMRHSWLtg" name="Salzkapazität">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
         </ownedAttribute>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_mmYVwjciEeybi6alUDIscQ" name="einsatzplan" type="_h3UrUDXSEeyzZYMRHSWLtg" association="_mmXusDciEeybi6alUDIscQ">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_mmYVwjciEeybi6alUDIscQ" type="_h3UrUDXSEeyzZYMRHSWLtg" association="_mmXusDciEeybi6alUDIscQ">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_mmYVwzciEeybi6alUDIscQ"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_mmY80DciEeybi6alUDIscQ" value="*"/>
         </ownedAttribute>
@@ -423,7 +442,7 @@ Beschreibung: Der Benutzer klick auf die Taste &quot;Wetterinformationen&quot;. 
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_V_nLkDXUEeyzZYMRHSWLtg" name="Schneeschleuder">
         <generalization xmi:type="uml:Generalization" xmi:id="_vSXMwDXVEeyzZYMRHSWLtg" general="_P5vZgDXUEeyzZYMRHSWLtg"/>
-        <ownedAttribute xmi:type="uml:Property" xmi:id="_tpa6sjciEeybi6alUDIscQ" name="einsatzplan" type="_h3UrUDXSEeyzZYMRHSWLtg" association="_tpaToDciEeybi6alUDIscQ">
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_tpa6sjciEeybi6alUDIscQ" type="_h3UrUDXSEeyzZYMRHSWLtg" association="_tpaToDciEeybi6alUDIscQ">
           <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_HuPGoDdTEeybi6alUDIscQ"/>
           <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_HpkpEDdTEeybi6alUDIscQ" value="*"/>
         </ownedAttribute>
@@ -464,19 +483,19 @@ Beschreibung: Der Benutzer klick auf die Taste &quot;Wetterinformationen&quot;. 
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mmYVwDciEeybi6alUDIscQ" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mmYVwTciEeybi6alUDIscQ" key="nature" value="UML_Nature"/>
         </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_mmY80TciEeybi6alUDIscQ" name="räum-/streufahrzeuge" type="_Sqzy8DXUEeyzZYMRHSWLtg" association="_mmXusDciEeybi6alUDIscQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_mmY80TciEeybi6alUDIscQ" type="_Sqzy8DXUEeyzZYMRHSWLtg" association="_mmXusDciEeybi6alUDIscQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_oXOBQDciEeybi6alUDIscQ" memberEnd="_oXOoUjciEeybi6alUDIscQ _oXPPYjciEeybi6alUDIscQ" navigableOwnedEnd="_oXPPYjciEeybi6alUDIscQ">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oXOoUDciEeybi6alUDIscQ" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oXOoUTciEeybi6alUDIscQ" key="nature" value="UML_Nature"/>
         </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_oXPPYjciEeybi6alUDIscQ" name="schneefräsen" type="_UXy5MDXUEeyzZYMRHSWLtg" association="_oXOBQDciEeybi6alUDIscQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_oXPPYjciEeybi6alUDIscQ" type="_UXy5MDXUEeyzZYMRHSWLtg" association="_oXOBQDciEeybi6alUDIscQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_tpaToDciEeybi6alUDIscQ" memberEnd="_tpa6sjciEeybi6alUDIscQ _tpa6tTciEeybi6alUDIscQ" navigableOwnedEnd="_tpa6tTciEeybi6alUDIscQ">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_tpa6sDciEeybi6alUDIscQ" source="org.eclipse.papyrus">
           <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_tpa6sTciEeybi6alUDIscQ" key="nature" value="UML_Nature"/>
         </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_tpa6tTciEeybi6alUDIscQ" name="schneeschleuder" type="_V_nLkDXUEeyzZYMRHSWLtg" association="_tpaToDciEeybi6alUDIscQ"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_tpa6tTciEeybi6alUDIscQ" type="_V_nLkDXUEeyzZYMRHSWLtg" association="_tpaToDciEeybi6alUDIscQ"/>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_IPb88DdYEeyKQufkTDC-Eg" name="fährt" memberEnd="_IPeZMDdYEeyKQufkTDC-Eg _IPfAQjdYEeyKQufkTDC-Eg" navigableOwnedEnd="_IPfAQjdYEeyKQufkTDC-Eg">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_IPdyIDdYEeyKQufkTDC-Eg" source="org.eclipse.papyrus">
@@ -532,6 +551,14 @@ Beschreibung: Der Benutzer klick auf die Taste &quot;Wetterinformationen&quot;. 
         <ownedAttribute xmi:type="uml:Property" xmi:id="_NBCK8DtOEeypb5NCdoRaHw" name="Passwort">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
         </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_cqBnEDwUEeyk8Y7CLhK37Q" type="_kT1b8DXQEeyzZYMRHSWLtg" association="_cp98sDwUEeyk8Y7CLhK37Q">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_qv58oDwUEeyk8Y7CLhK37Q"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_uaAP0DwUEeyk8Y7CLhK37Q" value="*"/>
+        </ownedAttribute>
+        <ownedAttribute xmi:type="uml:Property" xmi:id="_lUrNkjwVEeyk8Y7CLhK37Q" type="_h3UrUDXSEeyzZYMRHSWLtg" association="_lUqmgDwVEeyk8Y7CLhK37Q">
+          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_lUr0oDwVEeyk8Y7CLhK37Q"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lUr0oTwVEeyk8Y7CLhK37Q" value="*"/>
+        </ownedAttribute>
       </packagedElement>
       <packagedElement xmi:type="uml:Association" xmi:id="_lxEgoDtPEeypb5NCdoRaHw" name="zugreift auf" memberEnd="_lxGV0TtPEeypb5NCdoRaHw _lxHj8TtPEeypb5NCdoRaHw" navigableOwnedEnd="_lxHj8TtPEeypb5NCdoRaHw">
         <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lxFuwDtPEeypb5NCdoRaHw" source="org.eclipse.papyrus">
@@ -548,13 +575,13 @@ Beschreibung: Der Benutzer klick auf die Taste &quot;Wetterinformationen&quot;. 
         </eAnnotations>
         <ownedEnd xmi:type="uml:Property" xmi:id="_zn8w4DtPEeypb5NCdoRaHw" name="bürger" type="_WgwDIDtNEeypb5NCdoRaHw" association="_zn2DMDtPEeypb5NCdoRaHw"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Association" xmi:id="_-fV7wDtQEeypb5NCdoRaHw" name="bearbeitet" memberEnd="_-fWi0jtQEeypb5NCdoRaHw _-fXw8TtQEeypb5NCdoRaHw" navigableOwnedEnd="_-fXw8TtQEeypb5NCdoRaHw">
-        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_-fWi0DtQEeypb5NCdoRaHw" source="org.eclipse.papyrus">
-          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_-fWi0TtQEeypb5NCdoRaHw" key="nature" value="UML_Nature"/>
+      <packagedElement xmi:type="uml:Association" xmi:id="_lUqmgDwVEeyk8Y7CLhK37Q" name="bearbeitet" memberEnd="_lUrNkjwVEeyk8Y7CLhK37Q _lUr0ojwVEeyk8Y7CLhK37Q" navigableOwnedEnd="_lUr0ojwVEeyk8Y7CLhK37Q">
+        <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_lUrNkDwVEeyk8Y7CLhK37Q" source="org.eclipse.papyrus">
+          <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_lUrNkTwVEeyk8Y7CLhK37Q" key="nature" value="UML_Nature"/>
         </eAnnotations>
-        <ownedEnd xmi:type="uml:Property" xmi:id="_-fXw8TtQEeypb5NCdoRaHw" name="einsatzplan" type="_h3UrUDXSEeyzZYMRHSWLtg" association="_-fV7wDtQEeypb5NCdoRaHw">
-          <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_usyzkDtREeypb5NCdoRaHw"/>
-          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_us-ZwDtREeypb5NCdoRaHw" value="*"/>
+        <ownedEnd xmi:type="uml:Property" xmi:id="_lUr0ojwVEeyk8Y7CLhK37Q" type="_G3wfkDtOEeypb5NCdoRaHw" association="_lUqmgDwVEeyk8Y7CLhK37Q">
+          <lowerValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9fhykDwWEeyk8Y7CLhK37Q" value="1"/>
+          <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__gEuADwWEeyk8Y7CLhK37Q" value="*"/>
         </ownedEnd>
       </packagedElement>
     </packagedElement>
