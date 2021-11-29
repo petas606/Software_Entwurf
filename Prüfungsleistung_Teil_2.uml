@@ -3,4 +3,43 @@
   <packageImport xmi:type="uml:PackageImport" xmi:id="_9iu8cFDvEeypV5Rm0z7amw">
     <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
   </packageImport>
+  <packagedElement xmi:type="uml:Package" xmi:id="_PxsnQFDwEeypV5Rm0z7amw" name="Dialog">
+    <packagedElement xmi:type="uml:Component" xmi:id="_gDrA8FDwEeypV5Rm0z7amw" name="Dlg Einsatzplanung">
+      <packagedElement xmi:type="uml:Class" xmi:id="_8y4-cFDwEeypV5Rm0z7amw" name="Einsatzplansübersicht">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_LRy4AFDxEeypV5Rm0z7amw" name="pläneAnzeigen"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_OmwosFDxEeypV5Rm0z7amw" name="planBearbeiten"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_RiTz0FDxEeypV5Rm0z7amw" name="planAnlegen"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_b07TIFDxEeypV5Rm0z7amw" name="schließen"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_kLhKoFDxEeypV5Rm0z7amw" name="Einsatzplanmaske">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_qmlJkFDxEeypV5Rm0z7amw" name="abbrechen"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_rrx3EFDxEeypV5Rm0z7amw" name="anlegen"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_uPqJEFDxEeypV5Rm0z7amw" name="fahrzeugDatenVorbereiten"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_wklZEFDxEeypV5Rm0z7amw" name="straßenwartDatenVorbereiten"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_HQEdEFDzEeypV5Rm0z7amw" name="straßenwartHinzufügen"/>
+      </packagedElement>
+      <packagedElement xmi:type="uml:Class" xmi:id="_OaXgkFDzEeypV5Rm0z7amw" name="Einsatzplanbearbeitungsmaske">
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_UttG4FDzEeypV5Rm0z7amw" name="abbrechen"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_Vf4xwFDzEeypV5Rm0z7amw" name="speichern"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_XDJUQFDzEeypV5Rm0z7amw" name="fahrzeugDatenVorbereiten"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_ZV9rcFDzEeypV5Rm0z7amw" name="straßenwartDatenVorbereiten"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_dB8N8FDzEeypV5Rm0z7amw" name="straßenwartHinzufügen"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_eYBQEFDzEeypV5Rm0z7amw" name="abschnittHinzufügen"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_ftuewFDzEeypV5Rm0z7amw" name="prioritätErhöhen"/>
+        <ownedOperation xmi:type="uml:Operation" xmi:id="_hOUHwFDzEeypV5Rm0z7amw" name="prioritätHeruntersetzen"/>
+      </packagedElement>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_SyJggFDwEeypV5Rm0z7amw" name="Core">
+    <packagedElement xmi:type="uml:Component" xmi:id="_is67IFDwEeypV5Rm0z7amw" name="Dlg Einsatzplanung">
+      <packagedElement xmi:type="uml:Package" xmi:id="_nqhdkFDwEeypV5Rm0z7amw" name="Außensicht"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_pZhWAFDwEeypV5Rm0z7amw" name="Innensicht"/>
+    </packagedElement>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_U_5xgFDwEeypV5Rm0z7amw" name="Persistence">
+    <packagedElement xmi:type="uml:Component" xmi:id="_kMzZgFDwEeypV5Rm0z7amw" name="Dlg Einsatzplanung">
+      <packagedElement xmi:type="uml:Package" xmi:id="_tcgDQFDwEeypV5Rm0z7amw" name="Außensicht"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_u_xM0FDwEeypV5Rm0z7amw" name="Innensicht"/>
+    </packagedElement>
+  </packagedElement>
 </uml:Model>
