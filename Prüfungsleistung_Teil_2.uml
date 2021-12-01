@@ -32,7 +32,85 @@
   </packagedElement>
   <packagedElement xmi:type="uml:Package" xmi:id="_SyJggFDwEeypV5Rm0z7amw" name="Core">
     <packagedElement xmi:type="uml:Component" xmi:id="_is67IFDwEeypV5Rm0z7amw" name="Dlg Einsatzplanung">
-      <packagedElement xmi:type="uml:Package" xmi:id="_nqhdkFDwEeypV5Rm0z7amw" name="Außensicht"/>
+      <packagedElement xmi:type="uml:Package" xmi:id="_nqhdkFDwEeypV5Rm0z7amw" name="Außensicht">
+        <packagedElement xmi:type="uml:Class" xmi:id="_fsQvIFK0Eeyys6ujLfGmjQ" name="EinsatzplanTO" visibility="public">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_rKgUEFK0Eeyys6ujLfGmjQ" name="einsatzzeit">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_ylGdYFK0Eeyys6ujLfGmjQ" name="fahrzeugkennzeichen">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_06EwsFK0Eeyys6ujLfGmjQ" name="straßenwärte" type="_74_DkFK0Eeyys6ujLfGmjQ">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_laH3kFK5Eeyys6ujLfGmjQ" value="2"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_KD6mUFK3Eeyys6ujLfGmjQ" name="autobahnAbschnitte" type="_WsZbsFK1Eeyys6ujLfGmjQ">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jZBigFK5Eeyys6ujLfGmjQ" value="*"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_1q_I4FK3Eeyys6ujLfGmjQ" name="bearbeiter">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_I_Lg8FK5Eeyys6ujLfGmjQ" value="*"/>
+          </ownedAttribute>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_SeaGYFK3Eeyys6ujLfGmjQ" name="getEinsatzzeit"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Tg3o8FK3Eeyys6ujLfGmjQ" name="getStraßenwärte"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_ZHy1MFK3Eeyys6ujLfGmjQ" name="getFahrzeugkennzeichen"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_bVy90FK3Eeyys6ujLfGmjQ" name="getAutobahnabschnitt"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_74_DkFK0Eeyys6ujLfGmjQ" name="StraßenwartTO">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_AO1CcFK1Eeyys6ujLfGmjQ" name="Name">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_CeG9cFK1Eeyys6ujLfGmjQ" name="MobilfunkNummer">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_LCfZUFK1Eeyys6ujLfGmjQ" name="BerechtigteFahrzeugklasse" isUnique="false">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_RdnF0FK5Eeyys6ujLfGmjQ" value="3"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_V0IW8FK1Eeyys6ujLfGmjQ" name="zugehörigeEinsatzpläne" type="_fsQvIFK0Eeyys6ujLfGmjQ">
+            <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_fyqf0FK5Eeyys6ujLfGmjQ"/>
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_aCFBQFK5Eeyys6ujLfGmjQ" value="*"/>
+          </ownedAttribute>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_e9SB4FK3Eeyys6ujLfGmjQ" name="getName"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_g8KJYFK3Eeyys6ujLfGmjQ" name="getMobilfunknummer"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_j9LDUFK3Eeyys6ujLfGmjQ" name="getBerechtigteFahrzeugklasse"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_mcovYFK3Eeyys6ujLfGmjQ" name="getZugehörigeEinsatzpäne"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_WsZbsFK1Eeyys6ujLfGmjQ" name="AutobahnabschnittTO" visibility="public">
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_acr2cFK1Eeyys6ujLfGmjQ" name="autobahnNummer">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_zeAl4FK1Eeyys6ujLfGmjQ" name="autobahnKilometerStart">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_2zJ8wFK1Eeyys6ujLfGmjQ" name="autobahnKilometerEnde">
+            <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Real"/>
+          </ownedAttribute>
+          <ownedAttribute xmi:type="uml:Property" xmi:id="_AsyUUFK2Eeyys6ujLfGmjQ" name="zugehörigeEinsatzpläne" type="_fsQvIFK0Eeyys6ujLfGmjQ">
+            <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OP5MoFK5Eeyys6ujLfGmjQ" value="*"/>
+          </ownedAttribute>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_oxcgEFK2Eeyys6ujLfGmjQ" name="getAutobahnnummer"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_qhhWkFK2Eeyys6ujLfGmjQ" name="getAutobahnkilometerStart"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_sC_JUFK2Eeyys6ujLfGmjQ" name="getAutobahnkilometerEnde"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_uLqtEFK2Eeyys6ujLfGmjQ" name="getReihenfolge"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_xyS1gFK2Eeyys6ujLfGmjQ" name="getZugehörigeEinsatzplan"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_rBdeEFK6Eeyys6ujLfGmjQ" name="IEinsatzplanlisteAnzeigenLassen">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_tOwxMFK8Eeyys6ujLfGmjQ" name="einsatzplanSuchen"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_u4n84FK6Eeyys6ujLfGmjQ" name="IEinsatzplanManuellAnlegen">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_C-SqoFK7Eeyys6ujLfGmjQ" name="einsatzplanAnlegen"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_Lg3TMFK8Eeyys6ujLfGmjQ" name="autobahnAbschnittHinzufügen"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Interface" xmi:id="_wqne8FK6Eeyys6ujLfGmjQ" name="IEinsatzplanFactory">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_RBvh0FK8Eeyys6ujLfGmjQ" name="einsatzplanAnlegen"/>
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_S9DX8FK8Eeyys6ujLfGmjQ" name="einsatzpläneSuchen"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_Y0DnkFK8Eeyys6ujLfGmjQ" name="EinsatzplanlisteAnzeigenLassen" visibility="private">
+          <ownedOperation xmi:type="uml:Operation" xmi:id="_o_gigFK8Eeyys6ujLfGmjQ" name="einsatzpläneSuchen"/>
+        </packagedElement>
+        <packagedElement xmi:type="uml:Class" xmi:id="_dRdnAFK8Eeyys6ujLfGmjQ" name="EinsatzplanManuellAnlegen"/>
+        <packagedElement xmi:type="uml:Class" xmi:id="_eqw8QFK8Eeyys6ujLfGmjQ" name="EinsatzplanFactory"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Package" xmi:id="_pZhWAFDwEeypV5Rm0z7amw" name="Innensicht"/>
     </packagedElement>
   </packagedElement>
