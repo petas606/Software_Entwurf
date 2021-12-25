@@ -33,7 +33,7 @@
                         <Insets />
                      </HBox.margin>
                   </Text>
-                  <TextField fx:id="txtAutobahnkilometerStart" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="177.0">
+                  <TextField fx:id="txtAutobahnkilometerStart" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="177.0" promptText="Von">
                      <HBox.margin>
                         <Insets left="17.0" />
                      </HBox.margin>
@@ -43,7 +43,7 @@
                         <Font size="30.0" />
                      </font>
                   </Label>
-                  <TextField fx:id="txtAutobahnkilometerEnde" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="163.0" />
+                  <TextField fx:id="txtAutobahnkilometerEnde" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="163.0" promptText="Bis" />
                </children>
                <VBox.margin>
                   <Insets />
@@ -56,7 +56,7 @@
                         <Insets right="80.0" />
                      </HBox.margin>
                   </Text>
-                  <ComboBox fx:id="cboFahrzeug" prefHeight="27.0" prefWidth="115.0">
+                  <ComboBox fx:id="cboFahrzeug" prefHeight="27.0" prefWidth="115.0" promptText="Auswählen">
                   </ComboBox>
                </children>
                <opaqueInsets>
@@ -70,7 +70,7 @@
                         <Insets right="66.0" />
                      </HBox.margin>
                   </Text>
-                  <ComboBox fx:id="cboWochentag" minHeight="-Infinity" prefHeight="27.0" prefWidth="116.0">
+                  <ComboBox fx:id="cboWochentag" minHeight="-Infinity" prefHeight="27.0" prefWidth="116.0" promptText="Auswählen">
                   </ComboBox>
                </children>
             </HBox>
@@ -81,7 +81,7 @@
                         <Insets right="72.0" />
                      </HBox.margin>
                   </Text>
-                  <RadioButton fx:id="rbTagsüber" mnemonicParsing="false" onAction="#rbTagesüberSelected" text="tagsüber">
+                  <RadioButton fx:id="rbTagsüber" mnemonicParsing="false" onAction="#rbTagesüberSelected" selected="true" text="tagsüber">
                      <padding>
                         <Insets right="25.0" />
                      </padding>

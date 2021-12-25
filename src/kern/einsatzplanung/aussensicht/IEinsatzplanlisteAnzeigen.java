@@ -1,5 +1,7 @@
 package kern.einsatzplanung.aussensicht;
 
-public interface IEinsatzplanlisteAnzeigen {
+import java.util.Collection;
 
+public interface IEinsatzplanlisteAnzeigen {
+	public Collection<EinsatzplanTO> EinsatzplaeneAnzeigen();
 }
