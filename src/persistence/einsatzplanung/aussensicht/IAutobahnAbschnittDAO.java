@@ -1,5 +1,7 @@
 package persistence.einsatzplanung.aussensicht;
 
-public interface IAutobahnAbschnittDAO {
+import kern.einsatzplanung.aussensicht.*;
 
+public interface IAutobahnAbschnittDAO {
+	public boolean autobahnAbschnittAnlegen(AutobahnabschnittTO autobahnabschnitt);
 }

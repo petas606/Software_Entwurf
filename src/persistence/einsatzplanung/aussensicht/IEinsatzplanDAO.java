@@ -1,5 +1,10 @@
 package persistence.einsatzplanung.aussensicht;
 
-public interface IEinsatzplanDAO {
+import java.util.Collection;
 
+import kern.einsatzplanung.aussensicht.EinsatzplanTO;
+
+public interface IEinsatzplanDAO {
+	public Collection<EinsatzplanTO> einsatzpläneAnzeigen();
+	public boolean einsatzplanAnlegen(EinsatzplanTO einsatplan);
 }
