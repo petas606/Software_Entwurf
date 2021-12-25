@@ -1,8 +1,190 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
+<?import com.gluonhq.charm.glisten.control.DropdownButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
-</AnchorPane>
 
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" layoutX="100.0" layoutY="100.0" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Autobahnnummer" wrappingWidth="119.09635162353516">
+                     <HBox.margin>
+                        <Insets right="16.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="350.0" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Autobahnkilometer">
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Text>
+                  <HBox prefHeight="100.0" prefWidth="200.0">
+                     <children>
+                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="163.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                        <Label text="-">
+                           <font>
+                              <Font size="30.0" />
+                           </font>
+                        </Label>
+                        <TextField maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="163.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </TextField>
+                     </children>
+                  </HBox>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Fahrzeug">
+                     <HBox.margin>
+                        <Insets right="80.0" />
+                     </HBox.margin>
+                  </Text>
+                  <DropdownButton prefHeight="27.0" prefWidth="94.0">
+                      <items>
+                          <MenuItem text="Choice 1" />
+                          <MenuItem text="Choice 2" />
+                          <MenuItem text="Choice 3" />
+                      </items>
+                  </DropdownButton>
+               </children>
+               <opaqueInsets>
+                  <Insets top="10.0" />
+               </opaqueInsets>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Wochentag">
+                     <HBox.margin>
+                        <Insets right="66.0" />
+                     </HBox.margin>
+                  </Text>
+                  <DropdownButton prefHeight="27.0" prefWidth="91.0">
+                     <items>
+                        <MenuItem text="Choice 1" />
+                        <MenuItem text="Choice 2" />
+                        <MenuItem text="Choice 3" />
+                     </items>
+                  </DropdownButton>
+               </children>
+            </HBox>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Tageszeit">
+                     <HBox.margin>
+                        <Insets right="72.0" />
+                     </HBox.margin>
+                  </Text>
+                  <RadioButton mnemonicParsing="false" text="tagsüber">
+                     <padding>
+                        <Insets right="25.0" />
+                     </padding>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="nachts" />
+               </children>
+            </HBox>
+            <VBox minHeight="-Infinity" prefHeight="80.0" prefWidth="100.0">
+               <children>
+                  <HBox prefHeight="60.0" prefWidth="400.0">
+                     <children>
+                        <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Straßenwart">
+                           <HBox.margin>
+                              <Insets right="62.0" />
+                           </HBox.margin>
+                        </Text>
+                        <VBox minHeight="-Infinity" prefHeight="80.0" prefWidth="100.0">
+                           <children>
+                              <HBox prefHeight="100.0" prefWidth="200.0">
+                                 <children>
+                                    <DropdownButton minWidth="-Infinity" prefHeight="27.0" prefWidth="150.0">
+                                       <items>
+                                          <MenuItem text="Max Mustermann" />
+                                          <MenuItem text="Choice 2" />
+                                          <MenuItem text="Choice 3" />
+                                       </items>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </DropdownButton>
+                                    <DropdownButton minWidth="-Infinity" prefHeight="27.0" prefWidth="150.0">
+                                       <items>
+                                          <MenuItem text="Choice 1" />
+                                          <MenuItem text="Choice 2" />
+                                          <MenuItem text="Choice 3" />
+                                       </items>
+                                       <HBox.margin>
+                                          <Insets left="40.0" />
+                                       </HBox.margin>
+                                    </DropdownButton>
+                                 </children>
+                              </HBox>
+                              <Button alignment="CENTER_RIGHT" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="90.0" prefWidth="180.0" text="weitere Person hinzufügen" textAlignment="CENTER">
+                                 <VBox.margin>
+                                    <Insets />
+                                 </VBox.margin>
+                                 <padding>
+                                    <Insets bottom="10.0" />
+                                 </padding>
+                              </Button>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <HBox alignment="BOTTOM_RIGHT" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Anlegen">
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                     <HBox.margin>
+                        <Insets right="20.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="30.0" prefWidth="90.0" text="Abbrechen">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+         <padding>
+            <Insets bottom="20.0" left="100.0" right="100.0" top="20.0" />
+         </padding>
+      </VBox>
+   </center>
+</BorderPane>
