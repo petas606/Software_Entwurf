@@ -17,21 +17,6 @@ public class AutobahnabschnittTO {
 	public AutobahnabschnittTO() {
 		zugehörigeEinsatzpläne = new HashSet<Einsatzplan>();
 	}
-	public void setAutobahnnummer(String autobahnnummer) {
-		this.autobahnnummer = autobahnnummer;
-	}
-	public void setAutobahnKilometerEnde(double autobahnKilometerEnde) {
-		this.autobahnKilometerEnde = autobahnKilometerEnde;
-	}
-	public void setAutobahnKilometerStart(double autobahnKilometerStart) {
-		this.autobahnKilometerStart = autobahnKilometerStart;
-	}
-	public void setReihenfolge(int reihenfolge) {
-		this.reihenfolge = reihenfolge;
-	}
-	public void setZugehörigeEinsatzpläne(Set<Einsatzplan> zugehörigeEinsatzpläne) {
-		this.zugehörigeEinsatzpläne = zugehörigeEinsatzpläne;
-	}
 	public String getAutobahnnummer() {
 		return autobahnnummer;
 	}

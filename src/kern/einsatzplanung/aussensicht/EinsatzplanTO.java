@@ -42,13 +42,10 @@ public class EinsatzplanTO {
 	public void setPlaner(String planer) {
 		this.planer = planer;
 	}
-=======
->>>>>>> Stashed changes
 
 	public StraßenwartTO getStrassenwart1() {
 		return strassenwart1;
 	}
-<<<<<<< Updated upstream
 	
 	public void setStrassenwart1(StraßenwartTO strassenwart1) {
 		this.strassenwart1 = strassenwart1;
@@ -61,38 +58,7 @@ public class EinsatzplanTO {
 	public void setStrassenwart2(StraßenwartTO strassenwart2) {
 		this.strassenwart2 = strassenwart2;
 	}
-	
-=======
 
-	public void setStrassenwart1(StraßenwartTO strassenwart1) {
-		this.strassenwart1 = strassenwart1;
-	}
-
-	public StraßenwartTO getStrassenwart2() {
-		return strassenwart2;
-	}
-
-	public void setStrassenwart2(StraßenwartTO strassenwart2) {
-		this.strassenwart2 = strassenwart2;
-	}
-
-	public void setEinsatzzeit(Einsatzzeit einsatzzeit) {
-		this.einsatzzeit = einsatzzeit;
-	}
-
-	public void setFahrzeugKennzeichen(String fahrzeugKennzeichen) {
-		this.fahrzeugKennzeichen = fahrzeugKennzeichen;
-	}
-
-	public void setAutobahnabschnitte(Collection<AutobahnabschnittTO> autobahnabschnitte) {
-		this.autobahnabschnitte = autobahnabschnitte;
-	}
-
-	public void setPlaner(String planer) {
-		this.planer = planer;
-	}
-
->>>>>>> Stashed changes
 	public Collection<AutobahnabschnittTO> getAutobahnabschnitte() {
 		return autobahnabschnitte;
 	}
