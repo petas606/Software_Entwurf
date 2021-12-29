@@ -4,7 +4,7 @@ import java.util.Collection;
 
 import kern.einsatzplanung.aussensicht.EinsatzplanTO;
 
-public interface IEinsatzplanDAO {
+public interface IEinsatzplanverwaltungDAO {
 	public Collection<EinsatzplanTO> einsatzpläneAnzeigen();
 	public boolean einsatzplanAnlegen(EinsatzplanTO einsatplan);
 	public boolean istEinsatzplanVorhanden(EinsatzplanTO einsatzplan);

@@ -6,14 +6,14 @@ import java.util.Collection;
 import kern.einsatzplanung.aussensicht.AutobahnabschnittTO;
 import kern.einsatzplanung.aussensicht.EinsatzplanTO;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.Einsatzplan;
-import persistence.einsatzplanung.aussensicht.IAutobahnAbschnittDAO;
-import persistence.einsatzplanung.aussensicht.IEinsatzplanDAO;
-import persistence.einsatzplanung.innensicht.db.AutobahnAbschnittDAO;
-import persistence.einsatzplanung.innensicht.db.EinsatzplanDAO;
+import persistence.einsatzplanung.aussensicht.IAutobahnabschnittverwaltungDAO;
+import persistence.einsatzplanung.aussensicht.IEinsatzplanverwaltungDAO;
+import persistence.einsatzplanung.innensicht.db.AutobahnabschnittverwaltungDAO;
+import persistence.einsatzplanung.innensicht.db.EinsatzplanverwaltungDAO;
 
 public class EinsatzplanManager {
-	private IEinsatzplanDAO einsatzplanVerwalter = new EinsatzplanDAO();
-	private IAutobahnAbschnittDAO autobahnabschnittVerwalter= new AutobahnAbschnittDAO();
+	private IEinsatzplanverwaltungDAO einsatzplanVerwalter = new EinsatzplanverwaltungDAO();
+	private IAutobahnabschnittverwaltungDAO autobahnabschnittVerwalter= new AutobahnabschnittverwaltungDAO();
 	
 	public Collection<Einsatzplan> einsatzplaeneAnzeigen()
 	{

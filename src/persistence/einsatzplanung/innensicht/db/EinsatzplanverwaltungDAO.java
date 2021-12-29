@@ -12,9 +12,9 @@ import kern.einsatzplanung.aussensicht.StraﬂenwartTO;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Einsatzzeit;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Tageszeit;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.WochenTag;
-import persistence.einsatzplanung.aussensicht.IEinsatzplanDAO;
+import persistence.einsatzplanung.aussensicht.IEinsatzplanverwaltungDAO;
 
-public class EinsatzplanDAO implements IEinsatzplanDAO {
+public class EinsatzplanverwaltungDAO implements IEinsatzplanverwaltungDAO {
 
 	@Override
 	public Collection<EinsatzplanTO> einsatzpl‰neAnzeigen() {
