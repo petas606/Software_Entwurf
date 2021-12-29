@@ -3,6 +3,8 @@ package kern.einsatzplanung.innensicht.technischesDatenmodell;
 import java.util.HashSet;
 import java.util.Set;
 
+import kern.einsatzplanung.aussensicht.AutobahnabschnittTO;
+
 public class Autobahnabschnitt {
 	private String autobahnnummer;
 	private double autobahnKilometerStart;
@@ -55,4 +57,13 @@ public class Autobahnabschnitt {
 		this.zugehörigeEinsatzpläne = zugehörigeEinsatzpläne;
 	}
 	
+	public AutobahnabschnittTO toAutobahnabschnittTO () {
+		AutobahnabschnittTO autobahnabschnittTO = new AutobahnabschnittTO();
+		autobahnabschnittTO.setAutobahnnummer(this.getAutobahnnummer());
+		autobahnabschnittTO.setAutobahnKilometerStart(this.getAutobahnKilometerStart());
+		autobahnabschnittTO.setAutobahnKilometerEnde(this.getAutobahnKilometerEnde());
+		autobahnabschnittTO.setReihenfolge(this.getReihenfolge());
+		autobahnabschnittTO.setZugehörigeEinsatzpläne(this.getZugehörigeEinsatzpläne());
+		return autobahnabschnittTO;
+	}
 }

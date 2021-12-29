@@ -22,6 +22,26 @@ public class StraßenwartTO {
 		return vorname;
 	}
 	
+	public void setVorname(String vorname) {
+		this.vorname = vorname;
+	}
+
+	public void setNachname(String nachname) {
+		this.nachname = nachname;
+	}
+
+	public void setMobilfunknummer(String mobilfunknummer) {
+		this.mobilfunknummer = mobilfunknummer;
+	}
+
+	public void setBerechtigteFahrzeugklasse(Set<Fahrzeugklasse> berechtigteFahrzeugklasse) {
+		this.berechtigteFahrzeugklasse = berechtigteFahrzeugklasse;
+	}
+
+	public void setZugehörigeEinsatzpläne(Set<Einsatzplan> zugehörigeEinsatzpläne) {
+		this.zugehörigeEinsatzpläne = zugehörigeEinsatzpläne;
+	}
+
 	public String getNachname() {
 		return nachname;
 	}

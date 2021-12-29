@@ -11,8 +11,8 @@ import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Einsatzzeit;
 public class EinsatzplanTO {
 	private Einsatzzeit einsatzzeit;
 	private String fahrzeugKennzeichen;
-	private Straﬂenwart strassenwart1;
-	private Straﬂenwart strassenwart2;
+	private StraﬂenwartTO strassenwart1;
+	private StraﬂenwartTO strassenwart2;
 	private Collection<AutobahnabschnittTO> autobahnabschnitte;
 	private String planer;
 	
@@ -21,16 +21,41 @@ public class EinsatzplanTO {
 		return einsatzzeit;
 	}
 	
+	public void setEinsatzzeit(Einsatzzeit einsatzzeit) {
+		this.einsatzzeit = einsatzzeit;
+	}
+	
 	public String getFahrzeugKennzeichen() {
 		return fahrzeugKennzeichen;
 	}
 	
-	public Straﬂenwart getStrassenwart1() {
+	
+	public void setFahrzeugKennzeichen(String fahrzeugKennzeichen) {
+		this.fahrzeugKennzeichen = fahrzeugKennzeichen;
+	}
+
+	public void setAutobahnabschnitte(Collection<AutobahnabschnittTO> autobahnabschnitte) {
+		this.autobahnabschnitte = autobahnabschnitte;
+	}
+
+	public void setPlaner(String planer) {
+		this.planer = planer;
+	}
+
+	public StraﬂenwartTO getStrassenwart1() {
 		return strassenwart1;
 	}
 	
-	public Straﬂenwart getStrassenwart2() {
+	public void setStrassenwart1(StraﬂenwartTO strassenwart1) {
+		this.strassenwart1 = strassenwart1;
+	}
+	
+	public StraﬂenwartTO getStrassenwart2() {
 		return strassenwart2;
+	}
+	
+	public void setStrassenwart2(StraﬂenwartTO strassenwart2) {
+		this.strassenwart2 = strassenwart2;
 	}
 	
 	public Collection<AutobahnabschnittTO> getAutobahnabschnitte() {

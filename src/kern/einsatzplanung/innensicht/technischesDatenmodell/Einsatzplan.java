@@ -3,6 +3,8 @@ package kern.einsatzplanung.innensicht.technischesDatenmodell;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import kern.einsatzplanung.aussensicht.AutobahnabschnittTO;
+import kern.einsatzplanung.aussensicht.EinsatzplanTO;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Einsatzzeit;
 
 public class Einsatzplan {
@@ -11,10 +13,13 @@ public class Einsatzplan {
 	private Straﬂenwart strassenwart1;
 	private Straﬂenwart strassenwart2;
 	private Collection<Autobahnabschnitt> autobahnabschnitte;
+	private ArrayList<Autobahnabschnitt> autobahnabschnitteListe;
+	
 	private String planer;
 	
 	public Einsatzplan() {
 		autobahnabschnitte = new ArrayList<Autobahnabschnitt>();
+		autobahnabschnitteListe = new ArrayList<Autobahnabschnitt>();
 	}
 	
 	public void anlegen() 
@@ -72,5 +77,21 @@ public class Einsatzplan {
 		return this.fahrzeugKennzeichen == temp.fahrzeugKennzeichen 
 				&& einsatzzeit.getWochentag() == temp.einsatzzeit.getWochentag() 
 				&& einsatzzeit.getTageszeit() == temp.einsatzzeit.getTageszeit();
+	}
+	
+	public EinsatzplanTO toEinsatzplanTO() {
+		System.out.println("To EinsatzplanTO");
+		ArrayList<AutobahnabschnittTO> autobahnabschnitteTO = new ArrayList<AutobahnabschnittTO>();
+		for(Autobahnabschnitt autobahnabschnitt : this.autobahnabschnitte) 
+		{
+			autobahnabschnitteTO.add(autobahnabschnitt.toAutobahnabschnittTO());
+		}
+		EinsatzplanTO einsatzplanTO = new EinsatzplanTO();
+		einsatzplanTO.setEinsatzzeit(this.getEinsatzzeit());
+		einsatzplanTO.setFahrzeugKennzeichen(this.getFahrzeugKennzeichen());
+		einsatzplanTO.setAutobahnabschnitte(autobahnabschnitteTO);
+
+
+		return einsatzplanTO;
 	}
 }
