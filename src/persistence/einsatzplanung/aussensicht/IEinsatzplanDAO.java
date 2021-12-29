@@ -7,4 +7,5 @@ import kern.einsatzplanung.aussensicht.EinsatzplanTO;
 public interface IEinsatzplanDAO {
 	public Collection<EinsatzplanTO> einsatzpläneAnzeigen();
 	public boolean einsatzplanAnlegen(EinsatzplanTO einsatplan);
+	public boolean istEinsatzplanVorhanden(EinsatzplanTO einsatzplan);
 }

@@ -35,7 +35,6 @@ public class EinsatzplanManuelleAnlage_Controller {
 	public void weiterePerson() 
 	{
 		cboStraßenwart2.setVisible(true);
-		System.out.println(cboStraßenwart2.isVisible());
 	}
 	
 	public void rbTagesüberSelected() 

@@ -22,6 +22,7 @@ public class Straﬂenwart {
 		//TODO
 	}
 	
+	
 	public String getVorname() {
 		return vorname;
 	}

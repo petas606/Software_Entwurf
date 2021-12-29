@@ -1,0 +1,15 @@
+diff a/src/kern/einsatzplanung/aussensicht/EinsatzplanTO.java b/src/kern/einsatzplanung/aussensicht/EinsatzplanTO.java	(rejected hunks)
+@@ -42,10 +42,13 @@
+ 	public void setPlaner(String planer) {
+ 		this.planer = planer;
+ 	}
++=======
++>>>>>>> Stashed changes
+ 
+ 	public Stra�enwartTO getStrassenwart1() {
+ 		return strassenwart1;
+ 	}
++<<<<<<< Updated upstream
+ 	
+ 	public void setStrassenwart1(Stra�enwartTO strassenwart1) {
+ 		this.strassenwart1 = strassenwart1;

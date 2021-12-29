@@ -9,6 +9,7 @@ import kern.einsatzplanung.innensicht.technischesDatenmodell.Straﬂenwart;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Einsatzzeit;
 
 public class EinsatzplanTO {
+	private int einsatplanId;
 	private Einsatzzeit einsatzzeit;
 	private String fahrzeugKennzeichen;
 	private StraﬂenwartTO strassenwart1;
@@ -41,10 +42,13 @@ public class EinsatzplanTO {
 	public void setPlaner(String planer) {
 		this.planer = planer;
 	}
+=======
+>>>>>>> Stashed changes
 
 	public StraﬂenwartTO getStrassenwart1() {
 		return strassenwart1;
 	}
+<<<<<<< Updated upstream
 	
 	public void setStrassenwart1(StraﬂenwartTO strassenwart1) {
 		this.strassenwart1 = strassenwart1;
@@ -58,6 +62,37 @@ public class EinsatzplanTO {
 		this.strassenwart2 = strassenwart2;
 	}
 	
+=======
+
+	public void setStrassenwart1(StraﬂenwartTO strassenwart1) {
+		this.strassenwart1 = strassenwart1;
+	}
+
+	public StraﬂenwartTO getStrassenwart2() {
+		return strassenwart2;
+	}
+
+	public void setStrassenwart2(StraﬂenwartTO strassenwart2) {
+		this.strassenwart2 = strassenwart2;
+	}
+
+	public void setEinsatzzeit(Einsatzzeit einsatzzeit) {
+		this.einsatzzeit = einsatzzeit;
+	}
+
+	public void setFahrzeugKennzeichen(String fahrzeugKennzeichen) {
+		this.fahrzeugKennzeichen = fahrzeugKennzeichen;
+	}
+
+	public void setAutobahnabschnitte(Collection<AutobahnabschnittTO> autobahnabschnitte) {
+		this.autobahnabschnitte = autobahnabschnitte;
+	}
+
+	public void setPlaner(String planer) {
+		this.planer = planer;
+	}
+
+>>>>>>> Stashed changes
 	public Collection<AutobahnabschnittTO> getAutobahnabschnitte() {
 		return autobahnabschnitte;
 	}
@@ -74,5 +109,14 @@ public class EinsatzplanTO {
 	{
 		return new Einsatzplan();
 	}
+
+	public int getEinsatplanId() {
+		return einsatplanId;
+	}
+
+	public void setEinsatplanId(int einsatplanId) {
+		this.einsatplanId = einsatplanId;
+	}
+
 	
 }

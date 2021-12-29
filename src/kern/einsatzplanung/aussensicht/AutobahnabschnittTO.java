@@ -7,6 +7,7 @@ import kern.einsatzplanung.innensicht.technischesDatenmodell.Autobahnabschnitt;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.Einsatzplan;
 
 public class AutobahnabschnittTO {
+	private int autobahnAbschnittID;
 	private String autobahnnummer;
 	private double autobahnKilometerStart;
 	private double autobahnKilometerEnde;
@@ -34,6 +35,21 @@ public class AutobahnabschnittTO {
 	public String getAutobahnnummer() {
 		return autobahnnummer;
 	}
+	public void setAutobahnnummer(String autobahnnummer) {
+		this.autobahnnummer = autobahnnummer;
+	}
+	public void setAutobahnKilometerStart(double autobahnKilometerStart) {
+		this.autobahnKilometerStart = autobahnKilometerStart;
+	}
+	public void setAutobahnKilometerEnde(double autobahnKilometerEnde) {
+		this.autobahnKilometerEnde = autobahnKilometerEnde;
+	}
+	public void setReihenfolge(int reihenfolge) {
+		this.reihenfolge = reihenfolge;
+	}
+	public void setZugehörigeEinsatzpläne(Set<Einsatzplan> zugehörigeEinsatzpläne) {
+		this.zugehörigeEinsatzpläne = zugehörigeEinsatzpläne;
+	}
 	public double getAutobahnKilometerStart() {
 		return autobahnKilometerStart;
 	}
@@ -53,5 +69,11 @@ public class AutobahnabschnittTO {
 	public Autobahnabschnitt toAutobahnAbschnitt() 
 	{
 		return new Autobahnabschnitt();
+	}
+	public int getAutobahnAbschnittID() {
+		return autobahnAbschnittID;
+	}
+	public void setAutobahnAbschnittID(int autobahnAbschnittID) {
+		this.autobahnAbschnittID = autobahnAbschnittID;
 	}
 }

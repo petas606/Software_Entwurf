@@ -36,4 +36,10 @@ public class EinsatzplanManager {
 		return this.autobahnabschnittVerwalter.autobahnAbschnittAnlegen(autobahnabschnitt);
 	}
 	
+	public boolean istEinsatzplanVorhanden(EinsatzplanTO einsatzplanTO) 
+	{
+		return this.einsatzplanVerwalter.istEinsatzplanVorhanden(einsatzplanTO);
+		
+	}
+	
 }
