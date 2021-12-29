@@ -53,7 +53,12 @@ public class AutobahnabschnittTO {
 	
 	public Autobahnabschnitt toAutobahnAbschnitt() 
 	{
-		return new Autobahnabschnitt();
+		Autobahnabschnitt autobahnabschnitt = new Autobahnabschnitt();
+		autobahnabschnitt.setAutobahnKilometerEnde(autobahnKilometerEnde);
+		autobahnabschnitt.setAutobahnKilometerStart(autobahnKilometerStart);
+		autobahnabschnitt.setAutobahnnummer(autobahnnummer);
+		autobahnabschnitt.setReihenfolge(reihenfolge);
+		return autobahnabschnitt;
 	}
 	public int getAutobahnAbschnittID() {
 		return autobahnAbschnittID;

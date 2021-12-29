@@ -17,6 +17,9 @@ public class EinsatzplanTO {
 	private Collection<AutobahnabschnittTO> autobahnabschnitte;
 	private String planer;
 	
+	public EinsatzplanTO() {
+		autobahnabschnitte = new ArrayList<AutobahnabschnittTO>();
+	}
 	
 	public Einsatzzeit getEinsatzzeit() {
 		return einsatzzeit;
@@ -73,7 +76,18 @@ public class EinsatzplanTO {
 	
 	public Einsatzplan toEinsatzPlan() 
 	{
-		return new Einsatzplan();
+		ArrayList<Autobahnabschnitt> autobahnabschnitts = new ArrayList<Autobahnabschnitt>();
+		for(AutobahnabschnittTO temp: this.autobahnabschnitte) 
+		{
+			autobahnabschnitts.add(temp.toAutobahnAbschnitt());
+		}
+		Einsatzplan einsatzplan = new Einsatzplan();
+		einsatzplan.setStrassenwart1(this.strassenwart1.toStraﬂenwart());
+		einsatzplan.setStrassenwart2(this.strassenwart2.toStraﬂenwart());
+		einsatzplan.setEinsatzzeit(this.einsatzzeit);
+		einsatzplan.setFahrzeugKennzeichen(this.fahrzeugKennzeichen);
+		einsatzplan.setAutobahnabschnitte(autobahnabschnitts);
+		return einsatzplan;
 	}
 
 	public int getEinsatplanId() {

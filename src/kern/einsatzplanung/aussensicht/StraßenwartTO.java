@@ -4,6 +4,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 import kern.einsatzplanung.innensicht.technischesDatenmodell.Einsatzplan;
+import kern.einsatzplanung.innensicht.technischesDatenmodell.Straﬂenwart;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Fahrzeugklasse;
 
 public class StraﬂenwartTO {
@@ -66,6 +67,17 @@ public class StraﬂenwartTO {
 
 	public void setStraﬂenwartId(int straﬂenwartId) {
 		this.straﬂenwartId = straﬂenwartId;
+	}
+	
+	public Straﬂenwart toStraﬂenwart() 
+	{
+		Straﬂenwart straﬂenwart = new Straﬂenwart();
+		straﬂenwart.setMobilfunknummer(this.mobilfunknummer);
+		straﬂenwart.setBerechtigteFahrzeugklasse(berechtigteFahrzeugklasse);
+		straﬂenwart.setNachname(nachname);
+		straﬂenwart.setVorname(vorname);
+		straﬂenwart.setStraﬂenwartId(straﬂenwartId);
+		return straﬂenwart;
 	}
 
 }

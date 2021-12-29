@@ -6,6 +6,7 @@ import java.util.Set;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Fahrzeugklasse;
 
 public class Straßenwart {
+	private int straßenwartId;
 	private String vorname;
 	private String nachname;
 	private String mobilfunknummer;
@@ -63,6 +64,14 @@ public class Straßenwart {
 	
 	public void setZugehörigeEinsatzpläne(Set<Einsatzplan> zugehörigeEinsatzpläne) {
 		this.zugehörigeEinsatzpläne = zugehörigeEinsatzpläne;
+	}
+
+	public int getStraßenwartId() {
+		return straßenwartId;
+	}
+
+	public void setStraßenwartId(int straßenwartId) {
+		this.straßenwartId = straßenwartId;
 	}
 
 }

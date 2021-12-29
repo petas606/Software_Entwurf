@@ -18,61 +18,85 @@ public class EinsatzplanDAO implements IEinsatzplanDAO {
 
 	@Override
 	public Collection<EinsatzplanTO> einsatzpl‰neAnzeigen() {
+		ArrayList<EinsatzplanTO> einsatzplanTOs = new ArrayList<EinsatzplanTO>();
 		Connection aConnection = Persistence.getConnection();
 		ResultSet resultSet;
-		try {
+		try 
+		{
 			String aStatement = 
-					"SELECT A.*,C.*,D.*,E* FROM EINSATZPLAN A "
+					"SELECT A.*,C.*,D.STRASSENWART_ID AS STRASSENWART_ID2,"
+					+ "D.VORNAME as VORNAME2,D.NACHNAME AS NACHNAME2,D.MOBILFUNKNUMMER AS MOBILFUNKNUMMER2,"
+					+ "E.* FROM EINSATZPLAN A "
 					+ "LEFT JOIN EINSATZPLAN_AUTOBAHNABSCHNITT B ON A.EINSATZPLAN_ID = B.EINSATZPLAN_ID "
-					+ "LEFT JOIN STRAﬂENWART C ON C.STRAﬂENWART_ID = A.STRAﬂENWART_ID_1 "
-					+ "LEFT JOIN STRAﬂENWART D ON D.STRAﬂENWART_ID = A.STRAﬂENWART_ID_2 "
+					+ "LEFT JOIN STRASSENWART C ON C.STRASSENWART_ID = A.STRASSENWART_ID_1 "
+					+ "LEFT JOIN STRASSENWART D ON D.STRASSENWART_ID = A.STRASSENWART_ID_2 "
 					+ "LEFT JOIN AUTOBAHNABSCHNITT E ON E.AUTOBAHNABSCHNITT_ID = B.AUTOBAHNABSCHNITT_ID "
 					+ "ORDER BY A.EINSATZPLAN_ID";
 			resultSet = Persistence.executeQueryStatement(aConnection, aStatement);
-		}catch(Exception ex) 
+			EinsatzplanTO previousObj = new EinsatzplanTO();
+			while(resultSet.next()) 
+			{
+				
+				previousObj = resultToEinsatzplanTO(resultSet, previousObj);
+				if( previousObj != null) 
+				{ 
+					einsatzplanTOs.add(previousObj);
+				}
+			}
+		}
+		catch(Exception ex) 
 		{
 			ex.printStackTrace();
 		}
-		return null;
+		return einsatzplanTOs;
 	}
 	
 	private EinsatzplanTO resultToEinsatzplanTO(final ResultSet resultset, EinsatzplanTO previousObj) throws SQLException 
 	{
 		EinsatzplanTO einsatzplanTO = new EinsatzplanTO();
-		if(previousObj.getEinsatplanId() == resultset.getInt("A.EINSATZPLAN_ID")) 
+		if(previousObj.getEinsatplanId() == resultset.getInt("EINSATZPLAN_ID")) 
 		{
+			AutobahnabschnittTO autobahnabschnittTO = new AutobahnabschnittTO();
+		    autobahnabschnittTO.setAutobahnAbschnittID(resultset.getInt("AUTOBAHNABSCHNITT_ID"));
+		    autobahnabschnittTO.setAutobahnnummer(resultset.getString("AUTOBAHNNUMMER"));
+		    autobahnabschnittTO.setAutobahnKilometerStart(resultset.getDouble("AUTOBAHNKILOMETERSTART"));
+		    autobahnabschnittTO.setAutobahnKilometerEnde(resultset.getDouble("AUTOBAHNKILOMETERENDE"));
+		    autobahnabschnittTO.setReihenfolge(resultset.getInt("REIHENFOLGE"));
+		    previousObj.addAutobahnabschnitt(autobahnabschnittTO);
 			return null;
 		}
 		try 
 		{
 			StraﬂenwartTO strassenwart1 = new StraﬂenwartTO();
 			StraﬂenwartTO strassenwart2 = new StraﬂenwartTO();
-			ArrayList<AutobahnabschnittTO> autobahnabschnitte = new ArrayList<AutobahnabschnittTO>();
 		    Einsatzzeit einsatzzeit = new Einsatzzeit();
 		    
-		    strassenwart1.setVorname(resultset.getString("C.VORNAME"));
-		    strassenwart1.setNachname(resultset.getString("C.NACHNAME"));
-		    strassenwart1.setMobilfunknummer(resultset.getString("C.MOBILFUNKNUMMER"));
+		    strassenwart1.setStraﬂenwartId(resultset.getInt("STRASSENWART_ID"));
+		    strassenwart1.setVorname(resultset.getString("VORNAME"));
+		    strassenwart1.setNachname(resultset.getString("NACHNAME"));
+		    strassenwart1.setMobilfunknummer(resultset.getString("MOBILFUNKNUMMER"));
 		    
-		    strassenwart2.setVorname(resultset.getString("D.VORNAME"));
-		    strassenwart2.setNachname(resultset.getString("D.NACHNAME"));
-		    strassenwart2.setMobilfunknummer(resultset.getString("D.MOBILFUNKNUMMER"));
+		    strassenwart1.setStraﬂenwartId(resultset.getInt("STRASSENWART_ID2"));
+		    strassenwart2.setVorname(resultset.getString("VORNAME2"));
+		    strassenwart2.setNachname(resultset.getString("NACHNAME2"));
+		    strassenwart2.setMobilfunknummer(resultset.getString("MOBILFUNKNUMMER2"));
 		    
-		    einsatzzeit.setTageszeit(Tageszeit.valueOf(resultset.getString("A.TAGESZEIT")));
-		    einsatzzeit.setWochentstag(WochenTag.valueOf(resultset.getString("A.WOCHENTAG")));
+		    einsatzzeit.setTageszeit(Tageszeit.valueOf(resultset.getString("TAGESZEIT")));
+		    einsatzzeit.setWochentstag(WochenTag.valueOf(resultset.getString("WOCHENTAG")));
 		    
 		    AutobahnabschnittTO autobahnabschnittTO = new AutobahnabschnittTO();
-		    autobahnabschnittTO.setAutobahnAbschnittID(resultset.getInt("E.AUTOBAHNNUMMER"));
-		    autobahnabschnittTO.setAutobahnnummer(resultset.getString("E.AUTOBAHNNUMMER"));
-		    autobahnabschnittTO.setAutobahnKilometerStart(resultset.getDouble("E.AUTOBAHNKILOMETERSTART"));
-		    autobahnabschnittTO.setAutobahnKilometerEnde(resultset.getDouble("E.AUTOBAHNKILOMETERENDE"));
-		    autobahnabschnittTO.setReihenfolge(resultset.getInt("E.AUTOBAHNNUMMER"));
+		    autobahnabschnittTO.setAutobahnAbschnittID(resultset.getInt("AUTOBAHNABSCHNITT_ID"));
+		    autobahnabschnittTO.setAutobahnnummer(resultset.getString("AUTOBAHNNUMMER"));
+		    autobahnabschnittTO.setAutobahnKilometerStart(resultset.getDouble("AUTOBAHNKILOMETERSTART"));
+		    autobahnabschnittTO.setAutobahnKilometerEnde(resultset.getDouble("AUTOBAHNKILOMETERENDE"));
+		    autobahnabschnittTO.setReihenfolge(resultset.getInt("REIHENFOLGE"));
 		    
-			einsatzplanTO.setFahrzeugKennzeichen(resultset.getString("A.FAHRZEUGKENNZEICHEN"));
+			einsatzplanTO.setFahrzeugKennzeichen(resultset.getString("FAHRZEUGKENNZEICHEN"));
 			einsatzplanTO.setStrassenwart1(strassenwart1);
 			einsatzplanTO.setStrassenwart2(strassenwart2);
-			einsatzplanTO.setAutobahnabschnitte(autobahnabschnitte);
+			einsatzplanTO.addAutobahnabschnitt(autobahnabschnittTO);
 			einsatzplanTO.setEinsatzzeit(einsatzzeit);
+			einsatzplanTO.setEinsatplanId(resultset.getInt("EINSATZPLAN_ID"));
 		}
 		catch(Exception ex) 
 		{
