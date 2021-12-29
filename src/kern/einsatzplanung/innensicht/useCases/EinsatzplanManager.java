@@ -25,10 +25,10 @@ public class EinsatzplanManager {
 		return einsatzPlanArrayList;
 	}
 	
-	public boolean einsatzplanAnlegen(EinsatzplanTO einsatplan) 
+	public boolean einsatzplanAnlegen(Einsatzplan einsatzplan) 
 	{
-		this.autobahnabschnittVerwalter.autobahnAbschnittAnlegen((AutobahnabschnittTO)einsatplan.getAutobahnabschnitte().toArray()[0]);
-		return this.einsatzplanVerwalter.einsatzplanAnlegen(einsatplan);
+		this.autobahnabschnittVerwalter.autobahnAbschnittAnlegen((AutobahnabschnittTO)einsatzplan.getAutobahnabschnitte().toArray()[0]);
+		return this.einsatzplanVerwalter.einsatzplanAnlegen(einsatzplan.toEinsatzplanTO());
 	}
 	
 	public boolean autobahnabschnittAnlegen(AutobahnabschnittTO autobahnabschnitt) 
@@ -36,10 +36,13 @@ public class EinsatzplanManager {
 		return this.autobahnabschnittVerwalter.autobahnAbschnittAnlegen(autobahnabschnitt);
 	}
 	
-	public boolean istEinsatzplanVorhanden(EinsatzplanTO einsatzplanTO) 
+	public boolean istEinsatzplanVorhanden(Einsatzplan einsatzplan) 
 	{
-		return this.einsatzplanVerwalter.istEinsatzplanVorhanden(einsatzplanTO);
-		
+		if (!this.einsatzplanVerwalter.istEinsatzplanVorhanden(einsatzplan.toEinsatzplanTO()))
+			return true;
+		else {
+			return false;
+		}
 	}
 	
 }

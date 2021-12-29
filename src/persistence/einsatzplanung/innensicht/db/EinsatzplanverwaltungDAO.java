@@ -112,8 +112,11 @@ public class EinsatzplanverwaltungDAO implements IEinsatzplanverwaltungDAO {
 	}
 
 	@Override
-	public boolean istEinsatzplanVorhanden(EinsatzplanTO einsatzplan) {
-		// TODO Auto-generated method stub
+	public boolean istEinsatzplanVorhanden(EinsatzplanTO einsatzplanTO) {
+		Connection aConnection = Persistence.getConnection();
+		ResultSet resultSet;
+		//TODO
+			
 		return false;
 	}
 }

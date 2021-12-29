@@ -22,6 +22,22 @@ public class Einsatzplan {
 		autobahnabschnitteListe = new ArrayList<Autobahnabschnitt>();
 	}
 	
+	public Einsatzplan(String fahrzeugKennzeichen, Einsatzzeit einsatzzeit, Straﬂenwart strassenwart, Collection<Autobahnabschnitt> autobahnabschnitte ) {
+		this.fahrzeugKennzeichen = fahrzeugKennzeichen;
+		this.einsatzzeit = einsatzzeit;
+		this.strassenwart1 = strassenwart;
+		this.autobahnabschnitte = autobahnabschnitte;
+	}
+	
+	public Einsatzplan(String fahrzeugKennzeichen, Einsatzzeit einsatzzeit, Straﬂenwart strassenwart1, Straﬂenwart strassenwart2, Collection<Autobahnabschnitt> autobahnabschnitte ) {
+		this.fahrzeugKennzeichen = fahrzeugKennzeichen;
+		this.einsatzzeit = einsatzzeit;
+		this.strassenwart1 = strassenwart1;
+		this.strassenwart2 = strassenwart2;
+		this.autobahnabschnitte = autobahnabschnitte;
+	}
+	
+	
 	public void anlegen() 
 	{
 		//TODO
