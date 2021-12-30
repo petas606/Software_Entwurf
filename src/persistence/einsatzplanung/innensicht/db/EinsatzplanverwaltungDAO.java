@@ -13,7 +13,6 @@ import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Einsatzzeit;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Tageszeit;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.WochenTag;
 import persistence.einsatzplanung.aussensicht.IEinsatzplanverwaltungDAO;
-import persistence.kundenverwaltung.innensicht.db.Persistence;
 
 public class EinsatzplanverwaltungDAO implements IEinsatzplanverwaltungDAO {
 

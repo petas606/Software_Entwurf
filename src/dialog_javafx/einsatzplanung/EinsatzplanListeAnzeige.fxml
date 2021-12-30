@@ -41,10 +41,10 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dialog_javafx.einsatzplanung.EinsatzplanListeAnzeige_Controller">
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dialog_javafx.einsatzplanung.EinsatzplanListeAnzeige_Controller">
   <columnConstraints>
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="50" minWidth="10.0" prefWidth="34.0" />
-      <ColumnConstraints hgrow="SOMETIMES" maxWidth="700" minWidth="10.0"  />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="900" minWidth="10.0" />
       <ColumnConstraints hgrow="SOMETIMES" maxWidth="50" minWidth="0.0" prefWidth="32.0" />
   </columnConstraints>
   <rowConstraints>
@@ -53,16 +53,17 @@
     <RowConstraints maxHeight="202.0" minHeight="10.0" prefHeight="73.0" vgrow="SOMETIMES" />
   </rowConstraints>
    <children>
-      <TableView fx:id="tblEinsatzplanung" minHeight="-Infinity" minWidth="-Infinity" prefHeight="211.0" prefWidth="560" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
+      <TableView fx:id="tblEinsatzplanung" minHeight="-Infinity" minWidth="-Infinity" prefHeight="211.0" prefWidth="900.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER">
         <columns>
 	    	<TableColumn fx:id="tcEinsatzPlanId" text="Einsatzplan Id" />
 		    <TableColumn fx:id="tcFahrzeug" text="Fahrzeug" />
-		    <TableColumn fx:id="tcEinsatzzeit" maxWidth="192.0" minWidth="-Infinity" prefWidth="98.0" text="Einsatzzeit" />
-		    <TableColumn fx:id="tcStraßenwart" maxWidth="233.0" minWidth="-1.0" prefWidth="182.0" text="Straßenwart" />
+		    <TableColumn fx:id="tcEinsatzzeit" maxWidth="192.0" minWidth="-Infinity" prefWidth="130" text="Einsatzzeit" />
+		    <TableColumn fx:id="tcStraßenwart1" maxWidth="233.0" minWidth="-1.0" prefWidth="130.0" text="Straßenwart1" />
+		    <TableColumn fx:id="tcStraßenwart2" maxWidth="233.0" minWidth="-1.0" prefWidth="130.0" text="Straßenwart2" />
 		    <TableColumn fx:id="tcAutobahnabschnitt" minWidth="50.0" prefWidth="179.0" text="Autobahnabschnitt" />
         </columns>
       </TableView>
-      <Button fx:id="btnEinsatzplanAnlegen" mnemonicParsing="false" text="Einsatzplan anlegen" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" onMouseClicked="#einsatzplanAnlegenMaske"/>
+      <Button fx:id="btnEinsatzplanAnlegen" mnemonicParsing="false" onMouseClicked="#einsatzplanAnlegenMaske" text="Einsatzplan anlegen" GridPane.columnIndex="1" GridPane.halignment="RIGHT" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Einsatzplanung Übersicht" textAlignment="CENTER" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER">
          <font>
             <Font name="System Bold" size="14.0" />

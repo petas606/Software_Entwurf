@@ -16,22 +16,40 @@ import kern.einsatzplanung.innensicht.useCases.EinsatzplanFactory;
 
 public class EinsatzplanListeAnzeige_Controller {
 	@FXML
-	TableView<Object> tblEinsatzplanung;
+	TableView<EinplanListAnzeige_EinsatzplanDaten> tblEinsatzplanung;
 	@FXML
 	Button btnButton;
 	@FXML
-	TableColumn<Object, String> tcEinsatzPlanId;
+	TableColumn<EinplanListAnzeige_EinsatzplanDaten, String> tcEinsatzPlanId;
 	@FXML
-	TableColumn<Object, String> tcFahrzeug;
+	TableColumn<EinplanListAnzeige_EinsatzplanDaten, String> tcFahrzeug;
 	@FXML
-	TableColumn<Object, String> tcEinsatzzeit;
+	TableColumn<EinplanListAnzeige_EinsatzplanDaten, String> tcEinsatzzeit;
 	@FXML
-	TableColumn<Object, String> tcStraﬂenwart;
+	TableColumn<EinplanListAnzeige_EinsatzplanDaten, String> tcStraﬂenwart1;
 	@FXML
-	TableColumn<Object, String> tcAutobahnabschnitt;
+	TableColumn<EinplanListAnzeige_EinsatzplanDaten, String> tcStraﬂenwart2;
+	@FXML
+	TableColumn<EinplanListAnzeige_EinsatzplanDaten, String> tcAutobahnabschnitt;
 	private Hauptmenue screencontroller;
 	private ObservableList<EinplanListAnzeige_EinsatzplanDaten> einsatzplanListe = FXCollections.observableArrayList();
 	
+	 public void initialize()  {
+		 tcEinsatzPlanId.setCellValueFactory(cellData -> cellData.getValue().einsatzplanIdProperty());
+		 tcFahrzeug.setCellValueFactory(cellData -> cellData.getValue().fahrzeugKennzeichenProperty()); 
+		 tcEinsatzzeit.setCellValueFactory(cellData -> cellData.getValue().einsatzzeitProperty());
+		 tcStraﬂenwart1.setCellValueFactory(cellData -> cellData.getValue().strassenwart1Property());
+		 tcStraﬂenwart2.setCellValueFactory(cellData -> cellData.getValue().strassenwart2Property());
+		 tcAutobahnabschnitt.setCellValueFactory(cellData -> cellData.getValue().autobahnabschnittProperty());	
+		 tblEinsatzplanung.setItems(show());
+	    }
+
+	
+	
+	private ObservableList<EinplanListAnzeige_EinsatzplanDaten> show() {
+		return einsatzplanListe;
+	}
+
 	public void setScreenController (Hauptmenue screencontroller) {
     	this.screencontroller = screencontroller;
     	IEinsatzplanFactory factory = new EinsatzplanFactory();
