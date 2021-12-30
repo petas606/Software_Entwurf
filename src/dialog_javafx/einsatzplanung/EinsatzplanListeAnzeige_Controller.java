@@ -32,7 +32,7 @@ public class EinsatzplanListeAnzeige_Controller {
 	@FXML
 	TableColumn<EinplanListAnzeige_EinsatzplanDaten, String> tcAutobahnabschnitt;
 	private Hauptmenue screencontroller;
-	private ObservableList<EinplanListAnzeige_EinsatzplanDaten> einsatzplanListe = FXCollections.observableArrayList();
+	private static ObservableList<EinplanListAnzeige_EinsatzplanDaten> einsatzplanListe = FXCollections.observableArrayList();
 	
 	 public void initialize()  {
 		 tcEinsatzPlanId.setCellValueFactory(cellData -> cellData.getValue().einsatzplanIdProperty());
@@ -42,31 +42,33 @@ public class EinsatzplanListeAnzeige_Controller {
 		 tcStraßenwart2.setCellValueFactory(cellData -> cellData.getValue().strassenwart2Property());
 		 tcAutobahnabschnitt.setCellValueFactory(cellData -> cellData.getValue().autobahnabschnittProperty());	
 		 tblEinsatzplanung.setItems(show());
+		 
 	    }
 
 	
 	
-	private ObservableList<EinplanListAnzeige_EinsatzplanDaten> show() {
+	 public static ObservableList<EinplanListAnzeige_EinsatzplanDaten> show() { 
+		 IEinsatzplanFactory factory = new EinsatzplanFactory();
+		 IEinsatzplanlisteAnzeigen einsatzplanAnzeigen = factory.einsatzplanAnzeigen();
+		 Collection<EinsatzplanTO> einsatzplanTOs = einsatzplanAnzeigen.einsatzplaeneAnzeigen();
+		 einsatzplanListe.clear();
+		 for(EinsatzplanTO einsatzplanTO: einsatzplanTOs) 
+		 {
+			 EinplanListAnzeige_EinsatzplanDaten einsatzplanDaten = new EinplanListAnzeige_EinsatzplanDaten();
+			 einsatzplanDaten.setEinsatplanId(Integer.toString(einsatzplanTO.getEinsatplanId()));
+			 einsatzplanDaten.setEinsatzzeit(einsatzplanTO.getEinsatzzeit().toString());
+			 einsatzplanDaten.setStrassenwart1(einsatzplanTO.getStrassenwart1().toString());
+			 einsatzplanDaten.setStrassenwart2(einsatzplanTO.getStrassenwart2().toString());
+			 einsatzplanDaten.setFahrzeugKennzeichen(einsatzplanTO.getFahrzeugKennzeichen());
+			 einsatzplanDaten.setAutobahnabschnitte(einsatzplanTO.getAutobahnabschnitte().toString());
+			 einsatzplanListe.add(einsatzplanDaten);
+		 }
 		return einsatzplanListe;
 	}
 
 	public void setScreenController (Hauptmenue screencontroller) {
     	this.screencontroller = screencontroller;
-    	IEinsatzplanFactory factory = new EinsatzplanFactory();
-    	IEinsatzplanlisteAnzeigen einsatzplanAnzeigen = factory.einsatzplanAnzeigen();
-    	Collection<EinsatzplanTO> einsatzplanTOs = einsatzplanAnzeigen.einsatzplaeneAnzeigen();
-    	einsatzplanListe.clear();
-    	for(EinsatzplanTO einsatzplanTO: einsatzplanTOs) 
-    	{
-    		EinplanListAnzeige_EinsatzplanDaten einsatzplanDaten = new EinplanListAnzeige_EinsatzplanDaten();
-    		einsatzplanDaten.setEinsatplanId(Integer.toString(einsatzplanTO.getEinsatplanId()));
-    		einsatzplanDaten.setEinsatzzeit(einsatzplanTO.getEinsatzzeit().toString());
-    		einsatzplanDaten.setStrassenwart1(einsatzplanTO.getStrassenwart1().toString());
-    		einsatzplanDaten.setStrassenwart2(einsatzplanTO.getStrassenwart2().toString());
-    		einsatzplanDaten.setFahrzeugKennzeichen(einsatzplanTO.getFahrzeugKennzeichen());
-    		einsatzplanDaten.setAutobahnabschnitte(einsatzplanTO.getAutobahnabschnitte().toString());
-    		einsatzplanListe.add(einsatzplanDaten);
-    	}
+    	
     }
 	
 	public void einsatzplanAnlegenMaske() {

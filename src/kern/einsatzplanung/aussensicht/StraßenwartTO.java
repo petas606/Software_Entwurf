@@ -72,7 +72,12 @@ public class StraﬂenwartTO {
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return vorname + " " + nachname;
+		if(vorname == null && nachname == null) 
+		{
+			return "";
+		}
+		String fullname = vorname + " " + nachname;
+		return fullname;
 	}
 	
 	

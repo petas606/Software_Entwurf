@@ -6,6 +6,15 @@ import java.util.Set;
 import kern.einsatzplanung.aussensicht.AutobahnabschnittTO;
 
 public class Autobahnabschnitt {
+	private int autobahnAbschnittID;
+	public int getAutobahnAbschnittID() {
+		return autobahnAbschnittID;
+	}
+
+	public void setAutobahnAbschnittID(int autobahnAbschnittID) {
+		this.autobahnAbschnittID = autobahnAbschnittID;
+	}
+
 	private String autobahnnummer;
 	private double autobahnKilometerStart;
 	private double autobahnKilometerEnde;
@@ -63,6 +72,7 @@ public class Autobahnabschnitt {
 		autobahnabschnittTO.setAutobahnKilometerStart(this.getAutobahnKilometerStart());
 		autobahnabschnittTO.setAutobahnKilometerEnde(this.getAutobahnKilometerEnde());
 		autobahnabschnittTO.setReihenfolge(this.getReihenfolge());
+		autobahnabschnittTO.setAutobahnAbschnittID(this.autobahnAbschnittID);
 		autobahnabschnittTO.setZugehörigeEinsatzpläne(this.getZugehörigeEinsatzpläne());
 		return autobahnabschnittTO;
 	}

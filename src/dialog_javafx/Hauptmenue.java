@@ -3,11 +3,14 @@ package dialog_javafx;
 import dialog_javafx.einsatzplanung.EinsatzplanListeAnzeige_Controller;
 import dialog_javafx.einsatzplanung.EinsatzplanManuelleAnlage_Controller;
 import javafx.application.Application;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.TableView;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
 
 public class Hauptmenue extends Application{
 	
@@ -55,6 +58,7 @@ public class Hauptmenue extends Application{
 				case Hauptmenue.EINSATZPLANANLEGEN: mainStage.setScene(einsatzplanAnlegen);
 					break;
 			}
+			
 			
 			mainStage.sizeToScene();
 			mainStage.show();

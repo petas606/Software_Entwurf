@@ -38,7 +38,7 @@ public class EinsatzplanverwaltungDAO implements IEinsatzplanverwaltungDAO {
 			{
 				
 				previousObj = resultToEinsatzplanTO(resultSet, previousObj);
-				if( previousObj != null) 
+				if( previousObj.getEinsatplanId() != 0) 
 				{ 
 					einsatzplanTOs.add(previousObj);
 				}
@@ -66,19 +66,19 @@ public class EinsatzplanverwaltungDAO implements IEinsatzplanverwaltungDAO {
 		    autobahnabschnittTO.setAutobahnKilometerEnde(resultset.getDouble("AUTOBAHNKILOMETERENDE"));
 		    autobahnabschnittTO.setReihenfolge(resultset.getInt("REIHENFOLGE"));
 		    previousObj.addAutobahnabschnitt(autobahnabschnittTO);
-			return null;
+			return new EinsatzplanTO();
 		}
 		try 
-		{
-			StraﬂenwartTO strassenwart1 = new StraﬂenwartTO();
-			StraﬂenwartTO strassenwart2 = new StraﬂenwartTO();
+		{		
 		    Einsatzzeit einsatzzeit = new Einsatzzeit();
 		    
+		    StraﬂenwartTO strassenwart1 = new StraﬂenwartTO();
 		    strassenwart1.setStraﬂenwartId(resultset.getInt("STRASSENWART_ID"));
 		    strassenwart1.setVorname(resultset.getString("VORNAME"));
 		    strassenwart1.setNachname(resultset.getString("NACHNAME"));
 		    strassenwart1.setMobilfunknummer(resultset.getString("MOBILFUNKNUMMER"));
 		    
+			StraﬂenwartTO strassenwart2 = new StraﬂenwartTO();
 		    strassenwart1.setStraﬂenwartId(resultset.getInt("STRASSENWART_ID2"));
 		    strassenwart2.setVorname(resultset.getString("VORNAME2"));
 		    strassenwart2.setNachname(resultset.getString("NACHNAME2"));
@@ -115,13 +115,20 @@ public class EinsatzplanverwaltungDAO implements IEinsatzplanverwaltungDAO {
 			Persistence.executeUpdateStatement(
 					aConnection, 
 					"INSERT INTO EINSATZPLAN("
-					+ "FAHRZEUGKENNZEICHEN,TAGESZEIT,WOCHENTAG,STRASSENWART_ID_1,STRASSENWART_ID_2) "
+					+ "EINSATZPLAN_ID,FAHRZEUGKENNZEICHEN,WOCHENTAG,TAGESZEIT,STRASSENWART_ID_1,STRASSENWART_ID_2) "
 					+ "VALUES ( " +
-					     einsatzplanTO.getFahrzeugKennzeichen() + "," +
+						 einsatzplanTO.getEinsatplanId() + "," +
+					"'"+ einsatzplanTO.getFahrzeugKennzeichen() + "'," +
 					"'"+ einsatzplanTO.getEinsatzzeit().getWochentag() + "'," +
 					"'"+ einsatzplanTO.getEinsatzzeit().getTageszeit() + "'," +
-					"'"+ einsatzplanTO.getStrassenwart1() + "'," +
-					"'"+ einsatzplanTO.getStrassenwart2() + "')");
+					   + einsatzplanTO.getStrassenwart1().getStraﬂenwartId() + "," +
+					   + einsatzplanTO.getStrassenwart2().getStraﬂenwartId() + ")");
+			for(AutobahnabschnittTO autobahnabschnittTO : einsatzplanTO.getAutobahnabschnitte()) 
+			{
+				String aStatement = "INSERT INTO EINSATZPLAN_AUTOBAHNABSCHNITT (EINSATZPLAN_ID,AUTOBAHNABSCHNITT_ID) "
+						+ "VALUES("+einsatzplanTO.getEinsatplanId() +',' + autobahnabschnittTO.getAutobahnAbschnittID()+")";
+				Persistence.executeUpdateStatement(aConnection, aStatement);
+			}
 			return true;
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -131,13 +138,27 @@ public class EinsatzplanverwaltungDAO implements IEinsatzplanverwaltungDAO {
 		
 		return false;
 	}
-
+	
 	@Override
-	public boolean istEinsatzzeitVorhanden(Einsatzzeit einsatzzeit, String fahrzeugKennzeichen) {
+	public int getMaxEinsatzplanId() 
+	{
 		Connection aConnection = Persistence.getConnection();
-		ResultSet resultSet;
-		//TODO
-			
-		return false;
+		try {
+			String aStatement = "SELECT MAX(EINSATZPLAN_ID) FROM EINSATZPLAN";
+			ResultSet resultSet = Persistence.executeQueryStatement(aConnection, aStatement);
+			if(resultSet.next())
+				return resultSet.getInt(1);
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			Persistence.closeConnection(aConnection);
+		}
+		return 0;
 	}
+	
+	@Override
+	public boolean istEinsatzzeitVorhanden(EinsatzplanTO einsatzplanTO) {
+		return einsatzpl‰neAnzeigen().contains(einsatzplanTO) ;
+	}
+
 }

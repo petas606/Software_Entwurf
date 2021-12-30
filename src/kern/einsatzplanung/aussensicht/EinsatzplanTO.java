@@ -90,6 +90,14 @@ public class EinsatzplanTO {
 		einsatzplan.setEinsatzplanId(einsatplanId);
 		return einsatzplan;
 	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		EinsatzplanTO temp = (EinsatzplanTO) obj;
+		return this.fahrzeugKennzeichen == temp.fahrzeugKennzeichen 
+				&& einsatzzeit.getWochentag() == temp.einsatzzeit.getWochentag() 
+				&& einsatzzeit.getTageszeit() == temp.einsatzzeit.getTageszeit();
+	}
 
 	public int getEinsatplanId() {
 		return einsatplanId;

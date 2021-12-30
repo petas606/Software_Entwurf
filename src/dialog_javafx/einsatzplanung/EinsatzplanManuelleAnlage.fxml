@@ -56,8 +56,7 @@
                         <Insets right="80.0" />
                      </HBox.margin>
                   </Text>
-                  <ComboBox fx:id="cboFahrzeug" prefHeight="27.0" prefWidth="115.0" promptText="Auswählen">
-                  </ComboBox>
+                  <TextField fx:id="txtFahrzeug" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="30.0" prefWidth="350.0" />
                </children>
                <opaqueInsets>
                   <Insets top="10.0" />
@@ -102,16 +101,12 @@
                            <children>
                               <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <ComboBox fx:id="cboStraßenwart1" minWidth="-Infinity" prefHeight="27.0" prefWidth="150.0" promptText="Straßenwart1">
+                                    <ComboBox fx:id="cboStrassenwart1" minWidth="-Infinity" prefWidth="150.0">
                                        <HBox.margin>
-                                          <Insets />
+                                          <Insets right="10.0" />
                                        </HBox.margin>
                                     </ComboBox>
-                                    <ComboBox fx:id="cboStraßenwart2" minWidth="-Infinity" prefHeight="27.0" prefWidth="150.0" promptText="Straßenwart2" visible="false">
-                                       <HBox.margin>
-                                          <Insets left="40.0" />
-                                       </HBox.margin>
-                                    </ComboBox>
+                                    <ComboBox fx:id="cboStrassenwart2" minWidth="-Infinity" prefWidth="150.0" visible="false" />
                                  </children>
                               </HBox>
                               <Button alignment="CENTER" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#weiterePerson" prefHeight="30.0" prefWidth="140.0" text="Weitere Person" textAlignment="CENTER">

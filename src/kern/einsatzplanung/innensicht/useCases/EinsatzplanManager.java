@@ -5,16 +5,21 @@ import java.util.Collection;
 
 import kern.einsatzplanung.aussensicht.AutobahnabschnittTO;
 import kern.einsatzplanung.aussensicht.EinsatzplanTO;
+import kern.einsatzplanung.aussensicht.StraﬂenwartTO;
+import kern.einsatzplanung.innensicht.technischesDatenmodell.Autobahnabschnitt;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.Einsatzplan;
-import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Einsatzzeit;
+import kern.einsatzplanung.innensicht.technischesDatenmodell.Straﬂenwart;
 import persistence.einsatzplanung.aussensicht.IAutobahnabschnittverwaltungDAO;
 import persistence.einsatzplanung.aussensicht.IEinsatzplanverwaltungDAO;
+import persistence.einsatzplanung.aussensicht.IStraﬂenwartverwaltungDAO;
 import persistence.einsatzplanung.innensicht.db.AutobahnabschnittverwaltungDAO;
 import persistence.einsatzplanung.innensicht.db.EinsatzplanverwaltungDAO;
+import persistence.einsatzplanung.innensicht.db.StraﬂenwartverwaltungDAO;
 
 public class EinsatzplanManager {
 	private IEinsatzplanverwaltungDAO einsatzplanVerwalter = new EinsatzplanverwaltungDAO();
 	private IAutobahnabschnittverwaltungDAO autobahnabschnittVerwalter= new AutobahnabschnittverwaltungDAO();
+	private IStraﬂenwartverwaltungDAO straﬂenwartVerwalter = new StraﬂenwartverwaltungDAO();
 	
 	public Collection<Einsatzplan> einsatzplaeneAnzeigen()
 	{
@@ -28,7 +33,11 @@ public class EinsatzplanManager {
 	
 	public boolean einsatzplanAnlegen(Einsatzplan einsatzplan) 
 	{
-		this.autobahnabschnittVerwalter.autobahnAbschnittAnlegen((AutobahnabschnittTO)einsatzplan.getAutobahnabschnitte().toArray()[0]);
+		for(Autobahnabschnitt autobahnabschnitt : einsatzplan.getAutobahnabschnitte()) 
+		{
+			this.autobahnabschnittVerwalter.autobahnAbschnittAnlegen(autobahnabschnitt.toAutobahnabschnittTO());
+		}
+		
 		return this.einsatzplanVerwalter.einsatzplanAnlegen(einsatzplan.toEinsatzplanTO());
 	}
 	
@@ -37,13 +46,42 @@ public class EinsatzplanManager {
 		return this.autobahnabschnittVerwalter.autobahnAbschnittAnlegen(autobahnabschnitt);
 	}
 	
-	public boolean istEinsatzplanVorhanden(Einsatzzeit einsatzzeit, String fahrzeugkennzeichen) 
+	public boolean istEinsatzplanVorhanden(EinsatzplanTO einsatzplanTO) 
 	{
-		if (!this.einsatzplanVerwalter.istEinsatzzeitVorhanden(einsatzzeit, fahrzeugkennzeichen))
+		if (this.einsatzplanVerwalter.istEinsatzzeitVorhanden(einsatzplanTO))
 			return true;
 		else {
 			return false;
 		}
+	}
+	
+	public boolean istAutobahnAbschnittvorhanden(AutobahnabschnittTO autobahnabschnittTO) 
+	{
+		if(this.autobahnabschnittVerwalter.dupplicateAutobahnabschnitt(autobahnabschnittTO) != 0) 
+		{
+			return true;
+		}
+		return false;
+	}
+	
+	public int naeschteAutobahnabschnittIdErmitteln()  
+	{
+		return this.autobahnabschnittVerwalter.getMaxAutobahnabschnittId()+1;
+	}
+	
+	public int naeschteEinsatzplanIdErmitteln()  
+	{
+		return this.einsatzplanVerwalter.getMaxEinsatzplanId()+1;
+	}
+	
+	public Collection<Straﬂenwart> straﬂenw‰rterAnzeigen()
+	{
+		Collection<Straﬂenwart> straﬂenwarts = new ArrayList<Straﬂenwart>();
+		for(StraﬂenwartTO straﬂenwartTO : this.straﬂenwartVerwalter.straﬂenw‰rteAnzeigen()) 
+		{
+			straﬂenwarts.add(straﬂenwartTO.toStraﬂenwart());
+		}
+		return straﬂenwarts;
 	}
 	
 }

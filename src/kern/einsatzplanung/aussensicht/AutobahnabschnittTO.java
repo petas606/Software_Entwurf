@@ -57,6 +57,7 @@ public class AutobahnabschnittTO {
 		autobahnabschnitt.setAutobahnKilometerEnde(autobahnKilometerEnde);
 		autobahnabschnitt.setAutobahnKilometerStart(autobahnKilometerStart);
 		autobahnabschnitt.setAutobahnnummer(autobahnnummer);
+		autobahnabschnitt.setAutobahnAbschnittID(autobahnAbschnittID);
 		autobahnabschnitt.setReihenfolge(reihenfolge);
 		return autobahnabschnitt;
 	}
