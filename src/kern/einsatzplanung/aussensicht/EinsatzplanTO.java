@@ -87,6 +87,7 @@ public class EinsatzplanTO {
 		einsatzplan.setEinsatzzeit(this.einsatzzeit);
 		einsatzplan.setFahrzeugKennzeichen(this.fahrzeugKennzeichen);
 		einsatzplan.setAutobahnabschnitte(autobahnabschnitts);
+		einsatzplan.setEinsatzplanId(einsatplanId);
 		return einsatzplan;
 	}
 

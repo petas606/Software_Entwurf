@@ -49,6 +49,9 @@ public class EinsatzplanverwaltungDAO implements IEinsatzplanverwaltungDAO {
 		{
 			ex.printStackTrace();
 		}
+		finally {
+			Persistence.closeConnection(aConnection);
+		}
 		return einsatzplanTOs;
 	}
 	

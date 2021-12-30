@@ -8,6 +8,7 @@ import kern.einsatzplanung.aussensicht.EinsatzplanTO;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Einsatzzeit;
 
 public class Einsatzplan {
+	private int einsatzplanId;
 	private Einsatzzeit einsatzzeit;
 	private String fahrzeugKennzeichen;
 	private Straﬂenwart strassenwart1;
@@ -106,6 +107,17 @@ public class Einsatzplan {
 		einsatzplanTO.setEinsatzzeit(this.getEinsatzzeit());
 		einsatzplanTO.setFahrzeugKennzeichen(this.getFahrzeugKennzeichen());
 		einsatzplanTO.setAutobahnabschnitte(autobahnabschnitteTO);
+		einsatzplanTO.setEinsatplanId(einsatzplanId);
+		einsatzplanTO.setStrassenwart1(strassenwart1.toStraﬂenwartTO());
+		einsatzplanTO.setStrassenwart2(strassenwart2.toStraﬂenwartTO());
 		return einsatzplanTO;
+	}
+
+	public int getEinsatzplanId() {
+		return einsatzplanId;
+	}
+
+	public void setEinsatzplanId(int einsatzplanId) {
+		this.einsatzplanId = einsatzplanId;
 	}
 }

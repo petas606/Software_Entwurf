@@ -66,4 +66,10 @@ public class AutobahnabschnittTO {
 	public void setAutobahnAbschnittID(int autobahnAbschnittID) {
 		this.autobahnAbschnittID = autobahnAbschnittID;
 	}
+	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return autobahnnummer + " " + autobahnKilometerStart + " - " + autobahnKilometerEnde ;
+	}
 }

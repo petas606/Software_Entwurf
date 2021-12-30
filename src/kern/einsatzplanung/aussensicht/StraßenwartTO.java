@@ -69,6 +69,13 @@ public class StraﬂenwartTO {
 		this.straﬂenwartId = straﬂenwartId;
 	}
 	
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return vorname + " " + nachname;
+	}
+	
+	
 	public Straﬂenwart toStraﬂenwart() 
 	{
 		Straﬂenwart straﬂenwart = new Straﬂenwart();
