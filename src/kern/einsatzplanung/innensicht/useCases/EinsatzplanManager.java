@@ -6,6 +6,7 @@ import java.util.Collection;
 import kern.einsatzplanung.aussensicht.AutobahnabschnittTO;
 import kern.einsatzplanung.aussensicht.EinsatzplanTO;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.Einsatzplan;
+import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Einsatzzeit;
 import persistence.einsatzplanung.aussensicht.IAutobahnabschnittverwaltungDAO;
 import persistence.einsatzplanung.aussensicht.IEinsatzplanverwaltungDAO;
 import persistence.einsatzplanung.innensicht.db.AutobahnabschnittverwaltungDAO;
@@ -36,9 +37,9 @@ public class EinsatzplanManager {
 		return this.autobahnabschnittVerwalter.autobahnAbschnittAnlegen(autobahnabschnitt);
 	}
 	
-	public boolean istEinsatzplanVorhanden(Einsatzplan einsatzplan) 
+	public boolean istEinsatzplanVorhanden(Einsatzzeit einsatzzeit, String fahrzeugkennzeichen) 
 	{
-		if (!this.einsatzplanVerwalter.istEinsatzplanVorhanden(einsatzplan.toEinsatzplanTO()))
+		if (!this.einsatzplanVerwalter.istEinsatzzeitVorhanden(einsatzzeit, fahrzeugkennzeichen))
 			return true;
 		else {
 			return false;

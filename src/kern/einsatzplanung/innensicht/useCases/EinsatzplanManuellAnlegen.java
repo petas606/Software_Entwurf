@@ -19,7 +19,12 @@ public class EinsatzplanManuellAnlegen implements IEinsatzplanManuellAnlegen {
 	}
 	
 	public boolean einsatzplanValidieren (EinsatzplanManager einsatzplanManager, Einsatzzeit einsatzzeit, String fahrzeugkennzeichen) {
-		return false;
+		if(einsatzplanManager.istEinsatzplanVorhanden(einsatzzeit, fahrzeugkennzeichen)) {
+			System.out.println("Einsatzplan schon vorhanden!");
+			return false;
+		} else {
+			return true;
+		}
 	}
 
 }

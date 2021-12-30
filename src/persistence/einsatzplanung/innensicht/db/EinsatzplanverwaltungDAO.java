@@ -106,13 +106,13 @@ public class EinsatzplanverwaltungDAO implements IEinsatzplanverwaltungDAO {
 	}
 
 	@Override
-	public boolean einsatzplanAnlegen(EinsatzplanTO einsatplan) {
+	public boolean einsatzplanAnlegen(EinsatzplanTO einsatzplan) {
 		// TODO Auto-generated method stub
 		return false;
 	}
 
 	@Override
-	public boolean istEinsatzplanVorhanden(EinsatzplanTO einsatzplanTO) {
+	public boolean istEinsatzzeitVorhanden(Einsatzzeit einsatzzeit, String fahrzeugKennzeichen) {
 		Connection aConnection = Persistence.getConnection();
 		ResultSet resultSet;
 		//TODO
