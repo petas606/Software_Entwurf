@@ -35,7 +35,15 @@ public class EinsatzplanManager {
 	{
 		for(Autobahnabschnitt autobahnabschnitt : einsatzplan.getAutobahnabschnitte()) 
 		{
-			this.autobahnabschnittVerwalter.autobahnAbschnittAnlegen(autobahnabschnitt.toAutobahnabschnittTO());
+			int vorhandeneAutobahnabschnittId = this.autobahnabschnittVerwalter.dupplicateAutobahnabschnitt(autobahnabschnitt.toAutobahnabschnittTO());
+			if(vorhandeneAutobahnabschnittId == 0)
+			{
+				this.autobahnabschnittVerwalter.autobahnAbschnittAnlegen(autobahnabschnitt.toAutobahnabschnittTO());
+			}else 
+			{
+				autobahnabschnitt.setAutobahnAbschnittID(vorhandeneAutobahnabschnittId);
+			}
+			
 		}
 		
 		return this.einsatzplanVerwalter.einsatzplanAnlegen(einsatzplan.toEinsatzplanTO());

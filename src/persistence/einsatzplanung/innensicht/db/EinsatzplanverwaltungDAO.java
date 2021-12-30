@@ -158,7 +158,7 @@ public class EinsatzplanverwaltungDAO implements IEinsatzplanverwaltungDAO {
 	
 	@Override
 	public boolean istEinsatzzeitVorhanden(EinsatzplanTO einsatzplanTO) {
-		return einsatzpläneAnzeigen().contains(einsatzplanTO) ;
+		return einsatzpläneAnzeigen().contains(einsatzplanTO);
 	}
 
 }
