@@ -13,6 +13,7 @@ import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Einsatzzeit;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Tageszeit;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.WochenTag;
 import persistence.einsatzplanung.aussensicht.IEinsatzplanverwaltungDAO;
+import persistence.kundenverwaltung.innensicht.db.Persistence;
 
 public class EinsatzplanverwaltungDAO implements IEinsatzplanverwaltungDAO {
 
@@ -106,8 +107,25 @@ public class EinsatzplanverwaltungDAO implements IEinsatzplanverwaltungDAO {
 	}
 
 	@Override
-	public boolean einsatzplanAnlegen(EinsatzplanTO einsatzplan) {
-		// TODO Auto-generated method stub
+	public boolean einsatzplanAnlegen(EinsatzplanTO einsatzplanTO) {
+		Connection aConnection = Persistence.getConnection();
+		try {
+			Persistence.executeUpdateStatement(
+					aConnection, 
+					"INSERT INTO EINSATZPLAN("
+					+ "FAHRZEUGKENNZEICHEN,TAGESZEIT,WOCHENTAG,STRASSENWART_ID_1,STRASSENWART_ID_2) "
+					+ "VALUES ( " +
+					     einsatzplanTO.getFahrzeugKennzeichen() + "," +
+					"'"+ einsatzplanTO.getEinsatzzeit().getWochentag() + "'," +
+					"'"+ einsatzplanTO.getEinsatzzeit().getTageszeit() + "'," +
+					"'"+ einsatzplanTO.getStrassenwart1() + "'," +
+					"'"+ einsatzplanTO.getStrassenwart2() + "')");
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			Persistence.closeConnection(aConnection);
+		}
+		
 		return false;
 	}
 
