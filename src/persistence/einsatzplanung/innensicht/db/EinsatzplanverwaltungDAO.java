@@ -120,6 +120,7 @@ public class EinsatzplanverwaltungDAO implements IEinsatzplanverwaltungDAO {
 					"'"+ einsatzplanTO.getEinsatzzeit().getTageszeit() + "'," +
 					"'"+ einsatzplanTO.getStrassenwart1() + "'," +
 					"'"+ einsatzplanTO.getStrassenwart2() + "')");
+			return true;
 		} catch (SQLException e) {
 			e.printStackTrace();
 		} finally {
