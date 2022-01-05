@@ -17,7 +17,7 @@ import persistence.einsatzplanung.aussensicht.IEinsatzplanverwaltungDAO;
 public class EinsatzplanverwaltungDAO implements IEinsatzplanverwaltungDAO {
 
 	@Override
-	public Collection<EinsatzplanTO> einsatzpläneAnzeigen() {
+	public Collection<EinsatzplanTO> einsatzplaeneAnzeigen() {
 		ArrayList<EinsatzplanTO> einsatzplanTOs = new ArrayList<EinsatzplanTO>();
 		Connection aConnection = Persistence.getConnection();
 		ResultSet resultSet;
@@ -158,7 +158,7 @@ public class EinsatzplanverwaltungDAO implements IEinsatzplanverwaltungDAO {
 	
 	@Override
 	public boolean istEinsatzzeitVorhanden(EinsatzplanTO einsatzplanTO) {
-		return einsatzpläneAnzeigen().contains(einsatzplanTO);
+		return einsatzplaeneAnzeigen().contains(einsatzplanTO);
 	}
 
 }

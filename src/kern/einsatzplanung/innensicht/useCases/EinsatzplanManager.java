@@ -5,26 +5,26 @@ import java.util.Collection;
 
 import kern.einsatzplanung.aussensicht.AutobahnabschnittTO;
 import kern.einsatzplanung.aussensicht.EinsatzplanTO;
-import kern.einsatzplanung.aussensicht.StraﬂenwartTO;
+import kern.einsatzplanung.aussensicht.StrassenwartTO;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.Autobahnabschnitt;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.Einsatzplan;
-import kern.einsatzplanung.innensicht.technischesDatenmodell.Straﬂenwart;
+import kern.einsatzplanung.innensicht.technischesDatenmodell.Strassenwart;
 import persistence.einsatzplanung.aussensicht.IAutobahnabschnittverwaltungDAO;
 import persistence.einsatzplanung.aussensicht.IEinsatzplanverwaltungDAO;
-import persistence.einsatzplanung.aussensicht.IStraﬂenwartverwaltungDAO;
+import persistence.einsatzplanung.aussensicht.IStrassenwartverwaltungDAO;
 import persistence.einsatzplanung.innensicht.db.AutobahnabschnittverwaltungDAO;
 import persistence.einsatzplanung.innensicht.db.EinsatzplanverwaltungDAO;
-import persistence.einsatzplanung.innensicht.db.StraﬂenwartverwaltungDAO;
+import persistence.einsatzplanung.innensicht.db.StrassenwartverwaltungDAO;
 
 public class EinsatzplanManager {
 	private IEinsatzplanverwaltungDAO einsatzplanVerwalter = new EinsatzplanverwaltungDAO();
 	private IAutobahnabschnittverwaltungDAO autobahnabschnittVerwalter= new AutobahnabschnittverwaltungDAO();
-	private IStraﬂenwartverwaltungDAO straﬂenwartVerwalter = new StraﬂenwartverwaltungDAO();
+	private IStrassenwartverwaltungDAO strassenwartVerwalter = new StrassenwartverwaltungDAO();
 	
 	public Collection<Einsatzplan> einsatzplaeneAnzeigen()
 	{
 		ArrayList<Einsatzplan> einsatzPlanArrayList = new ArrayList<Einsatzplan>();
-		for(EinsatzplanTO temp : einsatzplanVerwalter.einsatzpl‰neAnzeigen()) 
+		for(EinsatzplanTO temp : einsatzplanVerwalter.einsatzplaeneAnzeigen()) 
 		{
 			einsatzPlanArrayList.add(temp.toEinsatzPlan());
 		}
@@ -82,14 +82,14 @@ public class EinsatzplanManager {
 		return this.einsatzplanVerwalter.getMaxEinsatzplanId()+1;
 	}
 	
-	public Collection<Straﬂenwart> straﬂenw‰rterAnzeigen()
+	public Collection<Strassenwart> strassenwaerterAnzeigen()
 	{
-		Collection<Straﬂenwart> straﬂenwarts = new ArrayList<Straﬂenwart>();
-		for(StraﬂenwartTO straﬂenwartTO : this.straﬂenwartVerwalter.straﬂenw‰rteAnzeigen()) 
+		Collection<Strassenwart> strassenwarts = new ArrayList<Strassenwart>();
+		for(StrassenwartTO strassenwartTO : this.strassenwartVerwalter.strassenwaerteAnzeigen()) 
 		{
-			straﬂenwarts.add(straﬂenwartTO.toStraﬂenwart());
+			strassenwarts.add(strassenwartTO.toStrassenwart());
 		}
-		return straﬂenwarts;
+		return strassenwarts;
 	}
 	
 }

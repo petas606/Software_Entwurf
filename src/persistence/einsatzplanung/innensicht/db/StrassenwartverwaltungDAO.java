@@ -7,28 +7,28 @@ import java.util.ArrayList;
 import java.util.Collection;
 
 import kern.einsatzplanung.aussensicht.EinsatzplanTO;
-import kern.einsatzplanung.aussensicht.StraﬂenwartTO;
-import persistence.einsatzplanung.aussensicht.IStraﬂenwartverwaltungDAO;
+import kern.einsatzplanung.aussensicht.StrassenwartTO;
+import persistence.einsatzplanung.aussensicht.IStrassenwartverwaltungDAO;
 
-public class StraﬂenwartverwaltungDAO implements IStraﬂenwartverwaltungDAO {
+public class StrassenwartverwaltungDAO implements IStrassenwartverwaltungDAO {
 
 	@Override
-	public Collection<StraﬂenwartTO> straﬂenw‰rteAnzeigen() {
-		ArrayList<StraﬂenwartTO> straﬂenwartTOs = new ArrayList<StraﬂenwartTO>();
+	public Collection<StrassenwartTO> strassenwaerteAnzeigen() {
+		ArrayList<StrassenwartTO> strassenwartTOs = new ArrayList<StrassenwartTO>();
 		Connection aConnection = Persistence.getConnection();
 		ResultSet resultSet;
 		try 
 		{
 			String aStatement = "SELECT * FROM STRASSENWART";
 			resultSet = Persistence.executeQueryStatement(aConnection, aStatement);
-			StraﬂenwartTO currentStraﬂenwart;
+			StrassenwartTO currentStrassenwart;
 			while(resultSet.next()) 
 			{
 				
-				currentStraﬂenwart = resultToStraﬂenwartTO(resultSet);
-				if( currentStraﬂenwart != null) 
+				currentStrassenwart = resultToStrassenwartTO(resultSet);
+				if( currentStrassenwart != null) 
 				{ 
-					straﬂenwartTOs.add(currentStraﬂenwart);
+					strassenwartTOs.add(currentStrassenwart);
 				}
 			}
 		}
@@ -39,13 +39,13 @@ public class StraﬂenwartverwaltungDAO implements IStraﬂenwartverwaltungDAO {
 		finally {
 			Persistence.closeConnection(aConnection);
 		}
-		return straﬂenwartTOs;
+		return strassenwartTOs;
 	}
 
-	private StraﬂenwartTO resultToStraﬂenwartTO(ResultSet resultSet) {
-		StraﬂenwartTO strassenwart = new StraﬂenwartTO();
+	private StrassenwartTO resultToStrassenwartTO(ResultSet resultSet) {
+		StrassenwartTO strassenwart = new StrassenwartTO();
 	    try {
-			strassenwart.setStraﬂenwartId(resultSet.getInt("STRASSENWART_ID"));
+			strassenwart.setStrassenwartId(resultSet.getInt("STRASSENWART_ID"));
 			strassenwart.setVorname(resultSet.getString("VORNAME"));
 		    strassenwart.setNachname(resultSet.getString("NACHNAME"));
 		    strassenwart.setMobilfunknummer(resultSet.getString("MOBILFUNKNUMMER"));

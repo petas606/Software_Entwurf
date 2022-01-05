@@ -2,8 +2,8 @@ package persistence.einsatzplanung.aussensicht;
 
 import java.util.Collection;
 
-import kern.einsatzplanung.aussensicht.StraﬂenwartTO;
+import kern.einsatzplanung.aussensicht.StrassenwartTO;
 
-public interface IStraﬂenwartverwaltungDAO {
-	public Collection<StraﬂenwartTO> straﬂenw‰rteAnzeigen();
+public interface IStrassenwartverwaltungDAO {
+	public Collection<StrassenwartTO> strassenwaerteAnzeigen();
 }

@@ -6,10 +6,10 @@ import java.util.Collection;
 import kern.einsatzplanung.aussensicht.AutobahnabschnittTO;
 import kern.einsatzplanung.aussensicht.EinsatzplanTO;
 import kern.einsatzplanung.aussensicht.IEinsatzplanManuellAnlegen;
-import kern.einsatzplanung.aussensicht.StraﬂenwartTO;
+import kern.einsatzplanung.aussensicht.StrassenwartTO;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.Autobahnabschnitt;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.Einsatzplan;
-import kern.einsatzplanung.innensicht.technischesDatenmodell.Straﬂenwart;
+import kern.einsatzplanung.innensicht.technischesDatenmodell.Strassenwart;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Einsatzzeit;
 
 public class EinsatzplanManuellAnlegen implements IEinsatzplanManuellAnlegen {
@@ -39,7 +39,7 @@ public class EinsatzplanManuellAnlegen implements IEinsatzplanManuellAnlegen {
 			return false;
 		}
 		
-		if(einsatzplanTO.getStrassenwart1().getStraﬂenwartId() == einsatzplanTO.getStrassenwart2().getStraﬂenwartId()) 
+		if(einsatzplanTO.getStrassenwart1().getStrassenwartId() == einsatzplanTO.getStrassenwart2().getStrassenwartId()) 
 		{
 			System.out.println("Dupizierte Straﬂenwart");
 			return false;
@@ -56,18 +56,18 @@ public class EinsatzplanManuellAnlegen implements IEinsatzplanManuellAnlegen {
 		return true;
 	}
 	
-	public Collection<StraﬂenwartTO> straﬂenw‰rterAnzeigen() {
+	public Collection<StrassenwartTO> strassenwaerterAnzeigen() {
 		EinsatzplanManager einsatzplanManager = new EinsatzplanManager();
-		Collection<Straﬂenwart> straﬂenwarts = einsatzplanManager.straﬂenw‰rterAnzeigen();
-		if(straﬂenwarts.isEmpty()) 
+		Collection<Strassenwart> strassenwarts = einsatzplanManager.strassenwaerterAnzeigen();
+		if(strassenwarts.isEmpty()) 
 		{
-			return new ArrayList<StraﬂenwartTO>();
+			return new ArrayList<StrassenwartTO>();
 		}
-		ArrayList<StraﬂenwartTO> straﬂenwartTOs = new ArrayList<StraﬂenwartTO>();
-		for(Straﬂenwart straﬂenwart : straﬂenwarts) 
+		ArrayList<StrassenwartTO> strassenwartTOs = new ArrayList<StrassenwartTO>();
+		for(Strassenwart strassenwart : strassenwarts) 
 		{
-			straﬂenwartTOs.add(straﬂenwart.toStraﬂenwartTO());
+			strassenwartTOs.add(strassenwart.toStrassenwartTO());
 		}
-		return straﬂenwartTOs;
+		return strassenwartTOs;
 	}
 }

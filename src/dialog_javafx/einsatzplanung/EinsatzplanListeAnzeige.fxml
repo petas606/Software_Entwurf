@@ -58,8 +58,8 @@
 	    	<TableColumn fx:id="tcEinsatzPlanId" text="Einsatzplan Id" />
 		    <TableColumn fx:id="tcFahrzeug" text="Fahrzeug" />
 		    <TableColumn fx:id="tcEinsatzzeit" maxWidth="192.0" minWidth="-Infinity" prefWidth="130" text="Einsatzzeit" />
-		    <TableColumn fx:id="tcStraßenwart1" maxWidth="233.0" minWidth="-1.0" prefWidth="130.0" text="Straßenwart1" />
-		    <TableColumn fx:id="tcStraßenwart2" maxWidth="233.0" minWidth="-1.0" prefWidth="130.0" text="Straßenwart2" />
+		    <TableColumn fx:id="tcStrassenwart1" maxWidth="233.0" minWidth="-1.0" prefWidth="130.0" text="Straßenwart1" />
+		    <TableColumn fx:id="tcStrassenwart2" maxWidth="233.0" minWidth="-1.0" prefWidth="130.0" text="Straßenwart2" />
 		    <TableColumn fx:id="tcAutobahnabschnitt" minWidth="50.0" prefWidth="179.0" text="Autobahnabschnitt" />
         </columns>
       </TableView>

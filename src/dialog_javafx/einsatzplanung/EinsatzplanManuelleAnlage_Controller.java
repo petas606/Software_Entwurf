@@ -17,7 +17,7 @@ import kern.einsatzplanung.aussensicht.AutobahnabschnittTO;
 import kern.einsatzplanung.aussensicht.EinsatzplanTO;
 import kern.einsatzplanung.aussensicht.IEinsatzplanFactory;
 import kern.einsatzplanung.aussensicht.IEinsatzplanManuellAnlegen;
-import kern.einsatzplanung.aussensicht.StraﬂenwartTO;
+import kern.einsatzplanung.aussensicht.StrassenwartTO;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Einsatzzeit;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Tageszeit;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.WochenTag;
@@ -40,9 +40,9 @@ public class EinsatzplanManuelleAnlage_Controller {
 	@FXML
 	RadioButton rbNacht;
 	@FXML
-	ComboBox<StraﬂenwartTO> cboStrassenwart2;
+	ComboBox<StrassenwartTO> cboStrassenwart2;
 	@FXML
-	ComboBox<StraﬂenwartTO> cboStrassenwart1;
+	ComboBox<StrassenwartTO> cboStrassenwart1;
 	
 	private Hauptmenue screencontroller;
 	
@@ -54,7 +54,7 @@ public class EinsatzplanManuelleAnlage_Controller {
 	{
 		IEinsatzplanFactory factory = new EinsatzplanFactory();
 		IEinsatzplanManuellAnlegen einsatzplanManuellAnlegen = factory.einsatzplanManuellAnlegen();
-		ObservableList<StraﬂenwartTO> straﬂenwartTOs = FXCollections.observableArrayList();
+		ObservableList<StrassenwartTO> straﬂenwartTOs = FXCollections.observableArrayList();
 		straﬂenwartTOs.addAll(einsatzplanManuellAnlegen.straﬂenw‰rterAnzeigen());
 		cboStrassenwart1.setItems(straﬂenwartTOs);
 		cboStrassenwart2.setItems(straﬂenwartTOs);
@@ -107,12 +107,12 @@ public class EinsatzplanManuelleAnlage_Controller {
 		autobahnabschnittTOs.add(autobahnabschnittTO);
 		 
 		
-		StraﬂenwartTO straﬂenwart1 = cboStrassenwart1.getValue();
-		StraﬂenwartTO straﬂenwart2 = cboStrassenwart2.getValue();
+		StrassenwartTO straﬂenwart1 = cboStrassenwart1.getValue();
+		StrassenwartTO straﬂenwart2 = cboStrassenwart2.getValue();
 		
 		if(straﬂenwart2 == null) 
 		{
-			straﬂenwart2 = new StraﬂenwartTO();
+			straﬂenwart2 = new StrassenwartTO();
 		}
 		
 		EinsatzplanTO einsatzplanTO = new EinsatzplanTO();

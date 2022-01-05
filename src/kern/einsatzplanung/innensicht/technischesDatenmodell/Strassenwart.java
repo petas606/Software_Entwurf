@@ -19,12 +19,6 @@ public class Strassenwart {
 		zugehoerigeEinsatzplaene = new HashSet<Einsatzplan>();
 	}
 	
-	public void anlegen() 
-	{
-		//TODO
-	}
-	
-	
 	public String getVorname() {
 		return vorname;
 	}

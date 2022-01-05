@@ -19,7 +19,7 @@ public class Autobahnabschnitt {
 	private double autobahnKilometerStart;
 	private double autobahnKilometerEnde;
 	private int reihenfolge;
-	private Set<Einsatzplan> zugehörigeEinsatzpläne;
+	private Set<Einsatzplan> zugehoerigeEinsatzplaene;
 	
 	public void anlegen() 
 	{
@@ -27,7 +27,7 @@ public class Autobahnabschnitt {
 	}
 	
 	public Autobahnabschnitt() {
-		zugehörigeEinsatzpläne = new HashSet<Einsatzplan>();
+		zugehoerigeEinsatzplaene = new HashSet<Einsatzplan>();
 	}
 	public String getAutobahnnummer() {
 		return autobahnnummer;
@@ -53,17 +53,17 @@ public class Autobahnabschnitt {
 	public void setReihenfolge(int reihenfolge) {
 		this.reihenfolge = reihenfolge;
 	}
-	public Set<Einsatzplan> getZugehörigeEinsatzpläne() {
-		return zugehörigeEinsatzpläne;
+	public Set<Einsatzplan> getZugehoerigeEinsatzplaene() {
+		return zugehoerigeEinsatzplaene;
 	}
 	
-	public void addZugehörigeEinsatzplan(Einsatzplan einsatzplan) 
+	public void addZugehoerigeEinsatzplan(Einsatzplan einsatzplan) 
 	{
-		this.zugehörigeEinsatzpläne.add(einsatzplan);
+		this.zugehoerigeEinsatzplaene.add(einsatzplan);
 	}
 	
-	public void setZugehörigeEinsatzpläne(Set<Einsatzplan> zugehörigeEinsatzpläne) {
-		this.zugehörigeEinsatzpläne = zugehörigeEinsatzpläne;
+	public void setZugehoerigeEinsatzplaene(Set<Einsatzplan> zugehoerigeEinsatzplaene) {
+		this.zugehoerigeEinsatzplaene = zugehoerigeEinsatzplaene;
 	}
 	
 	public AutobahnabschnittTO toAutobahnabschnittTO () {
@@ -73,7 +73,7 @@ public class Autobahnabschnitt {
 		autobahnabschnittTO.setAutobahnKilometerEnde(this.getAutobahnKilometerEnde());
 		autobahnabschnittTO.setReihenfolge(this.getReihenfolge());
 		autobahnabschnittTO.setAutobahnAbschnittID(this.autobahnAbschnittID);
-		autobahnabschnittTO.setZugehörigeEinsatzpläne(this.getZugehörigeEinsatzpläne());
+		autobahnabschnittTO.setZugehoerigeEinsatzplaene(this.getZugehoerigeEinsatzplaene());
 		return autobahnabschnittTO;
 	}
 }

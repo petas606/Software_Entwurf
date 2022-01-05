@@ -13,8 +13,6 @@ public class EinsatzplanFactory implements IEinsatzplanFactory {
 
 	@Override
 	public IEinsatzplanManuellAnlegen einsatzplanManuellAnlegen() {
-		// TODO Auto-generated method stub
 		return new EinsatzplanManuellAnlegen();
 	}
-	
 }

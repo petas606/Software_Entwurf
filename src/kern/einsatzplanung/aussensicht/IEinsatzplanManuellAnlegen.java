@@ -4,5 +4,5 @@ import java.util.Collection;
 
 public interface IEinsatzplanManuellAnlegen {
 	public boolean einsatzplanAnlegen(EinsatzplanTO einsatzplanTO);
-	public Collection<StraﬂenwartTO> straﬂenw‰rterAnzeigen();
+	public Collection<StrassenwartTO> strassenwaerterAnzeigen();
 }
