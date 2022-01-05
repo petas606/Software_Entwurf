@@ -1,4 +1,4 @@
-module Prüfungsleistung_Teil_3 {
+module PrÃ¼fungsleistung_Teil_3 {
 	requires javafx.controls;
 	requires javafx.fxml;
 	requires javafx.graphics;

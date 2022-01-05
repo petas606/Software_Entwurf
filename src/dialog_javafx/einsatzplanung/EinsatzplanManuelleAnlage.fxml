@@ -80,7 +80,7 @@
                         <Insets right="72.0" />
                      </HBox.margin>
                   </Text>
-                  <RadioButton fx:id="rbTagsüber" mnemonicParsing="false" onAction="#rbTagesüberSelected" selected="true" text="tagsüber">
+                  <RadioButton fx:id="rbTagsueber" mnemonicParsing="false" onAction="#rbTagesueberSelected" selected="true" text="tagsüber">
                      <padding>
                         <Insets right="25.0" />
                      </padding>
