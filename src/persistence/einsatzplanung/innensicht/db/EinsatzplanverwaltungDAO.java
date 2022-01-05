@@ -8,7 +8,7 @@ import java.util.Collection;
 
 import kern.einsatzplanung.aussensicht.AutobahnabschnittTO;
 import kern.einsatzplanung.aussensicht.EinsatzplanTO;
-import kern.einsatzplanung.aussensicht.StraﬂenwartTO;
+import kern.einsatzplanung.aussensicht.StrassenwartTO;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Einsatzzeit;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Tageszeit;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.WochenTag;
@@ -72,14 +72,14 @@ public class EinsatzplanverwaltungDAO implements IEinsatzplanverwaltungDAO {
 		{		
 		    Einsatzzeit einsatzzeit = new Einsatzzeit();
 		    
-		    StraﬂenwartTO strassenwart1 = new StraﬂenwartTO();
-		    strassenwart1.setStraﬂenwartId(resultset.getInt("STRASSENWART_ID"));
+		    StrassenwartTO strassenwart1 = new StrassenwartTO();
+		    strassenwart1.setStrassenwartId(resultset.getInt("STRASSENWART_ID"));
 		    strassenwart1.setVorname(resultset.getString("VORNAME"));
 		    strassenwart1.setNachname(resultset.getString("NACHNAME"));
 		    strassenwart1.setMobilfunknummer(resultset.getString("MOBILFUNKNUMMER"));
 		    
-			StraﬂenwartTO strassenwart2 = new StraﬂenwartTO();
-		    strassenwart1.setStraﬂenwartId(resultset.getInt("STRASSENWART_ID2"));
+			StrassenwartTO strassenwart2 = new StrassenwartTO();
+		    strassenwart1.setStrassenwartId(resultset.getInt("STRASSENWART_ID2"));
 		    strassenwart2.setVorname(resultset.getString("VORNAME2"));
 		    strassenwart2.setNachname(resultset.getString("NACHNAME2"));
 		    strassenwart2.setMobilfunknummer(resultset.getString("MOBILFUNKNUMMER2"));
@@ -121,8 +121,8 @@ public class EinsatzplanverwaltungDAO implements IEinsatzplanverwaltungDAO {
 					"'"+ einsatzplanTO.getFahrzeugKennzeichen() + "'," +
 					"'"+ einsatzplanTO.getEinsatzzeit().getWochentag() + "'," +
 					"'"+ einsatzplanTO.getEinsatzzeit().getTageszeit() + "'," +
-					   + einsatzplanTO.getStrassenwart1().getStraﬂenwartId() + "," +
-					   + einsatzplanTO.getStrassenwart2().getStraﬂenwartId() + ")");
+					   + einsatzplanTO.getStrassenwart1().getStrassenwartId() + "," +
+					   + einsatzplanTO.getStrassenwart2().getStrassenwartId() + ")");
 			for(AutobahnabschnittTO autobahnabschnittTO : einsatzplanTO.getAutobahnabschnitte()) 
 			{
 				String aStatement = "INSERT INTO EINSATZPLAN_AUTOBAHNABSCHNITT (EINSATZPLAN_ID,AUTOBAHNABSCHNITT_ID) "

@@ -4,21 +4,21 @@ import java.util.HashSet;
 import java.util.Set;
 
 import kern.einsatzplanung.innensicht.technischesDatenmodell.Einsatzplan;
-import kern.einsatzplanung.innensicht.technischesDatenmodell.Straßenwart;
+import kern.einsatzplanung.innensicht.technischesDatenmodell.Strassenwart;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Fahrzeugklasse;
 
-public class StraßenwartTO {
-	private int straßenwartId;
+public class StrassenwartTO {
+	private int strassenwartId;
 	private String vorname;
 	private String nachname;
 	private String mobilfunknummer;
 
 	private Set<Fahrzeugklasse> berechtigteFahrzeugklasse;
-	private Set<Einsatzplan> zugehörigeEinsatzpläne;
+	private Set<Einsatzplan> zugehoerigeEinsatzplaene;
 	
-	public StraßenwartTO() {
+	public StrassenwartTO() {
 		berechtigteFahrzeugklasse = new HashSet<Fahrzeugklasse>();
-		zugehörigeEinsatzpläne = new HashSet<Einsatzplan>();
+		zugehoerigeEinsatzplaene = new HashSet<Einsatzplan>();
 	}
 	
 	public String getVorname() {
@@ -41,8 +41,8 @@ public class StraßenwartTO {
 		this.berechtigteFahrzeugklasse = berechtigteFahrzeugklasse;
 	}
 
-	public void setZugehörigeEinsatzpläne(Set<Einsatzplan> zugehörigeEinsatzpläne) {
-		this.zugehörigeEinsatzpläne = zugehörigeEinsatzpläne;
+	public void setZugehoerigeEinsatzplaene(Set<Einsatzplan> zugehoerigeEinsatzplaene) {
+		this.zugehoerigeEinsatzplaene = zugehoerigeEinsatzplaene;
 	}
 
 	public String getNachname() {
@@ -57,16 +57,16 @@ public class StraßenwartTO {
 		return berechtigteFahrzeugklasse;
 	}
 	
-	public Set<Einsatzplan> getZugehörigeEinsatzpläne() {
-		return zugehörigeEinsatzpläne;
+	public Set<Einsatzplan> getZugehoerigeEinsatzplaene() {
+		return zugehoerigeEinsatzplaene;
 	}
 
-	public int getStraßenwartId() {
-		return straßenwartId;
+	public int getStrassenwartId() {
+		return strassenwartId;
 	}
 
-	public void setStraßenwartId(int straßenwartId) {
-		this.straßenwartId = straßenwartId;
+	public void setStrassenwartId(int strassenwartId) {
+		this.strassenwartId = strassenwartId;
 	}
 	
 	@Override
@@ -81,15 +81,15 @@ public class StraßenwartTO {
 	}
 	
 	
-	public Straßenwart toStraßenwart() 
+	public Strassenwart toStrassenwart() 
 	{
-		Straßenwart straßenwart = new Straßenwart();
-		straßenwart.setMobilfunknummer(this.mobilfunknummer);
-		straßenwart.setBerechtigteFahrzeugklasse(berechtigteFahrzeugklasse);
-		straßenwart.setNachname(nachname);
-		straßenwart.setVorname(vorname);
-		straßenwart.setStraßenwartId(straßenwartId);
-		return straßenwart;
+		Strassenwart strassenwart = new Strassenwart();
+		strassenwart.setMobilfunknummer(this.mobilfunknummer);
+		strassenwart.setBerechtigteFahrzeugklasse(berechtigteFahrzeugklasse);
+		strassenwart.setNachname(nachname);
+		strassenwart.setVorname(vorname);
+		strassenwart.setStrassenwartId(strassenwartId);
+		return strassenwart;
 	}
 
 }

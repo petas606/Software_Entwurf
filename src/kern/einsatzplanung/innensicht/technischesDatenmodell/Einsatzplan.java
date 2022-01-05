@@ -11,8 +11,8 @@ public class Einsatzplan {
 	private int einsatzplanId;
 	private Einsatzzeit einsatzzeit;
 	private String fahrzeugKennzeichen;
-	private Straﬂenwart strassenwart1;
-	private Straﬂenwart strassenwart2;
+	private Strassenwart strassenwart1;
+	private Strassenwart strassenwart2;
 	private Collection<Autobahnabschnitt> autobahnabschnitte;
 	private ArrayList<Autobahnabschnitt> autobahnabschnitteListe;
 	
@@ -23,14 +23,14 @@ public class Einsatzplan {
 		autobahnabschnitteListe = new ArrayList<Autobahnabschnitt>();
 	}
 	
-	public Einsatzplan(String fahrzeugKennzeichen, Einsatzzeit einsatzzeit, Straﬂenwart strassenwart, Collection<Autobahnabschnitt> autobahnabschnitte ) {
+	public Einsatzplan(String fahrzeugKennzeichen, Einsatzzeit einsatzzeit, Strassenwart strassenwart, Collection<Autobahnabschnitt> autobahnabschnitte ) {
 		this.fahrzeugKennzeichen = fahrzeugKennzeichen;
 		this.einsatzzeit = einsatzzeit;
 		this.strassenwart1 = strassenwart;
 		this.autobahnabschnitte = autobahnabschnitte;
 	}
 	
-	public Einsatzplan(String fahrzeugKennzeichen, Einsatzzeit einsatzzeit, Straﬂenwart strassenwart1, Straﬂenwart strassenwart2, Collection<Autobahnabschnitt> autobahnabschnitte ) {
+	public Einsatzplan(String fahrzeugKennzeichen, Einsatzzeit einsatzzeit, Strassenwart strassenwart1, Strassenwart strassenwart2, Collection<Autobahnabschnitt> autobahnabschnitte ) {
 		this.fahrzeugKennzeichen = fahrzeugKennzeichen;
 		this.einsatzzeit = einsatzzeit;
 		this.strassenwart1 = strassenwart1;
@@ -56,16 +56,16 @@ public class Einsatzplan {
 	public void setFahrzeugKennzeichen(String fahrzeugKennzeichen) {
 		this.fahrzeugKennzeichen = fahrzeugKennzeichen;
 	}
-	public Straﬂenwart getStrassenwart1() {
+	public Strassenwart getStrassenwart1() {
 		return strassenwart1;
 	}
-	public void setStrassenwart1(Straﬂenwart strassenwart1) {
+	public void setStrassenwart1(Strassenwart strassenwart1) {
 		this.strassenwart1 = strassenwart1;
 	}
-	public Straﬂenwart getStrassenwart2() {
+	public Strassenwart getStrassenwart2() {
 		return strassenwart2;
 	}
-	public void setStrassenwart2(Straﬂenwart strassenwart2) {
+	public void setStrassenwart2(Strassenwart strassenwart2) {
 		this.strassenwart2 = strassenwart2;
 	}
 	
@@ -108,8 +108,8 @@ public class Einsatzplan {
 		einsatzplanTO.setFahrzeugKennzeichen(this.getFahrzeugKennzeichen());
 		einsatzplanTO.setAutobahnabschnitte(autobahnabschnitteTO);
 		einsatzplanTO.setEinsatplanId(einsatzplanId);
-		einsatzplanTO.setStrassenwart1(strassenwart1.toStraﬂenwartTO());
-		einsatzplanTO.setStrassenwart2(strassenwart2.toStraﬂenwartTO());
+		einsatzplanTO.setStrassenwart1(strassenwart1.toStrassenwartTO());
+		einsatzplanTO.setStrassenwart2(strassenwart2.toStrassenwartTO());
 		return einsatzplanTO;
 	}
 

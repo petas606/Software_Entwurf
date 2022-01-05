@@ -5,15 +5,15 @@ import java.util.Collection;
 
 import kern.einsatzplanung.innensicht.technischesDatenmodell.Autobahnabschnitt;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.Einsatzplan;
-import kern.einsatzplanung.innensicht.technischesDatenmodell.Straﬂenwart;
+import kern.einsatzplanung.innensicht.technischesDatenmodell.Strassenwart;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Einsatzzeit;
 
 public class EinsatzplanTO {
 	private int einsatplanId;
 	private Einsatzzeit einsatzzeit;
 	private String fahrzeugKennzeichen;
-	private StraﬂenwartTO strassenwart1;
-	private StraﬂenwartTO strassenwart2;
+	private StrassenwartTO strassenwart1;
+	private StrassenwartTO strassenwart2;
 	private Collection<AutobahnabschnittTO> autobahnabschnitte;
 	private String planer;
 	
@@ -46,19 +46,19 @@ public class EinsatzplanTO {
 		this.planer = planer;
 	}
 
-	public StraﬂenwartTO getStrassenwart1() {
+	public StrassenwartTO getStrassenwart1() {
 		return strassenwart1;
 	}
 	
-	public void setStrassenwart1(StraﬂenwartTO strassenwart1) {
+	public void setStrassenwart1(StrassenwartTO strassenwart1) {
 		this.strassenwart1 = strassenwart1;
 	}
 	
-	public StraﬂenwartTO getStrassenwart2() {
+	public StrassenwartTO getStrassenwart2() {
 		return strassenwart2;
 	}
 	
-	public void setStrassenwart2(StraﬂenwartTO strassenwart2) {
+	public void setStrassenwart2(StrassenwartTO strassenwart2) {
 		this.strassenwart2 = strassenwart2;
 	}
 
@@ -82,8 +82,8 @@ public class EinsatzplanTO {
 			autobahnabschnitts.add(temp.toAutobahnAbschnitt());
 		}
 		Einsatzplan einsatzplan = new Einsatzplan();
-		einsatzplan.setStrassenwart1(this.strassenwart1.toStraﬂenwart());
-		einsatzplan.setStrassenwart2(this.strassenwart2.toStraﬂenwart());
+		einsatzplan.setStrassenwart1(this.strassenwart1.toStrassenwart());
+		einsatzplan.setStrassenwart2(this.strassenwart2.toStrassenwart());
 		einsatzplan.setEinsatzzeit(this.einsatzzeit);
 		einsatzplan.setFahrzeugKennzeichen(this.fahrzeugKennzeichen);
 		einsatzplan.setAutobahnabschnitte(autobahnabschnitts);

@@ -18,7 +18,7 @@ public class EinsatzplanListeAnzeige_Controller {
 	@FXML
 	TableView<EinplanListAnzeige_EinsatzplanDaten> tblEinsatzplanung;
 	@FXML
-	Button btnButton;
+	Button btnEinsatzplanAnlegen;
 	@FXML
 	TableColumn<EinplanListAnzeige_EinsatzplanDaten, String> tcEinsatzPlanId;
 	@FXML
@@ -26,9 +26,9 @@ public class EinsatzplanListeAnzeige_Controller {
 	@FXML
 	TableColumn<EinplanListAnzeige_EinsatzplanDaten, String> tcEinsatzzeit;
 	@FXML
-	TableColumn<EinplanListAnzeige_EinsatzplanDaten, String> tcStraﬂenwart1;
+	TableColumn<EinplanListAnzeige_EinsatzplanDaten, String> tcStrassenwart1;
 	@FXML
-	TableColumn<EinplanListAnzeige_EinsatzplanDaten, String> tcStraﬂenwart2;
+	TableColumn<EinplanListAnzeige_EinsatzplanDaten, String> tcStrassenwart2;
 	@FXML
 	TableColumn<EinplanListAnzeige_EinsatzplanDaten, String> tcAutobahnabschnitt;
 	private Hauptmenue screencontroller;
@@ -38,8 +38,8 @@ public class EinsatzplanListeAnzeige_Controller {
 		 tcEinsatzPlanId.setCellValueFactory(cellData -> cellData.getValue().einsatzplanIdProperty());
 		 tcFahrzeug.setCellValueFactory(cellData -> cellData.getValue().fahrzeugKennzeichenProperty()); 
 		 tcEinsatzzeit.setCellValueFactory(cellData -> cellData.getValue().einsatzzeitProperty());
-		 tcStraﬂenwart1.setCellValueFactory(cellData -> cellData.getValue().strassenwart1Property());
-		 tcStraﬂenwart2.setCellValueFactory(cellData -> cellData.getValue().strassenwart2Property());
+		 tcStrassenwart1.setCellValueFactory(cellData -> cellData.getValue().strassenwart1Property());
+		 tcStrassenwart2.setCellValueFactory(cellData -> cellData.getValue().strassenwart2Property());
 		 tcAutobahnabschnitt.setCellValueFactory(cellData -> cellData.getValue().autobahnabschnittProperty());	
 		 tblEinsatzplanung.setItems(show());
 		 

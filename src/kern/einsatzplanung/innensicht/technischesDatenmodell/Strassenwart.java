@@ -3,20 +3,20 @@ package kern.einsatzplanung.innensicht.technischesDatenmodell;
 import java.util.HashSet;
 import java.util.Set;
 
-import kern.einsatzplanung.aussensicht.StraßenwartTO;
+import kern.einsatzplanung.aussensicht.StrassenwartTO;
 import kern.einsatzplanung.innensicht.technischesDatenmodell.type.Fahrzeugklasse;
 
-public class Straßenwart {
-	private int straßenwartId;
+public class Strassenwart {
+	private int strassenwartId;
 	private String vorname;
 	private String nachname;
 	private String mobilfunknummer;
 	private Set<Fahrzeugklasse> berechtigteFahrzeugklasse;
-	private Set<Einsatzplan> zugehörigeEinsatzpläne;
+	private Set<Einsatzplan> zugehoerigeEinsatzplaene;
 	
-	public Straßenwart() {
+	public Strassenwart() {
 		berechtigteFahrzeugklasse = new HashSet<Fahrzeugklasse>();
-		zugehörigeEinsatzpläne = new HashSet<Einsatzplan>();
+		zugehoerigeEinsatzplaene = new HashSet<Einsatzplan>();
 	}
 	
 	public void anlegen() 
@@ -49,13 +49,13 @@ public class Straßenwart {
 	public void setBerechtigteFahrzeugklasse(Set<Fahrzeugklasse> berechtigteFahrzeugklasse) {
 		this.berechtigteFahrzeugklasse = berechtigteFahrzeugklasse;
 	}
-	public Set<Einsatzplan> getZugehörigeEinsatzpläne() {
-		return zugehörigeEinsatzpläne;
+	public Set<Einsatzplan> getZugehoerigeEinsatzplaene() {
+		return zugehoerigeEinsatzplaene;
 	}
 	
-	public void addZugehörigeEinsatzplan(Einsatzplan einsatzplan) 
+	public void addZugehoerigeEinsatzplan(Einsatzplan einsatzplan) 
 	{
-		this.zugehörigeEinsatzpläne.add(einsatzplan);
+		this.zugehoerigeEinsatzplaene.add(einsatzplan);
 	}
 	
 	public void addBerechtigteFahrzeugklasse(Fahrzeugklasse fahrzeugklasse) 
@@ -63,27 +63,27 @@ public class Straßenwart {
 		this.berechtigteFahrzeugklasse.add(fahrzeugklasse);
 	}
 	
-	public void setZugehörigeEinsatzpläne(Set<Einsatzplan> zugehörigeEinsatzpläne) {
-		this.zugehörigeEinsatzpläne = zugehörigeEinsatzpläne;
+	public void setZugehoerigeEinsatzplaene(Set<Einsatzplan> zugehoerigeEinsatzplaene) {
+		this.zugehoerigeEinsatzplaene = zugehoerigeEinsatzplaene;
 	}
 
-	public int getStraßenwartId() {
-		return straßenwartId;
+	public int getStrassenwartId() {
+		return strassenwartId;
 	}
 
-	public void setStraßenwartId(int straßenwartId) {
-		this.straßenwartId = straßenwartId;
+	public void setStrassenwartId(int strassenwartId) {
+		this.strassenwartId = strassenwartId;
 	}
 	
-	public StraßenwartTO toStraßenwartTO() 
+	public StrassenwartTO toStrassenwartTO() 
 	{
-		StraßenwartTO straßenwartTO = new StraßenwartTO();
-		straßenwartTO.setVorname(vorname);
-		straßenwartTO.setNachname(nachname);
-		straßenwartTO.setStraßenwartId(straßenwartId);
-		straßenwartTO.setMobilfunknummer(mobilfunknummer);
-		straßenwartTO.setBerechtigteFahrzeugklasse(berechtigteFahrzeugklasse);
-		return straßenwartTO;
+		StrassenwartTO strassenwartTO = new StrassenwartTO();
+		strassenwartTO.setVorname(vorname);
+		strassenwartTO.setNachname(nachname);
+		strassenwartTO.setStrassenwartId(strassenwartId);
+		strassenwartTO.setMobilfunknummer(mobilfunknummer);
+		strassenwartTO.setBerechtigteFahrzeugklasse(berechtigteFahrzeugklasse);
+		return strassenwartTO;
 	}
 	
 	@Override
